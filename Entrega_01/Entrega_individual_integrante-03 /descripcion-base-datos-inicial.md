@@ -30,4 +30,4 @@ Tipo de datos y periodo: Corresponde a una serie de tiempo cuantitativa. Los dat
 
 Peso del fichaje sobre los ingresos = transfer_fee / TOTAL_REVENUE × 100
 
-Este indicador permitirá comparar la importancia económica de fichajes realizados en diferentes momentos, complementando el ajuste por inflación realizado con la segunda base de datos.
+* Este indicador permitirá comparar la importancia económica de fichajes realizados en diferentes momentos, complementando el ajuste por inflación realizado con la segunda base de datos.
