@@ -25,9 +25,10 @@ Tipo de datos y periodo: Corresponde a una serie de tiempo cuantitativa. Los dat
 * De esta manera, se podrá calcular qué porcentaje de los ingresos anuales de un club representaba determinado fichaje. Esto permitirá distinguir entre el aumento nominal de los precios y un eventual aumento del peso económico que tienen las transferencias para los equipos.
 ## Metodología
 * Los datos serán recopilados mediante la revisión y extracción de información de las distintas ediciones del Deloitte Football Money League, disponibles en el portal oficial de Deloitte. La organización publica información sobre los ingresos totales y su distribución entre matchday, broadcast y commercial.
-* El plan de procesamiento consiste en realizar un cruce de datos relacional: se emparejará la temporada y el club de la base de ingresos con las variables transfer_date y club de la base principal de fichajes. Mediante este cruce se podrá calcular una nueva variable que indique qué porcentaje de los ingresos anuales del club representó cada fichaje.
-###La fórmula utilizada será:
+* El plan de procesamiento consiste en realizar un cruce de datos relacional: se emparejará la temporada y el club de la base de ingresos con las variables `transfer_date` y `club` de la base principal de fichajes. Mediante este cruce se podrá calcular una nueva variable que indique qué porcentaje de los ingresos anuales del club representó cada fichaje.
 
-Peso del fichaje sobre los ingresos = transfer_fee / TOTAL_REVENUE × 100
+### La fórmula utilizada será:
+
+Peso del fichaje sobre los ingresos = `transfer_fee` / `TOTA_REVENUE` × 100
 
 * Este indicador permitirá comparar la importancia económica de fichajes realizados en diferentes momentos, complementando el ajuste por inflación realizado con la segunda base de datos.
