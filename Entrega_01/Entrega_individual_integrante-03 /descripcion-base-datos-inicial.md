@@ -41,7 +41,8 @@ Los datos utilizados abarcarán desde la temporada **2005 hasta la temporada 202
 * Los datos serán recopilados mediante la revisión y extracción de información de las distintas ediciones del **Deloitte Football Money League**, disponibles en el portal oficial de Deloitte. La organización publica información sobre los ingresos totales y su distribución entre *matchday*, *broadcast* y *commercial*.
 
 * Para mantener la comparabilidad entre períodos, se registrarán los ingresos en euros.
-* 
+
+* Los datos que tienen una _ es porque no está la cifra exacta disponible.
 ### La fórmula utilizada será:
 
 **Peso del fichaje sobre los ingresos = `TRANSFER_FEE` / `TOTAL_REVENUE` × 100**
