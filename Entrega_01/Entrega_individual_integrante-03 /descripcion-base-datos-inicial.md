@@ -1,8 +1,10 @@
 # Ficha Técnica de Base de Datos: Ingresos de los clubes de fútbol
 ## Autor y publicación de los datos
 
-Propietarios/Autores: Deloitte Sports Business Group.
-Publicación: Los datos se obtendrán desde el informe anual Deloitte Football Money League, elaborado por Deloitte, que registra los clubes de fútbol con mayores ingresos a nivel mundial. Deloitte publica las distintas ediciones del informe y mantiene disponibles ediciones anteriores desde 2006.
+### Propietarios/Autores: 
+Deloitte Sports Business Group.
+### Publicación: 
+Los datos se obtendrán desde el informe anual Deloitte Football Money League, elaborado por Deloitte, que registra los clubes de fútbol con mayores ingresos a nivel mundial. Deloitte publica las distintas ediciones del informe y mantiene disponibles ediciones anteriores desde 2006.
 
 ## Contenido
 
