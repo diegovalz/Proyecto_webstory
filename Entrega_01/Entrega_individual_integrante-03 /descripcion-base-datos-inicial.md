@@ -10,11 +10,9 @@ Deloitte Sports Business Group.
 
 Los datos se obtendrán desde el informe anual **Deloitte Football Money League**, elaborado por Deloitte, que registra los clubes de fútbol con mayores ingresos, incluidos los de la Premier League. El informe analiza los ingresos generados por los clubes a partir de tres fuentes principales: año, club, y cuánto dinero tenía en ese tiempo del fichaje.
 
-Para este estudio, se utilizarán las ediciones históricas del *Football Money League* desde 2006 hasta la edición correspondiente a la temporada 2024-25. La edición 2026, publicada en enero de 2026, analiza los ingresos de la temporada 2024-25 y registra ingresos acumulados de €12.400 millones entre los 20 clubes de la *Money League*.
-
 ## Contenido
 
-**Descripción:** La base de datos contiene información sobre los ingresos anuales de los principales clubes de fútbol a nivel mundial, desglosados principalmente en tres categorías: ingresos por día de partido (*matchday*), derechos de transmisión (*broadcast*) e ingresos comerciales (*commercial*).
+**Descripción:** La base de datos contiene información sobre los ingresos anuales de los principales clubes de fútbol de la Premier League.
 
 El informe permite observar la evolución de la capacidad económica de los principales clubes europeos y, dentro de ellos, de los equipos de la Premier League. Además, permite analizar cómo ha cambiado la composición de los ingresos de los clubes a lo largo del tiempo.
 
