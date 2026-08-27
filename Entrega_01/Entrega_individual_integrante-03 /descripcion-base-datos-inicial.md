@@ -36,20 +36,12 @@ Los datos utilizados abarcarán desde la temporada **2005 hasta la temporada 202
 
 * La información también permitirá analizar si el crecimiento de los precios de los fichajes ha sido proporcional al crecimiento de los ingresos de los clubes. Esto es especialmente relevante para la Premier League, considerando el aumento de los ingresos derivados de los derechos audiovisuales y de las actividades comerciales.
 
-* Además, la serie histórica permite observar cómo ha cambiado el modelo económico de los grandes clubes. Por ejemplo, Deloitte identifica un desplazamiento progresivo hacia los ingresos comerciales entre los clubes que ocupan los primeros lugares de la *Money League*. En 2023-24, los ingresos comerciales representaron el 44% de los ingresos totales de los clubes de la *Money League*, frente al 38% correspondiente a transmisión y el 18% correspondiente a *matchday*.
-
 ## Metodología
 
 * Los datos serán recopilados mediante la revisión y extracción de información de las distintas ediciones del **Deloitte Football Money League**, disponibles en el portal oficial de Deloitte. La organización publica información sobre los ingresos totales y su distribución entre *matchday*, *broadcast* y *commercial*.
 
-* Para mantener la comparabilidad entre períodos, se registrarán los ingresos en la moneda utilizada por Deloitte y posteriormente se podrá realizar la conversión correspondiente, si fuese necesario para el análisis.
-
-* El plan de procesamiento consiste en realizar un **cruce de datos relacional**: se emparejará la temporada y el club de la base de ingresos con las variables `transfer_date` y `club` de la base principal de fichajes.
-
-* Debido a que Deloitte publica los ingresos correspondientes a temporadas completas y la base de fichajes registra operaciones individuales, el cruce deberá considerar el año o temporada correspondiente a cada transferencia.
-
-* Mediante este cruce se podrá calcular una nueva variable que indique qué porcentaje de los ingresos anuales del club representó cada fichaje.
-
+* Para mantener la comparabilidad entre períodos, se registrarán los ingresos en euros.
+* 
 ### La fórmula utilizada será:
 
 **Peso del fichaje sobre los ingresos = `TRANSFER_FEE` / `TOTAL_REVENUE` × 100**
