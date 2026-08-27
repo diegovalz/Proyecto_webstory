@@ -43,12 +43,3 @@ Los datos utilizados abarcarán desde la temporada **2005 hasta la temporada 202
 * Para mantener la comparabilidad entre períodos, se registrarán los ingresos en euros.
 
 * Los datos que tienen una _ es porque no está la cifra exacta disponible.
-### La fórmula utilizada será:
-
-**Peso del fichaje sobre los ingresos = `TRANSFER_FEE` / `TOTAL_REVENUE` × 100**
-
-* Este indicador permitirá comparar la importancia económica de fichajes realizados en diferentes momentos, complementando el ajuste por inflación realizado con la segunda base de datos.
-
-* Por ejemplo, un fichaje equivalente al 10% de los ingresos de un club tendrá un peso económico distinto de otro fichaje que también cueste €50 millones, pero represente solamente el 3% de los ingresos de su club. De esta forma, el indicador permitirá analizar la evolución del **peso relativo de los fichajes**, y no solamente su precio nominal o su valor ajustado por inflación.
-
-* Finalmente, se debe considerar que los ingresos reportados por Deloitte **no incluyen las transferencias de jugadores**, por lo que el indicador compara el costo de un fichaje con los ingresos operacionales del club y evita incorporar el propio gasto de transferencia dentro del denominador.
