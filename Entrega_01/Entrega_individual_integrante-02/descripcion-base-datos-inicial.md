@@ -4,7 +4,7 @@ Este documento detalla los conjuntos de datos que sustentan la investigación so
 
 ---
 
-## Base de Datos 1: Histórico Curado de Transferencias y Valor de Mercado (Existente)
+## Base de Datos: Histórico de Transferencias y Valor de Mercado de los jugadores tomando a Transfermarkt 
 
 * **Archivo asociado:** `bases-de-datos/transfers_filtered.csv`
 * **Autor y publicación de los datos:**
