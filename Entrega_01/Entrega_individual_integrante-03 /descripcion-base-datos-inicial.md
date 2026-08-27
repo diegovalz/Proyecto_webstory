@@ -12,7 +12,7 @@ Tipo de datos y periodo: Corresponde a una serie de tiempo cuantitativa. Los dat
 
 ## Variables:
 
-* SEASON (Temporal / Texto): Temporada correspondiente a los ingresos registrados (ej. 2005-06).
+* `SEASON` (Temporal / Texto): Temporada correspondiente a los ingresos registrados (ej. 2005-06).
 * CLUB (Texto): Nombre del club.
 * TOTAL_REVENUE (Numérico / Decimal): Ingresos totales del club durante la temporada.
 * MATCHDAY_REVENUE (Numérico / Decimal): Ingresos generados por los días de partido.
