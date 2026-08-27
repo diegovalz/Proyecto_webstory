@@ -34,8 +34,6 @@ Los datos utilizados abarcarán desde la temporada **2005 hasta la temporada 202
 
 * Esta base es valiosa para la investigación porque permite contextualizar el precio de los fichajes de la Premier League según la capacidad económica de los clubes. Mientras la base principal registra cuánto pagaron los equipos por los jugadores y la base de inflación permite llevar esos montos a un valor comparable, los ingresos permiten determinar qué tan significativo era ese gasto para el club en cada período.
 
-* De esta manera, se podrá calcular qué porcentaje de los ingresos anuales de un club representaba determinado fichaje. Esto permitirá distinguir entre el aumento nominal de los precios y un eventual aumento del peso económico que tienen las transferencias para los equipos.
-
 * La información también permitirá analizar si el crecimiento de los precios de los fichajes ha sido proporcional al crecimiento de los ingresos de los clubes. Esto es especialmente relevante para la Premier League, considerando el aumento de los ingresos derivados de los derechos audiovisuales y de las actividades comerciales.
 
 * Además, la serie histórica permite observar cómo ha cambiado el modelo económico de los grandes clubes. Por ejemplo, Deloitte identifica un desplazamiento progresivo hacia los ingresos comerciales entre los clubes que ocupan los primeros lugares de la *Money League*. En 2023-24, los ingresos comerciales representaron el 44% de los ingresos totales de los clubes de la *Money League*, frente al 38% correspondiente a transmisión y el 18% correspondiente a *matchday*.
