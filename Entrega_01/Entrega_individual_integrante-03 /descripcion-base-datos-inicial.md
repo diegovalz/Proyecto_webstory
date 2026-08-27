@@ -34,14 +34,9 @@ Los datos utilizados abarcarán desde la temporada **2004-05 hasta la temporada 
 
 ## Variables:
 
-* `SEASON` (Temporal / Texto): Temporada correspondiente a los ingresos registrados (ej. 2004-05).
+* `AÑO` (Numérico): Temporada correspondiente a los ingresos registrados (ej. 2004-05).
 * `CLUB` (Texto): Nombre del club.
-* `TOTAL_REVENUE` (Numérico / Decimal): Ingresos totales del club durante la temporada.
-* `MATCHDAY_REVENUE` (Numérico / Decimal): Ingresos generados por los días de partido, incluyendo principalmente entradas, hospitalidad corporativa y membresías.
-* `BROADCAST_REVENUE` (Numérico / Decimal): Ingresos provenientes de derechos de transmisión y distribución audiovisual.
-* `COMMERCIAL_REVENUE` (Numérico / Decimal): Ingresos provenientes de actividades comerciales, patrocinios, merchandising y otras actividades comerciales.
-* `CURRENCY` (Texto): Moneda en que se presentan los ingresos originales.
-* `RANK` (Numérico / Entero): Posición ocupada por el club en el *Deloitte Football Money League* correspondiente a cada temporada.
+* `DINERO_NETO` (Numérico / Decimal): Ingresos totales del club durante la temporada.
 
 ## Pertinencia
 
