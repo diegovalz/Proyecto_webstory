@@ -14,19 +14,15 @@ Los datos se obtendrán desde el informe anual **Deloitte Football Money League*
 
 **Descripción:** La base de datos contiene información sobre los ingresos anuales de los principales clubes de fútbol de la Premier League.
 
-El informe permite observar la evolución de la capacidad económica de los principales clubes europeos y, dentro de ellos, de los equipos de la Premier League. Además, permite analizar cómo ha cambiado la composición de los ingresos de los clubes a lo largo del tiempo.
+El informe permite observar la evolución de la capacidad económica de los principales clubes de la Premier League. 
 
-La metodología de Deloitte utiliza información proveniente de los estados financieros anuales de los clubes, información proporcionada directamente por estos y otras fuentes directas. Para facilitar la comparación, Deloitte clasifica los ingresos en las tres categorías mencionadas. La organización también señala que los ingresos por transferencias de jugadores y entrenadores **no están incluidos en los ingresos reportados**.
-
-Un aspecto relevante para el análisis histórico es que la estructura de ingresos de los clubes ha cambiado considerablemente. Deloitte señala que en la temporada 2009-10 los clubes que ocupaban los primeros diez lugares de la *Money League* obtenían aproximadamente el 26% de sus ingresos del *matchday*, el 43% de la transmisión y el 31% de actividades comerciales. En cambio, en 2023-24, el *top 10* obtenía el 48% de sus ingresos de actividades comerciales, mientras que la transmisión representaba el 34% y el *matchday* el 18%.
-
-En 2023-24, los clubes incluidos en la *Money League* generaron conjuntamente un récord de **€11.200 millones**, mientras que el Real Madrid se convirtió en el primer club en superar los **€1.000 millones de ingresos en una temporada**.
+La metodología de Deloitte utiliza información proveniente de los estados financieros anuales de los clubes, información proporcionada directamente por estos y otras fuentes directas. 
 
 ### Tipo de datos y período:
 
 Corresponde a una **serie de tiempo cuantitativa**, complementada con variables categóricas correspondientes a los clubes.
 
-Los datos utilizados abarcarán desde la temporada **2004-05 hasta la temporada 2024-25**, utilizando las distintas ediciones históricas disponibles del *Deloitte Football Money League*. Esto permite incorporar información desde 2005 y mantener una serie histórica de aproximadamente dos décadas. Deloitte señala que sus ediciones anteriores están disponibles desde 2006.
+Los datos utilizados abarcarán desde la temporada **2005 hasta la temporada 2024-25**, utilizando las distintas ediciones históricas disponibles del *Deloitte Football Money League*. Esto permite incorporar información y mantener una serie histórica de aproximadamente dos décadas.
 
 ## Variables:
 
