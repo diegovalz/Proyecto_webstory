@@ -13,12 +13,12 @@ Tipo de datos y periodo: Corresponde a una serie de tiempo cuantitativa. Los dat
 ## Variables:
 
 * `SEASON` (Temporal / Texto): Temporada correspondiente a los ingresos registrados (ej. 2005-06).
-* CLUB (Texto): Nombre del club.
-* TOTAL_REVENUE (Numérico / Decimal): Ingresos totales del club durante la temporada.
-* MATCHDAY_REVENUE (Numérico / Decimal): Ingresos generados por los días de partido.
-* BROADCAST_REVENUE (Numérico / Decimal): Ingresos provenientes de derechos de transmisión.
-* COMMERCIAL_REVENUE (Numérico / Decimal): Ingresos provenientes de actividades comerciales, patrocinios y merchandising.
-* CURRENCY (Texto): Moneda en que se presentan los ingresos originales.
+* `CLUB` (Texto): Nombre del club.
+* `TOTAL_REVENUE` (Numérico / Decimal): Ingresos totales del club durante la temporada.
+* `MATCHDAY_REVENUE` (Numérico / Decimal): Ingresos generados por los días de partido.
+* `BROADCAST_REVENUE` (Numérico / Decimal): Ingresos provenientes de derechos de transmisión.
+* `COMMERCIAL_REVENUE` (Numérico / Decimal): Ingresos provenientes de actividades comerciales, patrocinios y merchandising.
+* `CURRENCY` (Texto): Moneda en que se presentan los ingresos originales.
 
 ## Pertinencia
 * Esta base es valiosa para la investigación porque permite contextualizar el precio de los fichajes de la Premier League según la capacidad económica de los clubes. Mientras la base principal registra cuánto pagaron los equipos por los jugadores y la base de inflación permite llevar esos montos a un valor comparable, los ingresos permiten determinar qué tan significativo era ese gasto para el club en cada período.
