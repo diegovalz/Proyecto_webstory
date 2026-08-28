@@ -4,7 +4,29 @@
 Tipo, ¿Qué nos dice el gasto en fichajes sobre el poder económico y la competitividad de la Premier League?
 El objetivo es que los datos permitan cuestionar una idea bastante instalada en el fútbol: que gastar más necesariamente significa tener más éxito. Un club puede invertir cientos de millones en jugadores y no obtener los resultados esperados. 
 * ### Elabora al menos 2 ideas que te gustaría realizar para contar la historia
-  
+Primero, elaborar una línea de tiempo interactiva del dinero de la Premier League. Podría contribuir mostrando cuánto dinero han gastado los clubes de la Premier League en fichajes cada temporada. La visualización, además, permitiría observar el crecimiento del mercado y como cada vez se han gastado más recursos en los fichajes. La idea sería que el lector pueda seleccionar un año y ver:
+* gasto total de la Premier
+* club que más gastó
+* fichaje más caro
+* cantidad de fichajes
+* gasto neto
+
+En segundo lugar, se me ocurre un: “¿Cuánto cuesta ganar?”, que es básicamente comparar dinero invertido versus rendimiento deportivo.
+
+Se podría calcular cuánto gastó cada club en fichajes y compararlo con su posición final en la tabla.
+Esto permitiría encontrar casos contrastantes: clubes que gastaron muchísimo y tuvieron un rendimiento mediocre, frente a clubes que consiguieron buenos resultados con una inversión mucho menor.
+
 * ### Explica a qué arquetipo de historia pertenece tu proyecto (puedes revisar los arquetipos de historia en el material del curso). ¿Por qué crees que tu historia se ajusta a ese arquetipo? ¿Qué elementos de tu historia se relacionan con ese arquetipo?
+
+Considero que mi proyecto pertenece principalmente al arquetipo de Revelación, aunque también incorpora elementos de Explicación.
+
+El arquetipo de Revelación pregunta: “¿Qué está pasando que no sabíamos?”. En este caso, las cifras de los fichajes pueden revelar algo que a simple vista no necesariamente vemos cuando seguimos el fútbol: la dimensión económica y la velocidad con que ha crecido el mercado de jugadores.
+
+El espectador probablemente sabe que Chelsea, Manchester City, Liverpool, Arsenal o Manchester United gastan grandes cantidades de dinero. Sin embargo, al observar los datos durante un período extenso, puede aparecer una realidad mucho más grande: no se trata solamente de algunos clubes ricos, sino de una transformación económica de toda la Premier League.
+
+Los datos pueden revelar anomalías y contrastes. Por ejemplo, en 2025 la Premier League superó por primera vez los £3.000 millones de gasto bruto en un mercado de verano. En 2026, además, el gasto volvió a alcanzar cifras extraordinarias: a fines de agosto ya se hablaba de más de £2.700 millones gastados y de la posibilidad de superar el récord anterior.
+
+También tiene un componente de Explicación, pues explica por qué existe esta capacidad de gasto: los ingresos por televisión, los ingresos comerciales, la competencia por clasificar a torneos europeos, los propietarios y la enorme capacidad de generación de ingresos de los clubes ingleses.
+
 
 
