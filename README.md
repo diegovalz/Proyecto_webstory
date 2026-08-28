@@ -1,5 +1,5 @@
 # Propuesta de Investigación: El "Impuesto Premier League"
-## Radiografía al Sobreprecio, la Inflación y la Distorsión del Mercado de Fichajes (2010–2026)
+## Radiografía al Sobreprecio, la Inflación y la Distorsión del Mercado de Fichajes (2005–2026)
 
 * **Curso:** Narración Gráfica
 * **Repositorio del proyecto:** `https://github.com/[usuario]/[nombre-repositorio]`
@@ -8,26 +8,26 @@
 
 ## 1. Síntesis del proyecto
 
-En los últimos quince años, la Premier League de Inglaterra se ha distanciado financieramente del resto del ecosistema futbolístico global. Respaldada por contratos multimillonarios de derechos televisivos y la constante inyección de capitales privados internacionales, la liga inglesa ha generado una concentración de liquidez sin precedentes. No obstante, esta bonanza económica ha traído consigo un fenómeno distorsivo: la consolidación de un "impuesto implícito" (*Premier League Premium*), donde los clubes británicos pagan tarifas de transferencia significativamente superiores a la tasación técnica real de los futbolistas en el mercado internacional.
+En los últimos veinte años, la Premier League de Inglaterra se ha distanciado financieramente del resto del ecosistema futbolístico global. Respaldada por contratos multimillonarios de derechos televisivos y la constante inyección de capitales privados internacionales, la liga inglesa ha generado una concentración de liquidez sin precedentes. No obstante, esta bonanza económica ha traído consigo un fenómeno distorsivo: la consolidación de un "impuesto implícito", donde los clubes británicos pagan tarifas de transferencia significativamente superiores a la tasación técnica real de los futbolistas en el mercado internacional.
 
-Comúnmente, la narrativa deportiva y dirigencial justifica las astronómicas cifras de traspaso bajo la premisa de que "todo el mercado se ha encarecido" debido a la inflación económica general. Sin embargo, al contrastar el gasto histórico del fútbol inglés con los índices macroeconómicos oficiales de Europa —como el Índice Armonizado de Precios de Consumo (HICP)—, se evidencia una desconexión radical: mientras la economía real ha promediado inflaciones moderadas anuales (salvo picos coyunturales post-pandemia), el costo de los derechos federativos de los futbolistas ha experimentado una escalada exponencial impulsada puramente por la especulación y el exceso de liquidez.
+Comúnmente, la narrativa deportiva y dirigencial justifica las astronómicas cifras de traspaso bajo la premisa de que "todo el mercado se ha encarecido" debido a la inflación económica general. Sin embargo, al contrastar el gasto histórico del fútbol inglés con los índices macroeconómicos oficiales de Europa (HICP), se evidencia una desconexión. Mientras la economía ha promediado inflaciones moderadas anuales (salvo picos coyunturales por pandemia), el costo de los derechos federativos de los futbolistas ha experimentado una escalada exponencial impulsada puramente por la especulación y el exceso de liquidez.
 
-Esta investigación periodística propone una radiografía cuantitativa y visual de las transferencias ejecutadas por los 20 clubes más representativos de la Premier League a lo largo de 15 temporadas (2010/11 a 2025/26). A través del cruce entre el precio real pagado (*transfer fee*), la tasación estimada previa (*market value*) y los índices inflacionarios europeos, el proyecto analizará la dinámica entre **sobreprecio** (compras con sobrecoste) e **infraprecio** (fichajes de alta eficiencia o gangas). El relato buscará desentrañar si pagar este recargo es un lujo de la élite tradicional (*Big Six*) o una trampa financiera obligatoria para los clubes de clase media y baja en su lucha por evitar el descenso.
+Esta investigación periodística propone una radiografía cuantitativa y visual de las transferencias ejecutadas por los 20 clubes más representativos de la Premier League a lo largo de 20 temporadas (2005/06 a 2025/26). A través del cruce entre el precio real pagado (*transfer fee*), la tasación estimada previa (*market value*) y los índices inflacionarios europeos, el proyecto analizará la dinámica entre **sobreprecio** (compras con sobrecoste) e **infraprecio** (fichajes de alta eficiencia o gangas). 
 
 ---
 
 ## 2. Pregunta de investigación e hipótesis
 
-* **Pregunta de investigación:** ¿En qué medida los clubes de la Premier League pagan un sobreprecio sistemático respecto a la tasación de mercado de los futbolistas y a la inflación económica real europea, y cómo se distribuye esta ineficiencia financiera entre la élite y los equipos de mitad de tabla entre 2010 y 2026?
-* **Hipótesis:** La Premier League opera bajo una burbuja de sobreprecio estructural que supera el 30% respecto al valor de mercado tasado, desacoplada por completo de la inflación macroeconómica real (HICP); una distorsión que no responde únicamente al gasto del *Big Six*, sino a primas de urgencia asumidas por clubes medianos para asegurar la permanencia en la división.
+* **Pregunta de investigación:** ¿En qué medida los clubes de la Premier League pagan un sobreprecio sistemático respecto a la tasación de mercado de los futbolistas y a la inflación económica real europea, y cómo se distribuye esta ineficiencia financiera entre la élite y los equipos de mitad de tabla entre 2005 y 2026?
+* **Hipótesis:** La Premier League opera bajo una burbuja de sobreprecio estructural que se supera en gran medida respecto al valor de mercado tasado, desacoplada por completo de la inflación macroeconómica real (HICP); una distorsión que no responde únicamente al gasto del Big Six, sino a primas de urgencia asumidas por clubes medianos para asegurar la permanencia en la división y la ansiedad de los clubes más grandes por permanecer en la punta.
 
 ---
 
 ## 3. Antecedentes del tema
 
 El mercado de pases en el fútbol suele abordarse desde dos ópticas periodísticas tradicionales:
-1. **La cobertura de eventos / *Breaking News*:** Centrada en el rumor, el morbo de las cifras récord individuales y el espectáculo televisivo del cierre de libro de pases (*Deadline Day* en medios como *Sky Sports* o *The Athletic*).
-2. **Los informes corporativos e institucionales:** Publicaciones especializadas como el *Annual Review of Football Finance* de Deloitte o los reportes del *CIES Football Observatory*, que exponen balances agregados y tablas densas, pero carecen de una narrativa gráfica interactiva accesible para el lector general.
+1. **La cobertura de eventos / *Breaking News*:** Centrada en el rumor, el morbo de las cifras récord individuales y el espectáculo televisivo del cierre de libro de pases (Deadline Day en medios como Sky Sports o The Athletic).
+2. **Los informes corporativos e institucionales:** Publicaciones especializadas como el Annual Review of Football Finance de Deloitte o los reportes del CIES Football Observatory, que exponen balances agregados y tablas densas, pero carecen de una narrativa gráfica interactiva accesible para el lector general.
 
 **Aporte de la investigación:** La literatura actual rara vez cruza las bases micro de transferencias jugador por jugador con índices macroeconómicos de inflación real (HICP) y métricas de sobreprecio/infraprecio a lo largo de un período continuo de 15 temporadas. Este proyecto aportará una mirada longitudinal y visual sobre la ineficiencia del gasto y la brecha entre el valor deportivo tasado y el costo financiero desembolsado.
 
@@ -42,19 +42,19 @@ El mercado de pases en el fútbol suele abordarse desde dos ópticas periodísti
 * Clasificación y puntos ligueros de los clubes por temporada para contrastar gasto vs. rendimiento.
 
 ### Datos disponibles vs. datos por conseguir
-* **Datos disponibles:** Base de datos estructurada y filtrada (`transfers_filtered.csv`) con 3.084 registros de los 20 clubes más usuales de la Premier League (2010–2026), identificando 967 compras netas con tarifa y valor de mercado verificables por más de €19.500 millones.
-* **Datos por conseguir/consolidar:** Serie histórica del HICP oficial emitida por Eurostat / Banco Central Europeo y la distribución anual de derechos de transmisión de la Premier League.
+* **Datos disponibles:** Base de datos estructurada y filtrada (`transfers_filtered.csv`) con 3.084 registros de los 20 clubes más usuales de la Premier League (2010–2026), identificando 967 compras netas con tarifa y valor de mercado verificables por más de €19.500 millones. Además contamos con los datos de HICP brindados por el Banco Central Europeo.
+* **Datos por conseguir/consolidar:** El valor de mercado de los 20 clubes más consistentes de la Premier League junto al sobreprecio pagado por los jugadores que fichan.
 
 ### Datos que no existen y cómo se abordarán
 * Las comisiones privadas pagadas a agentes e intermediarios, así como cláusulas contractuales confidenciales, no son públicas. La investigación delimitará su alcance explícitamente a las **tarifas fijas oficiales reportadas (*transfer fee*)** para mantener la consistencia metodológica.
 
 ### Datos públicos vs. privados
-* **Públicos:** Balances de transferencias compilados por *Transfermarkt*, informes anuales de la Premier League, reportes financieros de Deloitte y series históricas del Banco Central Europeo/Eurostat.
-* **Privados:** Salarios netos de los planteles y contratos comerciales confidenciales.
+* **Públicos:** Balances de transferencias compilados por *Transfermarkt*, informes anuales de la Premier League, reportes financieros de Deloitte y series históricas del Banco Central Europeo.
+* **Privados:** Salarios netos de los planteles y contratos comerciales confidenciales (aunque en algunas páginas podemos ver los valores estimados de los planteles con lo que podríamos asumir un balance general, no podemos concluir el 100% de las veces los salarios netos de cada jugador).
 
 ### Confiabilidad de los datos
 * *Transfermarkt* es el estándar de referencia global utilizado por la industria, clubes profesionales y tribunales deportivos para tasaciones relativas.
-* *Eurostat* y *BCE* constituyen fuentes oficiales primarias de máxima fiabilidad estadística macroeconómica.
+* *BCE* es una fuente oficial de máxima fiabilidad estadística macroeconómica.
 
 ---
 
