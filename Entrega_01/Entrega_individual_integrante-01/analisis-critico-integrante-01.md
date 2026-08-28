@@ -1,0 +1,12 @@
+# Análisis crítico Juan Tapia
+## Qué esperas contar
+En el desarrollo de esta investigación periodística, mi principal expectativa es comprobar empíricamente una sospecha histórica sobre el fútbol moderno que es que la Premier League opera en una burbuja financiera desconectada de la economía real. Usualmente se justifica el aumento de los precios de los traspasos argumentando que "todo está más caro", pero espero revelar que esta premisa es falsa. Al contrastar el gasto histórico de los clubes ingleses con el Índice Armonizado de Precios de Consumo (HICP), busco demostrar que la inflación regular (que promedia entre un 2% y 3% anual, salvo con el covid en donde la inflación llegó a un máximo de 10,6 en octubre de 2022) es incapaz de explicar el crecimiento exponencial de las tarifas de transferencia. Lo que espero contar es la historia de un mercado donde el "sobreprecio" no es un mito mediático ni un efecto inflacionario, sino una práctica estructural e irracional que se ha mantenido en los últimos 15 años.
+
+## Ideas para contar la historia visualmente
+
+Para evidenciar la desconexión entre la economía real y los precios de los fichajes, me gustaría integrar un gráfico interactivo. En la página web, esto se verá como dos líneas que avanzan en el tiempo. Una línea plana y estable en la parte inferior (representando la inflación HICP) y una línea ascendente, dinámica y volátil en la parte superior (el gasto real de los clubes). La interactividad permitirá que, al pasar el cursor o hacer clic sobre un punto específico, el usuario despliegue ventanas emergentes con la información exacta del jugador, el año y el monto del sobreprecio.
+Por otro lado, me gustaría añadir una tabla con los fichajes más caros, fichajes que fueron una decepción o los clubes que tuvieron más egresos en algún año pero que quedaron mal posicionados en la tabla. Me gustaría mucho inspirarme de páginas como transfermarkt que tienen muchos datos y son fáciles de buscar.
+
+## Arquetipo
+
+Este proyecto se ajusta al arquetipo de observación. La pregunta central es qué hace el mercado de fichajes cuando lo analizamos a lo largo del tiempo (durante 15 temporadas). Los datos nos permitirán evidenciar contrastes y cambios (o eso espero ver). Mientras la inflación europea muestra una relativa estabilidad (dejando de lado lo ocurrido en la pandemia que se evidencia en los datos del Banco Central), el gasto de los clubes ingleses exhibe un gran salto. Observaremos cómo esta rutina de sobrepago se ha sostenido constantemente.
