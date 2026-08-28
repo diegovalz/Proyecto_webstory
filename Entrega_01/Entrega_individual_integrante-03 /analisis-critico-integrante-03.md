@@ -22,9 +22,7 @@ Considero que mi proyecto pertenece principalmente al arquetipo de Revelación, 
 
 El arquetipo de Revelación pregunta: “¿Qué está pasando que no sabíamos?”. En este caso, las cifras de los fichajes pueden revelar algo que a simple vista no necesariamente vemos cuando seguimos el fútbol: la dimensión económica y la velocidad con que ha crecido el mercado de jugadores.
 
-El espectador probablemente sabe que Chelsea, Manchester City, Liverpool, Arsenal o Manchester United gastan grandes cantidades de dinero. Sin embargo, al observar los datos durante un período extenso, puede aparecer una realidad mucho más grande: no se trata solamente de algunos clubes ricos, sino de una transformación económica de toda la Premier League.
-
-Los datos pueden revelar anomalías y contrastes. Por ejemplo, en 2025 la Premier League superó por primera vez los £3.000 millones de gasto bruto en un mercado de verano. En 2026, además, el gasto volvió a alcanzar cifras extraordinarias: a fines de agosto ya se hablaba de más de £2.700 millones gastados y de la posibilidad de superar el récord anterior.
+El espectador probablemente sabe que Chelsea, Manchester City, Liverpool, Arsenal o Manchester United gastan grandes cantidades de dinero. Sin embargo, al observar los datos durante un período extenso, puede aparecer una realidad mucho más grande: no se trata solamente de algunos clubes ricos, sino de una transformación económica de toda la Premier League. Los datos pueden revelar anomalías y contrastes. 
 
 También tiene un componente de Explicación, pues explica por qué existe esta capacidad de gasto: los ingresos por televisión, los ingresos comerciales, la competencia por clasificar a torneos europeos, los propietarios y la enorme capacidad de generación de ingresos de los clubes ingleses.
 
