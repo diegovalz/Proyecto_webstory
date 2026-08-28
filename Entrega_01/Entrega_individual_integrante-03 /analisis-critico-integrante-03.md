@@ -18,13 +18,6 @@ Esto permitiría encontrar casos contrastantes: clubes que gastaron muchísimo y
 
 * ### Explica a qué arquetipo de historia pertenece tu proyecto (puedes revisar los arquetipos de historia en el material del curso). ¿Por qué crees que tu historia se ajusta a ese arquetipo? ¿Qué elementos de tu historia se relacionan con ese arquetipo?
 
-Considero que mi proyecto pertenece principalmente al arquetipo de Revelación, aunque también incorpora elementos de Explicación.
-
-El arquetipo de Revelación pregunta: “¿Qué está pasando que no sabíamos?”. En este caso, las cifras de los fichajes pueden revelar algo que a simple vista no necesariamente vemos cuando seguimos el fútbol: la dimensión económica y la velocidad con que ha crecido el mercado de jugadores.
-
-El espectador probablemente sabe que Chelsea, Manchester City, Liverpool, Arsenal o Manchester United gastan grandes cantidades de dinero. Sin embargo, al observar los datos durante un período extenso, puede aparecer una realidad mucho más grande: no se trata solamente de algunos clubes ricos, sino de una transformación económica de toda la Premier League. Los datos pueden revelar anomalías y contrastes. 
-
-También tiene un componente de Explicación, pues explica por qué existe esta capacidad de gasto: los ingresos por televisión, los ingresos comerciales, la competencia por clasificar a torneos europeos, los propietarios y la enorme capacidad de generación de ingresos de los clubes ingleses.
-
+Considero que el proyecto pertenece principalmente al arquetipo de Observación, pues se basa principalmente en ver desde fuera los datos que ya se tienen respecto al mercado de fichajes en un lapso determinado de tiempo. Esto permitirá contrastar las variantes y establecer potenciales relaciones causales.
 
 
