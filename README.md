@@ -1,11 +1,6 @@
 # Propuesta de Investigación: El "Impuesto Premier League"
 ## Radiografía al Sobreprecio, la Inflación y la Distorsión del Mercado de Fichajes (2005–2026)
 
-* **Curso:** Narración Gráfica
-* **Repositorio del proyecto:** `https://github.com/[usuario]/[nombre-repositorio]`
-
----
-
 ## 1. Síntesis del proyecto
 
 En los últimos veinte años, la Premier League de Inglaterra se ha distanciado financieramente del resto del ecosistema futbolístico global. Respaldada por contratos multimillonarios de derechos televisivos y la constante inyección de capitales privados internacionales, la liga inglesa ha generado una concentración de liquidez sin precedentes. No obstante, esta bonanza económica ha traído consigo un fenómeno distorsivo: la consolidación de un "impuesto implícito", donde los clubes británicos pagan tarifas de transferencia significativamente superiores a la tasación técnica real de los futbolistas en el mercado internacional.
