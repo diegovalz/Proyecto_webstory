@@ -33,29 +33,20 @@ La base puede ser utilizada para realizar análisis descriptivos, tales como:
 * Evolución del valor de los clubes a través del tiempo.
 * Comparación del valor entre distintos clubes.
 * Identificación de aumentos o disminuciones en el valor de las instituciones.
-* Cálculo de promedios y variaciones porcentuales.
 * Elaboración de gráficos de evolución temporal.
 * Comparación posterior con variables de gasto u otros indicadores financieros.
 
 ## Otras observaciones sobre la base
 
-Es importante considerar que el **valor neto o valoración de un club no equivale necesariamente a sus ingresos, gastos o utilidades**. Son conceptos financieros diferentes y, por lo tanto, no deben interpretarse como equivalentes.
-
-Por ejemplo, Deloitte utiliza los ingresos como una medida comparable para analizar la capacidad de generación económica de los clubes y los divide, entre otras categorías, en ingresos de día de partido, derechos de transmisión y actividades comerciales.
-
-Por esta razón, si la base será utilizada posteriormente para estudiar los gastos de los clubes, ambas variables deben mantenerse separadas. El valor neto puede funcionar como una variable de contexto o de comparación frente a los gastos, pero no representa directamente cuánto dinero gasta un club.
-
-También se debe considerar que no todos los clubes permanecieron en la Premier League durante todo el período 2005-2025. Por lo tanto, la ausencia de un club en un determinado año no necesariamente representa un dato faltante, sino que puede indicar que el club no participó de la competición durante ese período.
-
-Finalmente, las diferencias en la forma en que las fuentes financieras calculan o presentan las valoraciones pueden afectar la comparabilidad entre años. Por ello, resulta recomendable mantener una metodología homogénea y registrar la fuente utilizada para cada observación cuando sea posible.
+Es importante considerar que el **valor neto** responde a una cifra general del valor de mercado del club.
 
 ## Diccionario de datos
 
 | Nombre de la variable | Descripción                                                                            | Tipo de dato     | Valores posibles                             | Observaciones editoriales                                                                                                   |
 | --------------------- | -------------------------------------------------------------------------------------- | ---------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `year`                | Año al que corresponde la valoración del club.                                         | Numérico entero  | 2005-2025                                    | Permite ordenar temporalmente las observaciones.                                                                            |
-| `club`                | Nombre oficial o estandarizado del club de la Premier League.                          | Texto            | Nombres de los clubes registrados en la base | Se recomienda utilizar una denominación uniforme para evitar que un mismo club aparezca como dos entidades diferentes.      |
-| `net_value_gbp_m`     | Valor neto o valoración económica del club expresada en millones de libras esterlinas. | Numérico decimal | Valores positivos expresados en £ millones   | Es la principal variable cuantitativa de la base. No debe interpretarse automáticamente como ingresos, gastos o utilidades. |
+| `club`                | Nombre oficial o estandarizado del club de la Premier League.                          | Texto            | Nombres de los clubes registrados en la base |      |
+| `net_value_gbp_m`     | Valor neto o valoración económica del club expresada en millones de libras esterlinas. | Numérico decimal | Valores positivos expresados en £ millones   | Es la principal variable cuantitativa de la base. |
 
 ### Unidad de observación
 
@@ -63,7 +54,7 @@ Cada fila de la base representa **un club en un año determinado**.
 
 Por ejemplo:
 
-| year | club   | net_value_gbp_m |
+| año | club   | valor neto en millones de libras esterlinas |
 | ---- | ------ | --------------: |
 | 2005 | Club A |          XXXX.X |
 | 2006 | Club A |          XXXX.X |
