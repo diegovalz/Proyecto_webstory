@@ -1,13 +1,10 @@
-# Entrega 02: El "Impuesto Premier League"
-## Radiografía al Sobreprecio y la Distorsión del Mercado de Fichajes (2010–2026)
-
-Este documento presenta la actualización de nuestra investigación, incorporando los ajustes conceptuales derivados de la retroalimentación de la Entrega 01. Hemos refinado nuestro enfoque económico: los datos no apuntan a una "burbuja" especulativa próxima a explotar, sino a la consolidación de un micro-mercado (la Premier League) que opera con una inflación intrínseca, distanciada estructuralmente de la economía europea general.
+El "Impuesto Premier League"
 
 ### 1. Hipótesis actual
-La Premier League ha consolidado un "impuesto implícito" y estructural donde los clubes pagan un sobreprecio sistemático (`transfer_fee`) que supera ampliamente la tasación técnica internacional de los futbolistas (`market_value`). Esta distorsión financiera es un fenómeno intrínseco del micro-mercado inglés y está completamente desacoplada de la inflación macroeconómica real europea (HICP), afectando no solo al *Big Six*, sino empujando a los clubes de mitad de tabla a asumir primas de urgencia.
+La Premier League ha consolidado un "impuesto implícito" y estructural donde los clubes pagan un sobreprecio sistemático (`transfer_fee`) que supera ampliamente la tasación técnica internacional de los futbolistas (`market_value`). Esta distorsión financiera es un fenómeno intrínseco del micro-mercado inglés y está completamente desacoplada de la inflación macroeconómica real europea (HICP), afectando no solo al Big Six (Manchester City, Manchester United, Chelsea, Arsenal, Tottenham, Liverpool), sino empujando a los clubes de mitad de tabla a asumir primas de urgencia.
 
 ### 2. Preguntas de investigación actuales
-Para guiar nuestro trabajo empírico con los datos y aislar la inflación real del sobreprecio, planteamos las siguientes interrogantes:
+Para guiar nuestro trabajo con los datos y aislar la inflación real del sobreprecio, planteamos las siguientes interrogantes:
 * ¿Cuál es la magnitud exacta del "Impuesto Premier League" (sobreprecio pagado vs. tasación de mercado) a lo largo de las últimas 15 temporadas, una vez que los montos se ajustan por la inflación europea (HICP)?
 * ¿Cómo se distribuye esta ineficiencia financiera: asumen los clubes de clase media un porcentaje de sobreprecio mayor que el *Big Six* al realizar compras para asegurar la permanencia?
 * ¿Qué instituciones presentan los índices más altos de ineficiencia financiera (compras con sobrecoste) y qué clubes destacan por capturar infraprecio (compras eficientes o gangas)?
