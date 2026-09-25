@@ -8,11 +8,11 @@ La construcción inicial consistió en la descarga directa del conjunto de datos
 
 Posteriormente, la base original fue sometida a un proceso de limpieza y estandarización programática mediante Python (pandas) para garantizar su replicabilidad y consistencia técnica. Las transformaciones incluyeron:
 
-Ajuste de la nomenclatura de las variables al estándar de la industria `snake_case`.
+- Ajuste de la nomenclatura de las variables al estándar de la industria `snake_case`.
 
-Conversión de variables de texto plano a tipos de datos temporales reales (`datetime`) bajo el estándar internacional ISO 8601.
+- Conversión de variables de texto plano a tipos de datos temporales reales (`datetime`) bajo el estándar internacional ISO 8601.
 
-Normalización de la dimensión temporal a un formato mensual estandarizado (`YYYY-MM`).
+- Normalización de la dimensión temporal a un formato mensual estandarizado (`YYYY-MM`).
 
 Este procesamiento metodológico se diseñó específicamente para permitir un cruce de datos relacional (JOIN) exacto con la base de datos de fichajes de la Premier League.
 
