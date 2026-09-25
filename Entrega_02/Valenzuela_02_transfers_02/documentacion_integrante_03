@@ -1,0 +1,94 @@
+# Documentación
+## Valor neto de los clubes de la Premier League (2005–2025)
+
+## 1. Descripción de la base de datos
+
+Esta base de datos recopila información sobre el **valor neto estimado de los clubes de la Premier League entre 2005 y 2025**. Su objetivo es permitir observar y comparar la evolución económica de los equipos que participaron en la competición durante este período.
+
+La recopilación se realizó de manera manual, buscando en internet los valores disponibles **año por año y club por club**. Debido a que no existe una única fuente que reúna de forma homogénea toda la información para los veinte años analizados, fue necesario recurrir a distintas publicaciones y registros históricos.
+
+Las principales fuentes utilizadas fueron **Forbes** y **Deloitte**, complementadas con otras fuentes disponibles en internet cuando estas no contaban con información para un determinado club o año.
+
+## 2. Proceso de recopilación y limpieza
+
+### Recopilación de los datos
+
+En una primera etapa se identificaron los clubes que participaron en la Premier League durante el período 2005–2025. Posteriormente, se realizaron búsquedas individuales para encontrar información sobre el valor económico de cada club en cada año.
+
+La recopilación fue principalmente manual. Para cada observación se buscó privilegiar información proveniente de fuentes especializadas y reconocidas en el ámbito financiero y deportivo, especialmente Forbes y Deloitte.
+
+Uno de los principales desafíos fue que la disponibilidad de información **no es uniforme a lo largo del período analizado**. Los clubes de mayor tamaño y reconocimiento internacional cuentan con más registros históricos, mientras que para equipos de menor tamaño, recién ascendidos o con menor presencia mediática existen menos estimaciones disponibles.
+
+### Homologación de nombres
+
+Los nombres de los clubes fueron revisados para mantener una denominación uniforme durante toda la base. Esto permitió evitar que un mismo equipo apareciera como categorías diferentes debido a variaciones en su nombre.
+
+Por ejemplo, si una fuente utilizaba el nombre completo de un club y otra una versión abreviada, ambas observaciones fueron homologadas bajo una misma denominación.
+
+### Homologación de valores
+
+Los valores recopilados fueron revisados para mantener un formato comparable dentro de la base. Cuando las fuentes presentaban cifras utilizando distintas unidades o monedas, estas fueron homologadas según el criterio utilizado para construir el gráfico final.
+
+También se eliminaron elementos de formato que pudieran impedir el tratamiento de las cifras como variables numéricas, como símbolos monetarios, separadores o texto adicional.
+
+### Revisión de duplicados y datos faltantes
+
+Se revisó que cada combinación **año–club** correspondiera a una única observación. En aquellos casos donde existían distintas estimaciones para un mismo club y año, se privilegió la fuente considerada más consistente y reconocida respecto del resto de la serie.
+
+Cuando no fue posible encontrar un dato suficientemente respaldado, se evitó presentar la cifra como un valor exacto comprobado. La ausencia de información constituye también una limitación de la base, especialmente para determinados clubes y para los primeros años del período estudiado.
+
+### Revisión final
+
+Finalmente, se revisó la consistencia temporal de los datos, buscando detectar cifras anómalas, errores de digitación o cambios demasiado pronunciados que pudieran provenir de problemas durante la recopilación.
+
+Esta revisión no buscó modificar artificialmente las variaciones existentes, sino identificar posibles errores antes de utilizar la base para realizar comparaciones y visualizaciones.
+
+## 3. Herramientas utilizadas
+
+La búsqueda de información se realizó mediante **buscadores de internet y consulta directa de publicaciones y páginas especializadas**. La información encontrada fue posteriormente organizada en una base tabular y utilizada para construir el gráfico sobre la evolución del valor de los clubes entre 2005 y 2025.
+
+El proceso de limpieza incluyó revisión manual de nombres, años, unidades, valores faltantes, duplicados y consistencia de las cifras.
+
+## 4. Fuentes utilizadas
+
+### Forbes
+
+Forbes fue una de las principales fuentes debido a sus publicaciones periódicas sobre la valorización económica de clubes de fútbol. Sus rankings y estimaciones permiten acceder a información histórica sobre algunos de los principales equipos de la Premier League.
+
+### Deloitte
+
+Deloitte fue utilizada por sus informes especializados sobre la industria del fútbol, particularmente aquellos relacionados con las finanzas y los ingresos de los clubes. Su trayectoria en el análisis económico del fútbol permitió utilizarla como otra fuente de referencia para contrastar y complementar los datos.
+
+### Fuentes complementarias
+
+Para determinados años o clubes en los que Forbes y Deloitte no ofrecían información suficiente, se utilizaron otras fuentes disponibles en internet. Estas fueron especialmente necesarias para clubes de menor reconocimiento o con participaciones más breves en la Premier League.
+
+## 5. Limitaciones y margen de error
+
+La base debe entenderse como una **reconstrucción histórica basada en estimaciones disponibles públicamente**, y no como un registro contable oficial de los clubes.
+
+Existe un margen de error asociado a distintos factores. En primer lugar, el concepto de “valor” de un club corresponde generalmente a una **estimación**, por lo que dos fuentes pueden entregar cifras diferentes para una misma institución y período dependiendo de su metodología.
+
+Además, la antigüedad de algunos datos dificulta encontrar registros comparables. La disponibilidad de información disminuye al retroceder en el tiempo y no todos los clubes fueron evaluados sistemáticamente durante los veinte años analizados.
+
+También existe una diferencia importante en la cantidad y calidad de información disponible según el reconocimiento de cada equipo. Clubes como Manchester United, Liverpool, Arsenal o Chelsea cuentan con numerosos registros históricos, mientras que equipos de menor tamaño o con estadías breves en la Premier League presentan mayores vacíos de información.
+
+Por estas razones, **las cifras no deben interpretarse como valores exactos**, sino como estimaciones que permiten identificar tendencias, diferencias y transformaciones generales en la valorización económica de los clubes.
+
+## 6. Preguntas que permite responder la base
+
+A partir de la base limpia y mediante herramientas como tablas dinámicas, es posible responder, entre otras, las siguientes preguntas:
+
+1. **¿Cómo ha evolucionado el valor estimado de cada club de la Premier League entre 2005 y 2025?**
+2. **¿Qué clubes presentan el mayor crecimiento de su valoración durante el período estudiado?**
+3. **¿Cómo ha cambiado la diferencia de valoración entre los clubes de mayor y menor valor de la Premier League?**
+4. **¿En qué períodos se observan los mayores aumentos o disminuciones en el valor estimado de los clubes?**
+5. **¿La valorización económica de los clubes de la Premier League se ha concentrado en determinados equipos o el crecimiento se distribuye entre el conjunto de la liga?**
+
+Estas preguntas permiten utilizar la base no solo para describir cifras individuales, sino también para estudiar la **evolución y las brechas económicas dentro de la Premier League durante las últimas dos décadas**.
+
+## 7. Criterio de transparencia
+
+Debido a que la construcción de la base implicó recopilar manualmente información proveniente de múltiples fuentes y años, se considera fundamental transparentar sus limitaciones. La combinación de estimaciones financieras, diferencias metodológicas entre fuentes, antigüedad de algunos registros y menor disponibilidad de información para determinados clubes significa que puede existir un margen de error.
+
+Por ello, el gráfico y los análisis derivados de esta base deben ser interpretados principalmente como una herramienta para **observar tendencias históricas y comparar órdenes de magnitud**, más que como una reconstrucción exacta del valor financiero de cada club en cada año.
