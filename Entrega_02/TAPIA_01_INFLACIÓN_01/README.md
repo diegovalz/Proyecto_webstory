@@ -3,9 +3,9 @@
 ## 1. Explicación del Proceso de Limpieza y Decisiones
 
 **Contexto y Auditoría Técnica:** 
-Dado que en la primera entrega la base de datos original fue aprobada sin comentarios negativos ni solicitudes de cambios, decidí ir un paso más allá para asegurar la calidad del proyecto. Sometí el archivo a una auditoría técnica utilizando un chat de Gemini especializado en programación e ingeniería de datos. El objetivo era buscar puntos de mejora estructural que, aunque no fueran errores aritméticos evidentes, pudieran dificultar el análisis o la visualización a futuro.
+Dado que en la primera entrega la base de datos original fue aprobada sin comentarios negativos ni solicitudes de cambios, sometí el archivo a una observación técnica utilizando un chat de Gemini especializado en programación e ingeniería de datos. El objetivo era buscar puntos de mejora que aunque no fueran errores evidentes, pudieran dificultar el análisis o la visualización a futuro.
 
-Gracias a este análisis cruzado, identifiqué que la estructura del archivo original no cumplía con los estándares óptimos para el análisis de series de tiempo (nomenclaturas inconsistentes y fechas en formato texto plano). 
+Gracias a este análisis, identifiqué que la estructura del archivo original no cumplía con los estándares óptimos para el análisis de series de tiempo (nomenclaturas inconsistentes y fechas en formato texto plano). 
 
 **Herramientas utilizadas:**
 *   **Lenguaje:** Python 3.
