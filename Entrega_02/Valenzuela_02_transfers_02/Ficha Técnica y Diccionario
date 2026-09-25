@@ -2,7 +2,7 @@
 
 ## 1. Ficha Técnica
 
-* **Nombre de la base de datos:** Base limpia de Transferencias, Valor Estimado y Sobreprecio en la Premier League.
+* **Nombre de la base de datos:** Base Curada de Transferencias, Valor Estimado y Sobreprecio en la Premier League.
 * **Archivo asociado en el repositorio:** `Transfers_cleaned2.csv`
 * **Fuente primaria y autoría:** David Cariboo - Kaggle.com
   * **Portal de origen:** *Transfermarkt* (GmbH & Co. KG).
@@ -26,13 +26,18 @@
 
 ## 2. Diccionario de Datos
 
-| Nombre de Columna | Variable Conceptual | Tipo de Dato (Python / Pandas) | Formato / Valores Posibles | Descripción Conceptual y Observaciones Editoriales |
-| :--- | :--- | :--- | :--- | :--- |
-| `Fecha` | Fecha de oficialización del traspaso | Cadena de texto / Fecha (`object` / `string`) | `DD-MM-YYYY` (Rango: `14-07-2004` a `12-08-2026`) | Fecha en que la transferencia fue inscrita oficialmente en el sistema federativo. Permite segmentar mercados de verano e invierno. |
-| `Temporada` | Temporada liguera de la operación | Cadena de texto (`object` / `string`) | Formato de dos dígitos: `10/11`, `11/12`, ..., `26/27` | Ciclo deportivo anual. Variable clave para segmentar series de tiempo y contrastar ciclos de derechos de televisión. |
-| `Club de origen_1` | Club vendedor o de procedencia | Cadena de texto (`object` / `string`) | Nombres propios de clubes globales (ej. *Bayern Munich*, *Girona*, *River Plate*) | Institución que traspasa los derechos federativos del deportista. Permite mapear flujos geográficos hacia Inglaterra. |
-| `Club comprador_2` | Club comprador en Premier League | Cadena de texto (`object` / `string`) | 20 clubes estandarizados (ej. *Chelsea*, *Man City*, *Arsenal*, *Wolves*) | Equipo de la Premier League que desembolsa el monto del traspaso. Variable categórica central para comparar políticas de gasto. |
-| `Valor pagado` | Monto real pactado de la transferencia | Numérico entero (`int64`) | 57.000 a 145.000.000 € | Cifra monetaria fija acordada entre clubes en euros (€). Excluye variables sujetas a rendimiento no devengadas. |
-| `Valor estimado` | Tasación técnica de mercado previa | Numérico entero (`int64`) | 50.000 a 150.000.000 € | Valoración económica calculada por la metodología técnica de Transfermarkt previa al momento de la venta en euros (€). |
-| `Deficit` | Porcentaje de sobreprecio o infraprecio | Numérico entero (`int64`) | -97 a 8700 (%) | Métrica analítica porcentual: $\frac{\text{Valor pagado} - \text{Valor estimado}}{\text{Valor estimado}} \times 100$. Positivo = sobrepago; Negativo = compra bajo tasación. |
+| `Fecha` | Fecha de oficialización del traspaso | Cadena de texto / Fecha (`object` / `string`) | `DD-MM-YYYY` (Rango: `14-07-2004` a `12-08-2026`) | Fecha en que la transferencia fue inscrita oficialmente en el sistema federativo. Permite segmentar mercados de verano e invierno.
+
+| `Temporada` | Temporada liguera de la operación | Cadena de texto (`object` / `string`) | Formato de dos dígitos: `10/11`, `11/12`, ..., `26/27` | Ciclo deportivo anual. Variable clave para segmentar series de tiempo y contrastar ciclos de derechos de televisión. 
+
+| `Club de origen_1` | Club vendedor o de procedencia | Cadena de texto (`object` / `string`) | Nombres propios de clubes globales (ej. *Bayern Munich*, *Girona*, *River Plate*) | Institución que traspasa los derechos federativos del deportista. Permite mapear flujos geográficos hacia Inglaterra. 
+
+| `Club comprador_2` | Club comprador en Premier League | Cadena de texto (`object` / `string`) | 20 clubes estandarizados (ej. *Chelsea*, *Man City*, *Arsenal*, *Wolves*) | Equipo de la Premier League que desembolsa el monto del traspaso. Variable categórica central para comparar políticas de gasto. 
+
+| `Valor pagado` | Monto real pactado de la transferencia | Numérico entero (`int64`) | 57.000 a 145.000.000 € | Cifra monetaria fija acordada entre clubes en euros (€). Excluye variables sujetas a rendimiento no devengadas. 
+
+| `Valor estimado` | Tasación técnica de mercado previa | Numérico entero (`int64`) | 50.000 a 150.000.000 € | Valoración económica calculada por la metodología técnica de Transfermarkt previa al momento de la venta en euros (€). 
+
+| `Deficit` | Porcentaje de sobreprecio o infraprecio | Numérico entero (`int64`) | -97 a 8700 (%) | Métrica analítica porcentual: $\frac{\text{Valor pagado} - \text{Valor estimado}}{\text{Valor estimado}} \times 100$. Positivo = sobrepago; Negativo = compra bajo tasación. 
+
 | `Jugador` | Nombre del futbolista transferido | Cadena de texto (`object` / `string`) | Nombres y apellidos estandarizados (ej. *Piero Hincapié*, *Daniel Peretz*) | Identificador deportivo individual del jugador objeto de la transacción. |
