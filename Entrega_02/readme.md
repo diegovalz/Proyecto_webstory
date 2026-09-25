@@ -1,7 +1,7 @@
 # El "Impuesto Premier League"
 
 ### 1. Hipótesis actual
-La Premier League ha consolidado un "impuesto implícito" y estructural donde los clubes pagan un sobreprecio sistemático (`transfer_fee`) que supera ampliamente la tasación técnica internacional de los futbolistas (`market_value`). Esta distorsión financiera es un fenómeno intrínseco del micro-mercado inglés y está completamente desacoplada de la inflación macroeconómica real europea (HICP), afectando no solo al Big Six (Manchester City, Manchester United, Chelsea, Arsenal, Tottenham, Liverpool), sino empujando a los clubes de mitad de tabla a asumir primas de urgencia.
+La Premier League ha consolidado un "impuesto implícito" y estructural donde los clubes pagan un sobreprecio sistemático (`valor_pagado`) que supera ampliamente la tasación técnica internacional de los futbolistas (`valor_estimado`). Esta distorsión financiera es un fenómeno intrínseco del micro-mercado inglés y está completamente desacoplada de la inflación macroeconómica real europea (HICP), afectando no solo al Big Six (Manchester City, Manchester United, Chelsea, Arsenal, Tottenham, Liverpool), sino empujando a los clubes de mitad de tabla a asumir primas de urgencia.
 
 ### 2. Preguntas de investigación actuales
 * ¿Cuál es la magnitud exacta del "Impuesto Premier League" (sobreprecio pagado vs. tasación de mercado) a lo largo de las últimas 15 temporadas, una vez que los montos se ajustan por la inflación europea (HICP)?
