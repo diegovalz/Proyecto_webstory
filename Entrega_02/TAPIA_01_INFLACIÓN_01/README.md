@@ -1,7 +1,5 @@
 # Historial de Procesos y Decisiones: Limpieza de Datos HICP
 
-Este documento detalla el proceso de auditoría, limpieza y estructuración de la base de datos de inflación (HICP), garantizando la total transparencia y replicabilidad del análisis de datos para este reportaje.
-
 ## 1. Explicación del Proceso de Limpieza y Decisiones
 
 **Contexto y Auditoría Técnica:** 
