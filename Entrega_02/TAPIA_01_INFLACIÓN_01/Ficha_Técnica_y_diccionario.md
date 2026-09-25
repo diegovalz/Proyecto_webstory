@@ -6,7 +6,7 @@ Los datos primarios son propiedad y autoría del **Banco Central Europeo**. La e
 ## 2. Metodología de la construcción de la base
 La construcción inicial consistió en la descarga directa del conjunto de datos desde la plataforma pública en formato `.csv`, delimitado a las fechas de interés del proyecto. 
 
-Posteriormente, la base original fue sometida a un proceso de limpieza y estandarización programática mediante Python (pandas) para garantizar su replicabilidad y consistencia técnica. Las transformaciones incluyeron:
+Posteriormente, la base original fue sometida a un proceso de limpieza mediante Python (pandas) para garantizar su replicabilidad y consistencia técnica. Las transformaciones incluyeron:
 
 - Ajuste de la nomenclatura de las variables al estándar de la industria `snake_case`.
 
@@ -14,7 +14,7 @@ Posteriormente, la base original fue sometida a un proceso de limpieza y estanda
 
 - Normalización de la dimensión temporal a un formato mensual estandarizado (`YYYY-MM`).
 
-Este procesamiento metodológico se diseñó específicamente para permitir un cruce de datos relacional (JOIN) exacto con la base de datos de fichajes de la Premier League.
+Este procesamiento se diseñó  para permitir un cruce de datos relacional (JOIN) exacto con la base de datos de fichajes de la Premier League (como no recibí comentarios negativos con respecto a mi base de datos, cree un chat con gemini que simula ser un experto en el área y me dio esos consejos).
 
 ## 3. Alcance de los datos
 El conjunto de datos representa una serie de tiempo que abarca ininterrumpidamente desde **enero de 2005 hasta junio de 2026**, enfocándose exclusivamente en medir la evolución de la inflación dentro de la zona euro.
