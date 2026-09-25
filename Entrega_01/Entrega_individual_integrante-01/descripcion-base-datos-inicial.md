@@ -8,9 +8,9 @@
 **Descripción:** La base de datos contiene el registro histórico mensual del Índice Armonizado de Precios de Consumo (HICP), el cual mide la evolución de la inflación en la zona euro. 
 **Tipo de datos y periodo:** Corresponde a una serie de tiempo cuantitativa. Los datos abarcan desde enero de 2005 hasta junio de 2026.
 **Variables:** 
-  * `DATE` (Temporal / Fecha): El último día del mes registrado (ej. 2005-01-31).
-  * `TIME PERIOD` (Texto): Alfanumérico que indica el año y mes de la observación (ej. 2005Jan).
-  * `HICP Inflation rate` (Numérico / Decimal): El porcentaje de inflación registrado en ese periodo específico.
+`DATE` (Temporal / Fecha): El último día del mes registrado (ej. 2005-01-31).
+`TIME PERIOD` (Texto): Alfanumérico que indica el año y mes de la observación (ej. 2005Jan).
+`HICP Inflation rate` (Numérico / Decimal): El porcentaje de inflación registrado en ese periodo específico.
 
 ## Pertinencia
 * Esta base es valiosa para la investigación porque permite traer los montos históricos del mercado de fichajes a un valor presente y real. Dado que el archivo principal registra las transferencias de la Premier League en euros (variables `transfer_fee` y `market_value_in_eur`), el HICP ajusta estos montos considerando la pérdida de poder adquisitivo a lo largo de las temporadas abarcadas. Esto permitirá demostrar si el sobreprecio pagado por los clubes ingleses ha aumentado o si las cifras responden a una distorsión inflacionaria.
