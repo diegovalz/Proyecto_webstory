@@ -5,7 +5,7 @@
 **Contexto y Auditoría Técnica:** 
 Dado que en la primera entrega la base de datos original fue aprobada sin comentarios negativos ni solicitudes de cambios, sometí el archivo a una observación técnica utilizando un chat de Gemini especializado en programación e ingeniería de datos. El objetivo era buscar puntos de mejora que aunque no fueran errores evidentes, pudieran dificultar el análisis o la visualización a futuro.
 
-Gracias a este análisis, identifiqué que la estructura del archivo original no cumplía con los estándares óptimos para el análisis de series de tiempo (nomenclaturas inconsistentes y fechas en formato texto plano). 
+Gracias a este análisis, identifiqué que la estructura del archivo original no cumplía con los estándares necesarios para el análisis de series de tiempo (nomenclaturas inconsistentes y fechas en formato texto plano). 
 
 **Herramientas utilizadas:**
 *   **Lenguaje:** Python 3.
@@ -14,10 +14,10 @@ Gracias a este análisis, identifiqué que la estructura del archivo original no
 
 **Paso a paso de la limpieza:**
 1.  **Carga de datos:** Importación del archivo crudo original (`archivo-base-datos.CSV`).
-2.  **Estandarización de cabeceras:** Se renombraron las columnas `DATE`, `TIME_PERIOD` y `HICP_Inflation_rate` al estándar `snake_case` (`fecha`, `periodo`, `tasa_inflacion`) para evitar errores de sintaxis en el análisis posterior.
-3.  **Casteo temporal (Datetime):** La columna de fecha original venía como texto (`DD-MM-YY`). Se transformó a formato de fecha ISO 8601 (`YYYY-MM-DD`). *Decisión clave:* Esto es obligatorio para que el software de visualización entienda que es una línea de tiempo continua y no texto aleatorio.
-4.  **Creación de llave relacional:** Se transformó el texto crudo (ej. `2005Jan`) a un formato universal numérico (`2005-01`). *Decisión clave:* Esta columna (`periodo`) actuará como ancla para hacer el cruce de bases de datos (JOIN) con el mes y año en el que se realizaron los fichajes de la Premier League.
-5.  **Exportación:** Se generó el archivo `base_datos_limpia.csv` sin el índice por defecto de pandas para mantener la base liviana y limpia.
+2.  **Estandarización de cabeceras:** Se renombraron las columnas `DATE`, `TIME_PERIOD` y `HICP_Inflation_rate` al estándar `snake_case` (`fecha`, `periodo`, `tasa_inflacion`) para evitar errores de sintaxis en el análisis posterior (eso recomendó gemini y sonaba verosimil).
+3.  **Casteo temporal (Datetime):** La columna de fecha original venía como texto (`DD-MM-YY`). Se transformó a formato de fecha ISO 8601 (`YYYY-MM-DD`). Esto es para que el software de visualización entienda que es una línea de tiempo continua y no texto aleatorio.
+4.  **Creación de llave relacional:** Se transformó el texto crudo (ej. `2005Jan`) a un formato universal numérico (`2005-01`). Esta columna (`periodo`) actuará como ancla para hacer el cruce de bases de datos (JOIN) con el mes y año en el que se realizaron los fichajes de la Premier League.
+5.  **Exportación:** Se generó el archivo `base_datos_limpia.csv`.
 
 ## 2. Fuentes de Datos Utilizadas
 
