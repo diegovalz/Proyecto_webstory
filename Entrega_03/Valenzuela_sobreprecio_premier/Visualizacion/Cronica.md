@@ -4,7 +4,7 @@ En las oficinas deportivas del fútbol europeo existe una regla no escrita que t
 
 Entre 2004 y 2026, los 20 clubes más estables del fútbol inglés desembolsaron más de 19.800 millones de euros en 997 operaciones de compra analizadas, según datos de Transfermarkt. Sin embargo, la tasación técnica estimada de esos mismos jugadores al momento de concretarse los acuerdos rondaba apenas los 15.280 millones de euros. La brecha resultante es demoledora: más de 4.555 millones de euros pagados íntegramente en calidad de sobreprecio neto. Es decir, casi un tercio del dinero invertido por el fútbol británico (un 29,8% de recargo acumulado) se esfumó en primas de urgencia y cláusulas infladas por la liquidez sin fondo de los lucrativos derechos televisivos.
 
-![Sobreprecio Acumulado por Club](vis_01.jpg)
+![Sobreprecio Acumulado por Club](vis_01.png)
 
 La visualización de datos desnuda las dimensiones de este fenómeno institución por institución. En la cúspide del gasto desmedido se erige el Chelsea FC. Con una política de contrataciones compulsiva que se aceleró exponencialmente en el último lustro, el club londinense acumula en solitario un sobreprecio de 837,2 millones de euros a lo largo de 93 traspasos. Pagaron más de 3.000 millones de euros por un lote de futbolistas tasado objetivamente en algo más de 2.000 millones.
 
