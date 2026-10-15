@@ -1,0 +1,1 @@
+La ficha tecnica chat
