@@ -1,0 +1,56 @@
+
+## Ficha técnica de la base de datos
+
+- **Tema:** evolución económica de los clubes de la Premier League.
+- **Período de estudio:** 2005–2025.
+- **Cobertura geográfica:** Inglaterra.
+- **Unidad de análisis:** club de fútbol por año.
+- **Fuentes:** Forbes y Deloitte Football Money League.
+- **Formato:** CSV.
+- **Herramientas de procesamiento:** Python y herramientas de organización de datos.
+- **Herramienta de visualización:** Altair.
+
+### Variables incorporadas
+
+| Variable | Descripción |
+|---|---|
+| Año | Año al que corresponde el registro. |
+| Club | Nombre del equipo de fútbol. |
+| Valor económico | Cifra económica registrada para el club. |
+| Fuente | Publicación de donde se obtuvo la información. |
+
+Los nombres definitivos de las variables y las unidades monetarias deben coincidir con los encabezados del archivo CSV.
+
+## 5. Observaciones y limitaciones
+
+La investigación presenta algunas limitaciones:
+
+- No todos los clubes cuentan con información disponible para todos los años.
+- Las valoraciones económicas pueden variar según la metodología utilizada por cada publicación.
+- Los datos históricos pueden presentar diferencias de cobertura y actualización.
+- Los ingresos publicados por Deloitte no representan necesariamente el valor total de un club.
+- La ausencia de información no debe interpretarse como un valor económico igual a cero.
+
+Estas limitaciones deben considerarse al interpretar las tendencias y realizar comparaciones entre equipos.
+
+## 6. Preguntas que permite responder la visualización
+
+- ¿Cómo ha evolucionado el valor económico de los clubes de la Premier League entre 2005 y 2025?
+- ¿Qué clubes presentan los mayores incrementos económicos?
+- ¿Se ha ampliado la diferencia económica entre los clubes más valiosos y el resto?
+- ¿Qué equipos han experimentado los cambios más significativos durante el período estudiado?
+- ¿Existen años en los que se observan cambios especialmente pronunciados?
+
+## 7. Archivos del proyecto
+
+- `README.md`: documentación metodológica del proyecto.
+- `premier_league.csv`: base de datos utilizada.
+- `visualizacion.ipynb`: código utilizado para generar la visualización.
+- `premier_league.html`: visualización interactiva.
+- `premier_league.jpg`: versión estática de la visualización.
+
+## 8. Reproducibilidad
+
+Para reproducir el trabajo, se debe descargar la base de datos CSV y ejecutar el notebook de Python con las librerías necesarias, incluyendo pandas y Altair.
+
+El notebook debe contener las instrucciones de lectura y procesamiento de datos, así como el código utilizado para generar la visualización final.
