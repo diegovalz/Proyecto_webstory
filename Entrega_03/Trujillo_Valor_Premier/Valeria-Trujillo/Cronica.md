@@ -10,6 +10,9 @@ Pero el crecimiento del fútbol inglés no implica que todos sus protagonistas j
 
 La desigualdad económica es una de las claves para interpretar estos datos. El valor de un club no depende exclusivamente de sus resultados deportivos, sino también de su capacidad para generar ingresos, atraer patrocinadores y proyectarse comercialmente. En consecuencia, dos equipos que compiten durante noventa minutos bajo las mismas reglas pueden hacerlo desde posiciones financieras profundamente distintas.
 
+<img width="2128" height="1156" alt="image" src="https://github.com/user-attachments/assets/5419e4e5-a772-4e3f-906d-0906ce9f0e28" />
+
+
 Esta transformación también obliga a distinguir entre dos indicadores que suelen confundirse: cuánto dinero genera un club y cuánto vale económicamente. Mientras Deloitte Football Money League registra los ingresos de las instituciones, Forbes publica estimaciones de su valoración. Ambas cifras permiten observar dimensiones del negocio futbolístico, pero no representan lo mismo ni pueden compararse directamente como si fueran equivalentes.
 
 El contraste con la inflación europea resulta especialmente revelador para la investigación. Si el encarecimiento de los fichajes respondiera únicamente al aumento general de los precios, sería razonable esperar una evolución relativamente similar entre ambos indicadores. Sin embargo, el mercado futbolístico funciona bajo condiciones particulares: los clubes compiten por un número limitado de jugadores, negocian contratos millonarios y toman decisiones condicionadas por sus recursos y expectativas deportivas.
