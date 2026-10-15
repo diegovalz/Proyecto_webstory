@@ -1,6 +1,5 @@
 # Entrega 03
 **"Impuesto Premier League": Radiografía al Sobreprecio e Inflación en el Mercado de Fichajes (2010–2026)  
- El "Impuesto Premier League": Radiografía al Sobreprecio e Inflación en el Mercado de Fichajes (2010–2026) **  
 ---
 
 ## 1. Hipótesis Actual
