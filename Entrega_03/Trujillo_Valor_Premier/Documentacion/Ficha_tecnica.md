@@ -5,7 +5,7 @@
 
 La base de datos fue elaborada para analizar la evolución económica de los clubes de la Premier League inglesa entre 2005 y 2025. Su objetivo es identificar tendencias de crecimiento, diferencias financieras entre equipos y posibles procesos de concentración económica dentro del fútbol profesional.
 
-La información fue recopilada a partir de publicaciones de Forbes y Deloitte Football Money League, dos fuentes especializadas en el análisis económico de la industria deportiva.
+La información fue recopilada a partir de publicaciones de Forbes y Deloitte Football Money League, dos fuentes especializadas en el análisis económico de la industria deportiva. Además, ciertos datos fueron buscados de manera específica en google.
 
 | Característica | Descripción |
 |---|---|
