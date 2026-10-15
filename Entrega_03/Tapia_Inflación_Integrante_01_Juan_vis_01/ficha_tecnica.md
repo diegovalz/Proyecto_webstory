@@ -5,9 +5,9 @@
 
 ## 1. Características de los Datos
 *   **Naturaleza:** Serie de tiempo macroeconómica unidimensional (frecuencia mensual).
-*   **Alcance temporal:** Enero 2005 — Junio 2026 (258 registros mensuales).
+*   **Alcance temporal:** Enero 2005 — Junio 2026.
 *   **Fuente original:** Portal de Estadísticas del Banco Central Europeo (BCE).
-*   **Estado:** Limpio y procesado (ETL completado en la Entrega 02). Formateado específicamente para consumo algorítmico y visualización en librerías de Python.
+*   **Estado:** Limpio y procesado (desde la Entrega 02). Formateado específicamente para consumo algorítmico y visualización en librerías de Python.
 
 ## 2. Variables Incorporadas (Diccionario de Datos)
 
@@ -18,6 +18,6 @@
 | `tasa_inflacion` | `float64` | `-0.6` a `10.6` | Valor porcentual de la inflación registrada en ese mes específico (Índice HICP). Variable graficada en el eje Y. |
 
 ## 3. Observaciones Editoriales y Metodológicas
-*   **Tratamiento de nulos:** La base de datos fue auditada y no presenta valores nulos (NaN) ni celdas vacías, garantizando la continuidad de la línea en la visualización gráfica.
+*   **Tratamiento de nulos:** La base de datos fue revisada y no presenta valores nulos ni celdas vacías, garantizando la continuidad de la línea en la visualización gráfica.
 *   **Contexto Económico:** Para el correcto análisis de la variable `tasa_inflacion`, debe tenerse en cuenta que el Banco Central Europeo (BCE) establece una meta de estabilidad histórica del 2%. Cualquier variación por debajo o por encima de esta cifra (especialmente los picos observados a partir de 2022) representan las fluctuaciones de la economía real europea.
 *   **Trazabilidad:** Esta base de datos es el producto derivado del archivo crudo entregado en la fase anterior del proyecto. Las nomenclaturas se ajustaron al estándar *snake_case* para evitar errores de sintaxis durante la programación del gráfico.
