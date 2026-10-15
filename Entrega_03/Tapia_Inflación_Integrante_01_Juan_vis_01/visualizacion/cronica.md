@@ -8,7 +8,7 @@ Al usar la misma palabra para mezclar dos cosas totalmente distintas, las direct
 
 Pero los datos dicen otra cosa. El Índice Armonizado de Precios de Consumo (HICP) del Banco Central Europeo demuestra que, durante casi veinte años, la inflación real de la Eurozona fue prácticamente plana, con un promedio de apenas 2.14%. En ese mismo tiempo, el fútbol inglés pagaba de forma sistemática el "Impuesto Premier", un sobreprecio que ronda el 30% por encima del valor real de los jugadores.
 
-\!\[Evolución de la Inflación vs Gasto de la Premier League\](vis_01.png)
+![Evolución de la Inflación vs Gasto de la Premier League](vis_01.png)
 
 La economía europea no justifica los números del fútbol inglés. El mercado de fichajes no sube por el costo de la vida, sino por una distorsión generada por los propios clubes, que al tener más dinero que nunca terminan compitiendo de forma desesperada por los mismos jugadores. No es que el mundo haya encarecido el fútbol. Es que la Premier League, encerrada en su propia burbuja, decidió encarecerse a sí misma.
 
