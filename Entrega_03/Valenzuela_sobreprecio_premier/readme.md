@@ -1,8 +1,4 @@
-# Documentación del Proceso de Visualización de Datos
-**Investigador:** Diego Andrés Valenzuela González  
-**Sub-historia:** El Sobreprecio e Ineficiencia Financiera en los Clubes de la Premier League  
-**Entrega:** Entrega 03 — Visualización Atómica: De datos a información  
-
+# El Sobreprecio e Ineficiencia Financiera en los Clubes de la Premier League  
 ---
 
 ## 1. Explicación del Proceso de Visualización y Decisiones de Diseño
