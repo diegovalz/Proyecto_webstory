@@ -1,61 +1,11 @@
 
-# Evolución del valor económico de los clubes de la Premier League (2005–2025)
+# Ficha técnica: Base de datos del valor económico de los clubes de la Premier League (2005–2025)
 
-## 1. Proceso de visualización
+## 1. Características generales de la base de datos
 
-Desarrollé esta visualización utilizando Python en Google Colab, apoyándome en la librería Pandas para organizar y procesar los datos y en Altair para construir el gráfico interactivo. El objetivo fue mostrar cómo ha evolucionado el valor económico de los clubes de la Premier League durante los últimos 20 años y qué diferencias existen entre los equipos.
+La base de datos fue elaborada para analizar la evolución económica de los clubes de la Premier League inglesa entre 2005 y 2025. Su objetivo es identificar tendencias de crecimiento, diferencias financieras entre equipos y posibles procesos de concentración económica dentro del fútbol profesional.
 
-El trabajo se dividió en cuatro etapas:
-
-**Primero, la recopilación de información.** Reuní datos económicos de los clubes de la Premier League correspondientes al período 2005–2025, utilizando publicaciones de Forbes y Deloitte Football Money League. Estas fuentes fueron seleccionadas por su trayectoria en el análisis financiero del fútbol profesional y por la disponibilidad de información histórica.
-
-**Segundo, la organización y limpieza de los datos.** Importé la información a una base de datos CSV, ordenando los registros según el año y el club correspondiente. Revisé la consistencia de los nombres de los equipos, los períodos disponibles y la existencia de registros incompletos. Esto permitió preparar la información para su procesamiento en Python y facilitar las comparaciones entre clubes.
-
-**Tercero, la construcción de la visualización.** Utilicé Altair para representar la evolución temporal de las cifras económicas. Busqué que el gráfico permitiera identificar tendencias de crecimiento, diferencias entre equipos y cambios significativos durante el período estudiado. La visualización fue diseñada para complementar el análisis grupal sobre el encarecimiento del mercado de fichajes.
-
-**Finalmente, la exportación.** Guardé el gráfico en formato `.html` para incorporarlo de manera interactiva en la webstory y en `.jpg` como respaldo estático.
-
----
-
-## 2. Base de datos utilizada
-
-**Archivo:** `Valor Neto Premier League.csv`
-
-**Por qué la elegí:** Para nuestra investigación grupal necesitábamos entender qué hay detrás del aumento de los precios de los futbolistas. Si los fichajes son cada vez más caros, también resulta necesario analizar cómo ha evolucionado la capacidad económica de los clubes que participan en este mercado.
-
-La base de datos reúne información económica de los equipos de la Premier League entre 2005 y 2025, recopilada a partir de Forbes y Deloitte Football Money League.
-
-La seleccioné porque permite estudiar el crecimiento económico de los clubes, identificar diferencias entre equipos y explorar si el encarecimiento del fútbol está acompañado por una expansión financiera de la industria.
-
-Además, funciona como complemento de las visualizaciones elaboradas por el resto del equipo. Mientras el gráfico de inflación europea permite observar la evolución general de los precios, esta visualización busca mostrar cómo ha cambiado la dimensión económica de los clubes ingleses.
-
-Es importante considerar que Forbes publica estimaciones del valor económico de los clubes, mientras que Deloitte Football Money League informa principalmente sobre sus ingresos. Por lo tanto, ambos indicadores no deben interpretarse como equivalentes ni combinarse directamente sin una justificación metodológica.
-
----
-
-## 3. Preguntas de investigación que responde el gráfico
-
-Esta visualización está diseñada para incorporarse en la webstory final y responder tres preguntas centrales de nuestro reportaje:
-
-**¿Cómo ha evolucionado el valor económico de los clubes de la Premier League durante los últimos 20 años?**
-
-El gráfico permite observar los cambios registrados entre 2005 y 2025, identificar tendencias de crecimiento y reconocer los períodos en los que se producen las variaciones más significativas.
-
-**¿Todos los clubes han experimentado el mismo crecimiento económico?**
-
-La visualización busca identificar las diferencias entre equipos y explorar si el crecimiento de la industria se ha distribuido de manera relativamente homogénea o si se ha concentrado en un grupo reducido de clubes.
-
-**¿El aumento del precio de los futbolistas responde únicamente a la inflación o también al crecimiento económico de los clubes?**
-
-Este gráfico permite contextualizar el encarecimiento del mercado de fichajes y contrastar la evolución económica de los clubes con las visualizaciones sobre inflación europea y transferencias realizadas por el resto del equipo.
-
-En conjunto, buscamos investigar si el encarecimiento del fútbol puede explicarse únicamente por el aumento general de los precios o si también responde a transformaciones económicas propias de la industria.
-
----
-
-## 4. Ficha técnica de la base de datos
-
-### 4.1. Información general
+La información fue recopilada a partir de publicaciones de Forbes y Deloitte Football Money League, dos fuentes especializadas en el análisis económico de la industria deportiva.
 
 | Característica | Descripción |
 |---|---|
@@ -64,14 +14,15 @@ En conjunto, buscamos investigar si el encarecimiento del fútbol puede explicar
 | **Cobertura geográfica** | Inglaterra |
 | **Unidad de análisis** | Club de fútbol por año |
 | **Fuentes de información** | Forbes y Deloitte Football Money League |
-| **Formato de la base de datos** | CSV (valores separados por comas) |
-| **Herramientas de procesamiento** | Python y Pandas |
-| **Herramienta de visualización** | Altair (Python) |
+| **Formato** | CSV (valores separados por comas) |
+| **Herramienta de procesamiento** | Python y Pandas |
+| **Herramienta de visualización** | Altair |
 | **Entorno de trabajo** | Google Colab |
+| **Archivo** | Valor Neto Premier League.csv |
 
-### 4.2. Variables incorporadas
+## 2. Variables incorporadas
 
-La base de datos reúne información económica de los clubes de la Premier League durante el período 2005–2025.
+La base de datos organiza la información económica de los clubes según el año y el equipo correspondiente, permitiendo analizar su evolución histórica.
 
 | Variable | Descripción |
 |---|---|
@@ -80,128 +31,70 @@ La base de datos reúne información económica de los clubes de la Premier Leag
 | **Valor económico** | Cifra económica registrada para el club en el año correspondiente. |
 | **Fuente** | Publicación o informe del que se obtuvo la información. |
 
-**Nota metodológica:** Los nombres de las variables y las unidades monetarias deben coincidir con los encabezados y valores del archivo CSV original.
+**Nota:** Los nombres de las variables y las unidades monetarias deben coincidir con los encabezados y valores utilizados en el archivo CSV original.
 
----
+## 3. Observaciones sobre la base de datos
 
-## 5. Observaciones y limitaciones
+### 3.1. Disponibilidad de información
 
-Durante la recopilación y el procesamiento de los datos se identificaron distintas limitaciones que deben considerarse al interpretar los resultados.
+Una de las principales limitaciones de la investigación es que no todos los clubes cuentan con información económica disponible para cada año del período estudiado.
 
-### 5.1. Disponibilidad de información
+Esto puede generar diferencias en la cantidad de registros entre equipos y limitar determinadas comparaciones históricas.
 
-No todos los clubes cuentan con información económica disponible para la totalidad del período estudiado. Esto puede generar diferencias en la cantidad de observaciones entre equipos y años.
+La ausencia de un registro no significa que el valor económico de un club sea igual a cero, sino que no se dispone de información para ese año.
 
-### 5.2. Diferencias metodológicas entre fuentes
+### 3.2. Diferencias metodológicas entre fuentes
 
-Las publicaciones utilizadas presentan diferencias en la forma de medir la situación económica de los clubes:
+Las publicaciones utilizadas responden a metodologías diferentes.
 
-- **Forbes:** publica estimaciones sobre el valor económico de los equipos.
-- **Deloitte Football Money League:** presenta información sobre los ingresos generados por los clubes.
+- **Forbes:** publica estimaciones del valor económico de los clubes, considerando distintos aspectos de su actividad financiera y comercial.
+- **Deloitte Football Money League:** presenta información sobre los ingresos generados por los equipos a partir de sus actividades económicas.
 
-Esta distinción es relevante porque los ingresos anuales no representan necesariamente el valor económico total de una institución.
+Esta distinción es fundamental porque el valor económico total de un club y sus ingresos anuales no representan la misma variable.
 
-Por lo tanto, las cifras de ambas fuentes deben identificarse correctamente para evitar comparaciones entre indicadores que miden fenómenos diferentes.
+Por lo tanto, ambas fuentes deben identificarse correctamente y sus cifras no deben combinarse directamente como si midieran un mismo indicador.
 
-### 5.3. Comparabilidad histórica
+### 3.3. Comparabilidad histórica
 
-Los datos correspondientes a distintos años pueden presentar diferencias en su cobertura, disponibilidad y metodología de estimación.
+Las estimaciones económicas pueden presentar diferencias entre años debido a cambios en las metodologías, la disponibilidad de información y las condiciones del mercado.
 
-Estas variaciones deben considerarse al comparar la evolución económica de los clubes durante las últimas dos décadas.
+Además, los valores nominales pueden verse afectados por la inflación y por las variaciones monetarias.
 
-### 5.4. Datos faltantes
+Por esta razón, las comparaciones históricas deben considerar las unidades monetarias utilizadas y las posibles diferencias entre las fuentes originales.
 
-La ausencia de información para un determinado club o año no significa que su valor económico sea igual a cero.
+### 3.4. Cobertura de los clubes
 
-Los registros sin información deben identificarse como datos faltantes para evitar interpretaciones incorrectas.
+La información disponible puede variar entre equipos según su relevancia económica y su presencia en los informes consultados.
 
-### 5.5. Alcances del análisis
+Esto significa que los clubes con mayor participación en publicaciones financieras pueden contar con una cobertura histórica más amplia que otros equipos.
 
-La visualización permite identificar tendencias económicas, diferencias entre clubes y transformaciones durante el período estudiado.
+### 3.5. Limitaciones interpretativas
 
-Sin embargo, los resultados no permiten establecer por sí solos una relación causal entre el crecimiento económico de los clubes y el aumento de los precios de los fichajes.
+La visualización permite identificar tendencias económicas y diferencias entre clubes, pero no demuestra por sí sola las causas de dichas variaciones.
 
-Para explorar esa relación es necesario complementar los resultados con los datos de transferencias e inflación analizados por el resto del equipo.
+El crecimiento del valor económico de un equipo puede estar relacionado con distintos factores, como los derechos de transmisión, los ingresos comerciales, los resultados deportivos y la inversión privada.
 
----
+Asimismo, el aumento del valor económico de los clubes no demuestra automáticamente que este sea la causa del encarecimiento de los fichajes.
 
-## 6. Preguntas adicionales que permite responder la visualización
+Para estudiar esa relación es necesario complementar la información con los datos de transferencias e inflación utilizados en la investigación grupal.
 
-Además de las preguntas centrales del reportaje, el gráfico permite explorar otros aspectos de la evolución económica del fútbol inglés:
+## 4. Alcances de la base de datos
 
-1. ¿Qué clubes presentan los mayores incrementos económicos durante el período estudiado?
-2. ¿Se ha ampliado la diferencia entre los clubes más valiosos y el resto de los equipos?
-3. ¿Qué equipos han experimentado las transformaciones económicas más significativas?
-4. ¿Existen años en los que se observan aumentos o disminuciones especialmente pronunciados?
-5. ¿Qué tendencias permiten identificar posibles procesos de concentración económica dentro de la Premier League?
+Esta base permite estudiar la evolución económica de los clubes de la Premier League durante las últimas dos décadas y explorar las diferencias entre las instituciones que participan en la competencia.
 
-Estas preguntas permiten profundizar en las desigualdades económicas del fútbol inglés y complementar el análisis del mercado de fichajes.
+Su principal aporte a la investigación es proporcionar contexto financiero al aumento de los precios en el mercado de fichajes.
 
----
+Al combinar sus resultados con las visualizaciones de inflación europea y transferencias, es posible investigar si el encarecimiento del fútbol forma parte de una transformación económica más amplia de la industria.
 
-## 7. Archivos del proyecto
+## 5. Consideraciones para la reutilización
 
-El proyecto contempla los siguientes archivos:
+Para utilizar esta base de datos en nuevas investigaciones se recomienda:
 
-| Archivo | Descripción |
-|---|---|
-| `README.md` | Documentación metodológica y explicación del proyecto. |
-| `Ficha_Tecnica.md` | Características, variables y limitaciones de la base de datos. |
-| `Valor Neto Premier League.csv` | Base de datos utilizada para construir la visualización. |
-| `visualizacion.ipynb` | Notebook de Python con el código utilizado para procesar y visualizar los datos. |
-| `premier_league.html` | Versión interactiva de la visualización desarrollada con Altair. |
-| `premier_league.jpg` | Versión estática de la visualización. |
-| `Cronica.md` | Texto periodístico que acompaña e interpreta la visualización. |
+1. Verificar las fuentes originales de las cifras económicas.
+2. Identificar correctamente las unidades monetarias.
+3. Distinguir entre valoraciones de clubes e ingresos anuales.
+4. Considerar los registros faltantes al realizar comparaciones.
+5. Revisar la comparabilidad de las cifras entre distintos años.
+6. Documentar cualquier transformación adicional aplicada a los datos.
 
----
-
-## 8. Reproducibilidad
-
-El proyecto busca garantizar la transparencia y replicabilidad del proceso de recopilación, procesamiento y visualización de los datos.
-
-Para reproducir el trabajo se deben seguir los siguientes pasos:
-
-### Paso 1. Descargar los archivos
-
-Descargar desde el repositorio de GitHub:
-
-- `Valor Neto Premier League.csv`
-- `visualizacion.ipynb`
-
-### Paso 2. Preparar el entorno de trabajo
-
-Abrir Google Colab o un entorno compatible con Jupyter Notebook.
-
-El código utiliza principalmente las siguientes librerías:
-
-- **Pandas:** para importar, organizar y procesar la base de datos.
-- **Altair:** para construir la visualización interactiva.
-
-### Paso 3. Importar la base de datos
-
-Abrir el notebook `visualizacion.ipynb` y cargar el archivo CSV mediante Pandas.
-
-Es necesario verificar que la ruta del archivo corresponda a su ubicación en el entorno de trabajo.
-
-### Paso 4. Ejecutar el procesamiento
-
-Ejecutar las celdas del notebook en el orden establecido.
-
-Este proceso debe permitir reproducir la preparación de los datos y las transformaciones necesarias para construir el gráfico.
-
-### Paso 5. Generar la visualización
-
-Ejecutar el código correspondiente a Altair para obtener la visualización final.
-
-### Paso 6. Exportar los resultados
-
-Guardar la visualización en los siguientes formatos:
-
-- `.html`: versión interactiva para la webstory.
-- `.jpg`: versión estática para respaldo y presentación.
-
-### Consideraciones finales
-
-La reproducibilidad depende de utilizar la misma base de datos y aplicar los procedimientos documentados en el notebook.
-
-Cualquier modificación en las fuentes, variables, criterios de limpieza o procedimientos de procesamiento puede generar diferencias respecto de los resultados originales.
+Estas precauciones permiten mejorar la transparencia, interpretación y reproducibilidad del análisis.
