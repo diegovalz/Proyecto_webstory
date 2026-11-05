@@ -5,7 +5,7 @@
 ---
 
 ## 1. Enlace a la Web Publicada
-* **GitHub Pages:** https://diegovalz.github.io/Proyecto_webstory/Entrega_04/Valenzuela_03/sitio_web/index.html
+* **GitHub Pages:** https://diegovalz.github.io/Proyecto_webstory/Entrega_04/Valenzuela_03/Sitio_Web/Index.html
 
 ---
 
