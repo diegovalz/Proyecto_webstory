@@ -12,7 +12,7 @@
 ## 2. Descripción de la Pieza Narrativa Individual
 La página web desarrollada en formato HTML básico (`sitio_web/index.html`) funciona como wireframe estructural e integra la crónica periodística individual (*"El doble discurso de la Premier"*) con la visualización atómica de la inflación europea (`imagen_visualizacion.png`).
 
-La estructura emplea las etiquetas HTML revisadas en clases (`<h1>`, `<h2>`, `<p>`, `<img>`, `<a>`, `<div>`, `<hr>`) sin estilos CSS adicionales, articulando el contraste entre el Índice Armonizado de Precios de Consumo (HICP) del Banco Central Europeo —que promedió un 2,14% manteniendo estabilidad cercana a la meta del 2% durante casi dos décadas— y la burbuja especulativa del mercado de fichajes inglés (~30% de sobreprecio estructural).
+La estructura emplea las etiquetas HTML revisadas en clases (`<h1>`, `<h2>`, `<p>`, `<img>`, `<a>`, `<div>`, `<hr>`) sin estilos CSS adicionales, articulando el contraste entre el Índice Armonizado de Precios de Consumo (HICP) del Banco Central Europeo (que promedió un 2,14% manteniendo estabilidad cercana a la meta del 2% durante casi dos décadas) y la burbuja especulativa del mercado de fichajes inglés (~30% de sobreprecio estructural).
 
 ---
 
