@@ -1,6 +1,6 @@
 # Entrega 05: Webstory — Versión Preliminar (Beta)
 
-**Titular del Reportaje:** *La prima del oro británico: Cuando el mercado cobra el «Impuesto Premier» (2005–2026)*  
+**Titular del Reportaje:** *El «Impuesto Premier League»: por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes (2005–2026)*  
 **Integrantes:** Juan Tapia, Valeria Trujillo y Diego Valenzuela  
 **Curso:** Narración Gráfica de No Ficción (COM-208) — Pontificia Universidad Católica de Chile  
 

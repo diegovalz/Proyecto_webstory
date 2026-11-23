@@ -3,336 +3,308 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>El Impuesto Premier — Radiografía al sobreprecio en la Premier League (2005–2026)</title>
-  <meta name="description" content="Radiografía al sobreprecio e inflación en el mercado de fichajes del fútbol inglés (2005-2026). Análisis de 997 operaciones y más de €19.800M invertidos." />
+  <title>El Impuesto Premier League: Por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes</title>
+  <meta name="description" content="Investigación periodística de datos sobre 997 traspasos de la Premier League (2005–2026): €4.555 millones en sobreprecio neto frente a una inflación europea del 2,14%." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="chartTooltip" class="chart-tooltip" role="tooltip" aria-hidden="true"></div>
 
-  <!-- Sticky Glassmorphic Navigation Bar (Origin Financial Style) -->
+  <!-- Masthead Periodístico Estilo Reuters Graphics / The Athletic -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="#inicio" class="brand-mark">
-        <span class="brand-icon">£</span>
-        <span class="brand-wordmark"><em>Impuesto</em> Premier</span>
+        <span class="brand-tag">INVESTIGACIÓN</span>
+        <span class="brand-wordmark">EL IMPUESTO PREMIER <span>· COM-208 UC</span></span>
       </a>
       <nav class="nav-links" aria-label="Navegación principal">
-        <a href="#sobreprecio" class="nav-glass-btn">Sobreprecio</a>
-        <a href="#inflacion" class="nav-glass-btn">Inflación BCE</a>
-        <a href="#clubes" class="nav-glass-btn">20 Clubes</a>
-        <a href="#metodologia" class="nav-glass-btn">Base de Datos</a>
+        <a href="#fichajes" class="nav-link">Fichajes Récord</a>
+        <a href="#sobreprecio" class="nav-link">01. Sobreprecio por Club</a>
+        <a href="#inflacion" class="nav-link">02. Inflación BCE</a>
+        <a href="#clubes" class="nav-link">03. Valor Patrimonial</a>
+        <a href="#metodologia" class="nav-link">Simulador y Base</a>
       </nav>
       <div class="header-actions">
-        <a href="#equipo" class="nav-text-link">Equipo UC</a>
-        <a href="#sobreprecio" class="btn-primary-cta">Explorar datos <span>→</span></a>
+        <a href="#sobreprecio" class="btn-header-action">Explorar gráficos ↓</a>
         <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Abrir menú">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
         </button>
       </div>
     </div>
     <nav class="mobile-drawer" id="mobileDrawer" aria-label="Navegación móvil">
-      <a href="#inicio" class="nav-glass-btn">Inicio</a>
-      <a href="#sobreprecio" class="nav-glass-btn">01 · Sobreprecio</a>
-      <a href="#inflacion" class="nav-glass-btn">02 · Inflación BCE</a>
-      <a href="#clubes" class="nav-glass-btn">03 · Evolución 20 Clubes</a>
-      <a href="#metodologia" class="nav-glass-btn">04 · Metodología y Tabla</a>
-      <a href="#equipo" class="nav-glass-btn">05 · Equipo</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#fichajes">Fichajes bajo la lupa</a>
+      <a href="#sobreprecio">01 · Sobreprecio por club (Diego Valenzuela)</a>
+      <a href="#inflacion">02 · Inflación BCE vs. Premier (Juan Tapia)</a>
+      <a href="#clubes">03 · Evolución patrimonial 2005–2025 (Valeria Trujillo)</a>
+      <a href="#metodologia">Simulador y Tabla de los 20 Clubes</a>
     </nav>
     <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
   </header>
 
   <main>
-    <!-- 1. HERO SECTION — Sky Atmosphere + Whisper-Weight 300 Display + AI Data Advisor -->
+    <!-- 1. PORTADA PERIODÍSTICA (REUTERS INVESTIGATES / THE ATHLETIC) -->
     <section id="inicio" class="hero">
-      <div class="container hero-center">
-        <div class="promo-eyebrow-badge">
-          <span>RADIOGRAFÍA FINANCIERA · 2005–2026 — 997 OPERACIONES</span>
-        </div>
-
-        <h1 class="display-headline"><em>La prima</em> del oro británico</h1>
-
-        <p class="section-subhead">
-          Cuando el mercado europeo cobra el «Impuesto Premier»: cómo veinte años de liquidez televisiva generaron €4.555,1 millones de sobreprecio estructural mientras la inflación real europea permanecía en 2,14%.
-        </p>
-
-        <div class="hero-cta-row">
-          <a href="#sobreprecio" class="btn-primary-cta">Recorrer la investigación <span>→</span></a>
-          <a href="#metodologia" class="btn-ghost-outline">Inspeccionar los 20 clubes</a>
-        </div>
-
-        <!-- Origin Financial AI / Natural-Language Data Prompt Component -->
-        <div class="ai-prompt-box" aria-label="Consultor interactivo de la base de datos">
-          <form class="ai-prompt-form" id="aiPromptForm">
-            <input
-              type="text"
-              id="aiPromptInput"
-              class="ai-prompt-input"
-              placeholder="Pregunta a la base de datos: ¿Cuánto sobrepagó el Chelsea o cuál fue la inflación del BCE?"
-              aria-label="Consultar club o indicador en la base de datos"
-            />
-            <button type="submit" class="ai-prompt-submit" aria-label="Consultar datos">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </button>
-          </form>
-          <div class="ai-prompt-suggestions">
-            <button type="button" class="pill-badge-btn" data-ai-query="Chelsea">Chelsea (€837,2M)</button>
-            <button type="button" class="pill-badge-btn" data-ai-query="Manchester United">Man Utd (+272,8%)</button>
-            <button type="button" class="pill-badge-btn" data-ai-query="Inflación BCE">Inflación BCE (2,14%)</button>
-            <button type="button" class="pill-badge-btn" data-ai-query="Newcastle">Newcastle (+154,3%)</button>
+      <div class="container">
+        <div class="hero-header-block">
+          <div class="hero-rubric-bar">
+            <span class="rubric-pill">REPORTAJE ESPECIAL DE DATOS</span>
+            <span class="rubric-league">FÚTBOL INGLÉS · MERCADO DE TRANSFERENCIAS (2005–2026)</span>
           </div>
-          <div class="ai-answer-panel" id="aiAnswerPanel" aria-live="polite">
-            <div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:4px;">SÍNTESIS EJECUTIVA · 2005–2026</div>
-            Los 20 clubes ingleses más estables desembolsaron <strong class="tabular">€19.841,9M</strong> por futbolistas tasados en <strong class="tabular">€15.286,8M</strong>: un sobreprecio neto de <strong class="tabular" style="color:var(--color-iris-gleam);">€4.555,1M (+29,8%)</strong>. Selecciona o escribe el nombre de cualquier club arriba para auditar su balance.
-          </div>
-        </div>
 
-        <!-- Award Laurel Badges (Sources & Verification) -->
-        <div class="laurel-row" aria-label="Fuentes de verificación de datos">
-          <div class="laurel-badge">
-            <svg width="20" height="32" viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M18 32C10 28 6 20 8 6C12 10 15 18 18 32Z"/></svg>
-            <div class="laurel-text-wrap">
-              <span class="laurel-source">Transfermarkt</span>
-              <span class="laurel-sub">997 TRASPASOS AUDITADOS</span>
+          <h1 class="hero-title">El «Impuesto Premier League»: por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes</h1>
+
+          <p class="hero-deck">
+            Una auditoría a 997 contrataciones entre 2005 y 2026 demuestra que los 20 clubes principales de Inglaterra desembolsaron €4.555,1 millones por encima del valor real de mercado de sus futbolistas. Al contrastar las cifras con la inflación oficial del Banco Central Europeo (2,14%), la excusa del costo de la vida se derrumba.
+          </p>
+
+          <div class="byline-block">
+            <div class="byline-authors">
+              Por <strong>Juan Tapia</strong>, <strong>Valeria Trujillo</strong> y <strong>Diego Valenzuela</strong> · Periodismo de Datos UC
             </div>
-            <svg width="20" height="32" viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 32C14 28 18 20 16 6C12 10 9 18 6 32Z"/></svg>
-          </div>
-          <div class="laurel-badge">
-            <svg width="20" height="32" viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M18 32C10 28 6 20 8 6C12 10 15 18 18 32Z"/></svg>
-            <div class="laurel-text-wrap">
-              <span class="laurel-source">Eurostat &amp; BCE</span>
-              <span class="laurel-sub">SERIE HICP 2005–2026</span>
+            <div>
+              Fuentes verificadas: <strong>Transfermarkt</strong> · <strong>Banco Central Europeo (Eurostat HICP)</strong> · <strong>Forbes &amp; Deloitte</strong>
             </div>
-            <svg width="20" height="32" viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 32C14 28 18 20 16 6C12 10 9 18 6 32Z"/></svg>
-          </div>
-          <div class="laurel-badge">
-            <svg width="20" height="32" viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M18 32C10 28 6 20 8 6C12 10 15 18 18 32Z"/></svg>
-            <div class="laurel-text-wrap">
-              <span class="laurel-source">Forbes &amp; Deloitte</span>
-              <span class="laurel-sub">VALORACIÓN DE CLUBES</span>
-            </div>
-            <svg width="20" height="32" viewBox="0 0 24 36" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 32C14 28 18 20 16 6C12 10 9 18 6 32Z"/></svg>
           </div>
         </div>
 
-        <!-- Graphite Showcase Module (90px internal padding on desktop) -->
-        <div class="showcase-band">
-          <figure class="showcase-frame" style="margin:0;">
-            <div class="showcase-media">
-              <img
+        <figure class="hero-lead-figure">
+          <div class="hero-media-wrap">
+            <img
               src="data:image/jpeg;base64,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"
               alt="Vista nocturna de un estadio de la Premier League inglesa iluminado con reflejos financieros sobre el palco de prensa"
               referrerpolicy="no-referrer"
             />
-            </div>
-            <figcaption class="showcase-caption">
-              <span>LONDRES &amp; MÁNCHESTER · EPICENTRO DE LA LIQUIDEZ TELEVISIVA EUROPEA (2005–2026)</span>
-              <span>CRÉDITO: GETTY IMAGES / PERIODISMO DE DATOS UC</span>
-            </figcaption>
-          </figure>
+          </div>
+          <figcaption class="figure-caption">
+            <span>Los contratos récord de televisión convirtieron a la Premier League en el motor financiero de Europa, pero también en el comprador más penalizado por el mercado.</span>
+            <span>Fotografía: Archivo Deportes UC / Getty Images</span>
+          </figcaption>
+        </figure>
+
+        <!-- Cuadro de Hallazgos Clave estilo Reuters Graphics -->
+        <div class="kpi-ledger" aria-label="Cifras principales de la investigación">
+          <div class="kpi-cell">
+            <div class="kpi-tag">GASTO TOTAL AUDITADO</div>
+            <div class="kpi-number tabular">€19.841,9M</div>
+            <div class="kpi-desc">Desembolsados por los 20 clubes ingleses en 997 fichajes entre 2005 y 2026.</div>
+          </div>
+          <div class="kpi-cell">
+            <div class="kpi-tag">TASACIÓN REAL DE MERCADO</div>
+            <div class="kpi-number market tabular">€15.286,8M</div>
+            <div class="kpi-desc">Valor técnico estimado en Transfermarkt previo a la firma de cada traspaso.</div>
+          </div>
+          <div class="kpi-cell">
+            <div class="kpi-tag">SOBREPRECIO («IMPUESTO PREMIER»)</div>
+            <div class="kpi-number overpay tabular">+€4.555,1M</div>
+            <div class="kpi-desc">Recargo neto pagado en exceso (+29,8% sobre el valor real de los futbolistas).</div>
+          </div>
+          <div class="kpi-cell">
+            <div class="kpi-tag">INFLACIÓN REAL EUROPEA (BCE)</div>
+            <div class="kpi-number market tabular">2,14%</div>
+            <div class="kpi-desc">Promedio anual del índice HICP en la Eurozona (meta histórica del BCE: 2,0%).</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 2. THREE CHROMATIC FEATURE CATEGORY CARDS + SILVER INVERTED STAT BLOCK -->
-    <section class="story-section">
+    <!-- 2. EXPEDIENTE DE FICHAJES: JUGADORES RECORTADOS SIN FONDO Y DESGLOSE POR OPERACIÓN -->
+    <section id="fichajes" class="story-section">
       <div class="container">
-        <div class="section-header-center">
-          <span class="mono-label">ARQUITECTURA DE LA INVESTIGACIÓN</span>
-          <h2 class="section-display-title"><em>Tres</em> dimensiones de una anomalía financiera</h2>
-          <p class="section-subhead">
-            En las oficinas deportivas del continente rige una ley implícita: cuando quien negocia viste los colores de la Premier League, la cotización se multiplica antes de firmar.
-          </p>
+        <div class="prose reading-column">
+          <p class="drop-cap">En las direcciones deportivas de Lisboa, Ámsterdam, Bilbao o San Sebastián existe una regla no escrita que todo negociador aplica sin excepción: cuando el club que llama por teléfono compite en la Premier League inglesa, la tasación del futbolista se multiplica automáticamente. Lejos de ser un mito de vestuario, dos décadas de registros contables confirman que casi uno de cada tres euros invertidos por los clubes británicos corresponde a sobreprecio puro.</p>
         </div>
 
-        <!-- 3-Column Full-Bleed Chromatic Category Tiles (Origin Financial Signature) -->
-        <div class="category-grid">
-          <a href="#sobreprecio" class="feature-category-card iris">
-            <div class="feature-card-top">
-              <span class="mono-label">EJE 01 · DIEGO VALENZUELA</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-              </svg>
-            </div>
+        <div class="dossier-wrap" aria-label="Expediente visual de fichajes con mayor sobreprecio">
+          <div class="dossier-header">
             <div>
-              <h3 class="feature-card-title"><em>El recargo</em> por club</h3>
-              <p class="feature-card-desc">
-                Radiografía a las 997 operaciones de compra: Chelsea acumula €837,2M en sobreprecio neto y Manchester United lidera el desvío porcentual con 272,8%.
-              </p>
+              <span class="kicker-label">EXPEDIENTE INTERACTIVO · LOS ROSTROS DE LA BURBUJA</span>
+              <h2 class="dossier-title">Radiografía a las transferencias más infladas del fútbol inglés</h2>
+              <p class="dossier-sub">Cada ficha desglosa cuánto valía realmente el jugador según Transfermarkt (en verde) y cuántos millones adicionales pagó el club inglés como «Impuesto Premier» (en rojo). Haz clic en cualquier tarjeta o club para inspeccionar sus 3 casos récord.</p>
             </div>
-          </a>
-
-          <a href="#inflacion" class="feature-category-card orchid">
-            <div class="feature-card-top">
-              <span class="mono-label">EJE 02 · JUAN TAPIA</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="feature-card-title"><em>El doble</em> discurso</h3>
-              <p class="feature-card-desc">
-                Contraste con el Índice Armonizado de Precios de Consumo (HICP) del BCE: 2,14% de inflación real frente a una burbuja interna que supera el 30% de sobreprecio.
-              </p>
-            </div>
-          </a>
-
-          <a href="#clubes" class="feature-category-card periwinkle">
-            <div class="feature-card-top">
-              <span class="mono-label">EJE 03 · VALERIA TRUJILLO</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="feature-card-title"><em>Imperios</em> en alza</h3>
-              <p class="feature-card-desc">
-                Veinte años de evolución patrimonial (2005–2026): cómo los derechos televisivos y fondos soberanos separaron al Big Six de los clubes que sobrepagan por sobrevivir.
-              </p>
-            </div>
-          </a>
-        </div>
-
-        <!-- Silver Inverted Card (#cacaca surface, #000000 text) -->
-        <div class="stat-inverted-card" aria-label="Magnitudes principales del estudio">
-          <div class="inverted-header">
-            <span class="mono-label" style="color:#000000;">EVIDENCIA EMPÍRICA CONSOLIDADA · 20 TEMPORADAS</span>
-            <h3 class="inverted-title"><em>Cuatro</em> cifras que definen la burbuja británica</h3>
-          </div>
-          <div class="kpi-strip">
-            <div class="kpi-item">
-              <div class="kpi-value tabular">€19.841,9M</div>
-              <div class="kpi-label">Total desembolsado por los 20 clubes en las 997 transferencias analizadas.</div>
-            </div>
-            <div class="kpi-item">
-              <div class="kpi-value tabular">€15.286,8M</div>
-              <div class="kpi-label">Tasación técnica objetiva de mercado previa a cada acuerdo en Transfermarkt.</div>
-            </div>
-            <div class="kpi-item">
-              <div class="kpi-value tabular">+€4.555,1M</div>
-              <div class="kpi-label">Sobreprecio neto acumulado (+29,8% de recargo estructural pagado al mercado).</div>
-            </div>
-            <div class="kpi-item">
-              <div class="kpi-value tabular">2,14%</div>
-              <div class="kpi-label">Inflación real promedio anual en la Eurozona (HICP del BCE, meta histórica 2,0%).</div>
+            <div class="chart-legend-bar" style="margin:0;">
+              <span class="legend-item"><span class="legend-swatch" style="background:var(--data-market);"></span> Tasación real (€M)</span>
+              <span class="legend-item"><span class="legend-swatch" style="background:var(--data-overpay);"></span> Sobreprecio pagado (+€M)</span>
             </div>
           </div>
-        </div>
 
-        <!-- Interactive Visual Metaphor: Football Goals Balance + Podium -->
-        <div class="visual-grid">
-          <div class="surface-card">
-            <p class="card-kicker">BALANZA DE CAPITAL · CADA BALÓN REPRESENTA UN TRAMO DE INVERSIÓN</p>
-            <h3 class="card-title"><em>Dos arcos</em> frente a frente: el gasto desborda al valor real</h3>
-            <div class="goal-controls-bar">
-              <div class="scale-controls" role="group" aria-label="Seleccionar club o muestra completa">
-                <button type="button" class="seg-btn active" data-ball-scope="all">Liga (20 clubes)</button>
-                <button type="button" class="seg-btn" data-ball-scope="Chelsea">Chelsea</button>
-                <button type="button" class="seg-btn" data-ball-scope="Man Utd">Man Utd</button>
-                <button type="button" class="seg-btn" data-ball-scope="Man City">Man City</button>
-                <button type="button" class="seg-btn" data-ball-scope="Newcastle">Newcastle</button>
-              </div>
-              <button type="button" class="btn-replay-goals" id="replayGoalsBtn">Llenar arcos →</button>
-            </div>
-            <div class="goals-pitch">
-              <div class="goal-panel">
-                <div class="goal-scoreboard">
-                  <span class="goal-panel-title">Arco de Gastos</span>
-                  <span class="goal-panel-amount tabular" id="goalSpentVal" style="color:var(--color-iris-gleam);">€19.841,9M</span>
+          <!-- 4 Tarjetas de Jugadores con Fotografías Recortadas Sin Fondo -->
+          <div class="player-cards-grid">
+            <!-- Card 1: Chelsea / Enzo Fernández -->
+            <article class="player-dossier-card active" data-dossier-club="Chelsea">
+              <div class="player-stage">
+                <div class="player-club-stripe" style="background:#034694;"></div>
+                <div class="player-badge-top">
+                  <span class="player-club-pill" style="background:#034694;">1° CHELSEA FC</span>
+                  <span class="player-season-tag">TEMP. 2022/23</span>
                 </div>
-                <div class="goal-frame" aria-label="Portería de gastos llenándose de balones">
-                  <div class="goal-overflow-line" id="goalGapLine" style="bottom:77%;">
-                    <span class="goal-overflow-tag" id="goalGapTag">EXCESO: +€4.555,1M</span>
+                <span class="player-overpay-tag">+€66,0M (+120%)</span>
+                <img src="img/player_chelsea.png" alt="Jugador de Chelsea FC sin fondo" class="player-cutout-img" />
+              </div>
+              <div class="player-card-body">
+                <div>
+                  <h3 class="player-name">Enzo Fernández</h3>
+                  <p class="player-route">SL Benfica → Chelsea FC · Mediocampista</p>
+                </div>
+                <div>
+                  <div class="player-price-meter">
+                    <div class="price-bar-track">
+                      <div class="price-bar-est" style="width:45%;"></div>
+                      <div class="price-bar-over" style="width:55%;"></div>
+                    </div>
                   </div>
-                  <div class="goal-balls-chamber" id="goalSpentBalls"></div>
-                </div>
-                <div class="goal-footer-meta">
-                  <span id="goalSpentCount" class="tabular">79 BALONES</span>
-                  <span>CAPITAL QUE SALE</span>
+                  <div class="price-ledger-row"><span>Tasación real:</span><strong style="color:var(--data-market);">€55,0M</strong></div>
+                  <div class="price-ledger-row"><span>Sobreprecio neto:</span><strong style="color:var(--data-overpay);">+€66,0M</strong></div>
+                  <div class="price-ledger-row total"><span>Monto final pagado:</span><span>€121,0M</span></div>
                 </div>
               </div>
-              <div class="goal-panel">
-                <div class="goal-scoreboard">
-                  <span class="goal-panel-title">Arco de Valor Real</span>
-                  <span class="goal-panel-amount tabular" id="goalEstVal" style="color:var(--color-cyan-signal);">€15.286,8M</span>
+            </article>
+
+            <!-- Card 2: Manchester United / Antony -->
+            <article class="player-dossier-card" data-dossier-club="Man Utd">
+              <div class="player-stage">
+                <div class="player-club-stripe" style="background:#c82829;"></div>
+                <div class="player-badge-top">
+                  <span class="player-club-pill" style="background:#c82829;">2° MAN. UNITED</span>
+                  <span class="player-season-tag">TEMP. 2022/23</span>
                 </div>
-                <div class="goal-frame" aria-label="Portería de valor real llenándose de balones">
-                  <div class="goal-balls-chamber" id="goalEstBalls"></div>
+                <span class="player-overpay-tag">+€60,0M (+171%)</span>
+                <img src="img/player_manutd.png" alt="Jugador de Manchester United sin fondo" class="player-cutout-img" />
+              </div>
+              <div class="player-card-body">
+                <div>
+                  <h3 class="player-name">Antony</h3>
+                  <p class="player-route">AFC Ajax → Manchester United · Extremo</p>
                 </div>
-                <div class="goal-footer-meta">
-                  <span id="goalEstCount" class="tabular">61 BALONES</span>
-                  <span>VALOR QUE ENTRA</span>
+                <div>
+                  <div class="player-price-meter">
+                    <div class="price-bar-track">
+                      <div class="price-bar-est" style="width:37%;"></div>
+                      <div class="price-bar-over" style="width:63%;"></div>
+                    </div>
+                  </div>
+                  <div class="price-ledger-row"><span>Tasación real:</span><strong style="color:var(--data-market);">€35,0M</strong></div>
+                  <div class="price-ledger-row"><span>Sobreprecio neto:</span><strong style="color:var(--data-overpay);">+€60,0M</strong></div>
+                  <div class="price-ledger-row total"><span>Monto final pagado:</span><span>€95,0M</span></div>
                 </div>
               </div>
-            </div>
-            <div class="goal-tooltip-bar" id="goalInspectorBar" aria-live="polite">
-              <span id="goalInspectorText">Toca o pasa el cursor sobre cualquier balón dentro de los arcos para ver el monto acumulado.</span>
-              <strong id="goalUnitBadge" class="tabular" style="color:var(--color-cyan-signal);">1 BALÓN = €250M</strong>
-            </div>
-            <div class="ball-legend">
-              <span class="legend-item"><span class="legend-swatch" style="background:var(--color-iris-gleam);"></span> Balón de sobreprecio pagado</span>
-              <span class="legend-item"><span class="legend-swatch" style="background:var(--color-cyan-signal);"></span> Balón de tasación real de mercado</span>
-            </div>
+            </article>
+
+            <!-- Card 3: Manchester City / Jack Grealish -->
+            <article class="player-dossier-card" data-dossier-club="Man City">
+              <div class="player-stage">
+                <div class="player-club-stripe" style="background:#1d70b8;"></div>
+                <div class="player-badge-top">
+                  <span class="player-club-pill" style="background:#1d70b8;">3° MAN. CITY</span>
+                  <span class="player-season-tag">TEMP. 2021/22</span>
+                </div>
+                <span class="player-overpay-tag">+€52,5M (+81%)</span>
+                <img src="img/player_mancity.png" alt="Jugador de Manchester City sin fondo" class="player-cutout-img" />
+              </div>
+              <div class="player-card-body">
+                <div>
+                  <h3 class="player-name">Jack Grealish</h3>
+                  <p class="player-route">Aston Villa → Manchester City · Volante ofensivo</p>
+                </div>
+                <div>
+                  <div class="player-price-meter">
+                    <div class="price-bar-track">
+                      <div class="price-bar-est" style="width:55%;"></div>
+                      <div class="price-bar-over" style="width:45%;"></div>
+                    </div>
+                  </div>
+                  <div class="price-ledger-row"><span>Tasación real:</span><strong style="color:var(--data-market);">€65,0M</strong></div>
+                  <div class="price-ledger-row"><span>Sobreprecio neto:</span><strong style="color:var(--data-overpay);">+€52,5M</strong></div>
+                  <div class="price-ledger-row total"><span>Monto final pagado:</span><span>€117,5M</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: Newcastle United / Alexander Isak -->
+            <article class="player-dossier-card" data-dossier-club="Newcastle">
+              <div class="player-stage">
+                <div class="player-club-stripe" style="background:#111417;"></div>
+                <div class="player-badge-top">
+                  <span class="player-club-pill" style="background:#111417;">4° NEWCASTLE</span>
+                  <span class="player-season-tag">TEMP. 2022/23</span>
+                </div>
+                <span class="player-overpay-tag">+€47,5M (+158%)</span>
+                <img src="img/player_newcastle.png" alt="Jugador de Newcastle United sin fondo" class="player-cutout-img" />
+              </div>
+              <div class="player-card-body">
+                <div>
+                  <h3 class="player-name">Alexander Isak</h3>
+                  <p class="player-route">Real Sociedad → Newcastle United · Delantero</p>
+                </div>
+                <div>
+                  <div class="player-price-meter">
+                    <div class="price-bar-track">
+                      <div class="price-bar-est" style="width:39%;"></div>
+                      <div class="price-bar-over" style="width:61%;"></div>
+                    </div>
+                  </div>
+                  <div class="price-ledger-row"><span>Tasación real:</span><strong style="color:var(--data-market);">€30,0M</strong></div>
+                  <div class="price-ledger-row"><span>Sobreprecio neto:</span><strong style="color:var(--data-overpay);">+€47,5M</strong></div>
+                  <div class="price-ledger-row total"><span>Monto final pagado:</span><span>€77,5M</span></div>
+                </div>
+              </div>
+            </article>
           </div>
 
-          <div class="surface-card">
-            <p class="card-kicker">PODIO HISTÓRICO INTERACTIVO · TOCA UN CLUB PARA INSPECCIONAR</p>
-            <h3 class="card-title"><em>Los tres</em> mayores pagadores del Impuesto Premier</h3>
-            <div class="podium-stage" role="tablist" aria-label="Podio de sobreprecio acumulado">
-              <button type="button" class="podium-btn rank-3" data-podium-club="Man City" role="tab" aria-selected="false">
-                <span class="podium-rank"><em>3°</em></span>
-                <span class="podium-abbr">MAN CITY</span>
-                <span class="podium-overpay">€490,2M</span>
-              </button>
-              <button type="button" class="podium-btn rank-1 active" data-podium-club="Chelsea" role="tab" aria-selected="true">
-                <span class="podium-rank"><em>1°</em></span>
-                <span class="podium-abbr">CHELSEA</span>
-                <span class="podium-overpay">€837,2M</span>
-              </button>
-              <button type="button" class="podium-btn rank-2" data-podium-club="Man Utd" role="tab" aria-selected="false">
-                <span class="podium-rank"><em>2°</em></span>
-                <span class="podium-abbr">MAN UTD</span>
-                <span class="podium-overpay">€516,0M</span>
-              </button>
+          <!-- Explorador de los 3 Fichajes Más Inflados de Cualquier Club -->
+          <div class="club-explorer-box">
+            <div class="club-explorer-head">
+              <div>
+                <div class="kicker-label" style="margin-bottom:2px;">AUDITORÍA DE OPERACIONES POR INSTITUCIÓN</div>
+                <strong id="dossierClubTitle" style="font-family:var(--font-sans);font-size:16px;color:var(--ink-primary);">Chelsea — Top 3 fichajes con mayor sobreprecio</strong>
+                <div id="dossierClubSummary" style="font-family:var(--font-sans);font-size:13px;color:var(--ink-muted);margin-top:2px;"></div>
+              </div>
+              <div class="scale-controls" role="group" aria-label="Inspeccionar fichajes récord por club">
+                <button type="button" class="seg-btn active" data-dossier-club="Chelsea">Chelsea</button>
+                <button type="button" class="seg-btn" data-dossier-club="Man Utd">Man Utd</button>
+                <button type="button" class="seg-btn" data-dossier-club="Man City">Man City</button>
+                <button type="button" class="seg-btn" data-dossier-club="Newcastle">Newcastle</button>
+                <button type="button" class="seg-btn" data-dossier-club="Liverpool">Liverpool</button>
+                <button type="button" class="seg-btn" data-dossier-club="Arsenal">Arsenal</button>
+                <button type="button" class="seg-btn" data-dossier-club="Everton">Everton</button>
+                <button type="button" class="seg-btn" data-dossier-club="Southampton">Southampton</button>
+              </div>
             </div>
-            <div class="podium-detail" id="podiumDetail" aria-live="polite"></div>
+            <div class="deals-strip-grid" id="dossierDealsGrid" aria-live="polite"></div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 3. SECCIÓN 01: DIEGO VALENZUELA -->
-    <section id="sobreprecio" class="story-section abyss">
+    <section id="sobreprecio" class="story-section alt-bg">
       <div class="container">
-        <div class="section-header-center">
-          <span class="mono-label">SECCIÓN 01 · CRÓNICA Y VISUALIZACIÓN POR DIEGO VALENZUELA</span>
-          <h2 class="section-display-title"><em>El Impuesto</em> Premier: sobreprecio acumulado por club</h2>
-          <p class="section-subhead">
-            Casi un tercio del dinero invertido por el fútbol británico (29,8% de recargo acumulado) se esfumó en primas de urgencia y cláusulas infladas por la liquidez televisiva.
+        <div class="section-header-editorial">
+          <span class="kicker-label">CAPÍTULO 01 · POR DIEGO VALENZUELA</span>
+          <h2 class="section-title">Quiénes inflan el mercado: el ranking del sobreprecio club por club</h2>
+          <p class="section-standfirst">
+            Entre 2005 y 2026, el Chelsea FC acumuló €837,2 millones en sobreprecio neto, mientras el Manchester United pagó un recargo promedio del 272,8% por operación. Pero la presión inflacionaria golpea con igual dureza a la mitad de la tabla.
           </p>
         </div>
 
         <div class="prose reading-column">
-          <p class="drop-cap">En las oficinas deportivas del fútbol europeo existe una regla no escrita que todo director deportivo conoce de memoria: si quien toca a la puerta viste los colores de un club de la Premier League inglesa, la cotización de cualquier futbolista se multiplica automáticamente antes de descolgar el teléfono. No es un mito de vestuario ni una exageración de la prensa deportiva británica. Los números fríos de más de dos décadas de transferencias revelan una distorsión estructural: el «Impuesto Premier», una prima monetaria que convierte al torneo más rico del planeta en la liga más sistemáticamente ineficiente a la hora de pagar por su talento.</p>
-          <p>Entre 2005 y 2026, los 20 clubes más estables del fútbol inglés desembolsaron más de <strong>19.800 millones de euros</strong> en 997 operaciones de compra analizadas, según datos de Transfermarkt. Sin embargo, la tasación técnica estimada de esos mismos jugadores al momento de concretarse los acuerdos rondaba apenas los <strong>15.280 millones de euros</strong>. La brecha resultante es demoledora: más de <strong>4.555 millones de euros</strong> pagados íntegramente en calidad de sobreprecio neto.</p>
+          <p>Entre 2005 y 2026, los 20 clubes más estables del fútbol inglés desembolsaron más de <strong>19.800 millones de euros</strong> en 997 operaciones de compra analizadas, según los registros de Transfermarkt. Sin embargo, la tasación técnica estimada de esos mismos jugadores al momento de cerrarse los acuerdos rondaba apenas los <strong>15.280 millones de euros</strong>. La brecha resultante supera los <strong>4.555 millones de euros</strong> pagados íntegramente en calidad de sobreprecio neto: un 29,8% de recargo acumulado que se esfumó en primas de urgencia y cláusulas infladas por la liquidez de los derechos televisivos.</p>
         </div>
 
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 01 · BRECHA, MATRIZ DE CUADRANTES Y RANKING</span>
-              <h3 class="chart-title"><em>Sobreprecio</em> acumulado y distorsión por club (2005–2026)</h3>
-              <p class="chart-subtitle">Explora en tres representaciones complementarias: la brecha directa entre tasación real y precio pagado (Dumbbell Chart), la matriz de 4 cuadrantes (Opulencia vs. Supervivencia) y el ranking con promedio de liga.</p>
+              <span class="kicker-label">GRÁFICO 01 · RADIOGRAFÍA DE LOS 20 CLUBES (2005–2026)</span>
+              <h3 class="chart-title">El Chelsea lidera el sobrepago absoluto (€837,2M); el United encabeza el recargo porcentual (272,8%)</h3>
+              <p class="chart-subtitle">Alterna entre el gráfico de brecha (Tasación real vs. Monto pagado), la matriz de 4 cuadrantes (Gasto total vs. % de recargo) y los rankings con la media de la liga. Pasa el cursor o toca cada club para ver el detalle.</p>
             </div>
             <div class="chart-controls" role="group" aria-label="Representación del gráfico 01">
-              <button type="button" class="seg-btn active" data-c1-mode="dumbbell">Brecha Dumbbell (€M)</button>
+              <button type="button" class="seg-btn active" data-c1-mode="dumbbell">Brecha (Tasación vs. Pagado)</button>
               <button type="button" class="seg-btn" data-c1-mode="scatter">Matriz 4 Cuadrantes</button>
               <button type="button" class="seg-btn" data-c1-mode="overpay">Ranking Sobreprecio (€M)</button>
               <button type="button" class="seg-btn" data-c1-mode="avgDef">Ranking Recargo (%)</button>
@@ -342,21 +314,21 @@
           <div class="svg-chart-wrap" id="chart01Wrap"></div>
           <div class="club-inspector">
             <div>
-              <strong id="inspClubName" style="color:var(--color-pure);font-family:var(--font-lyon-display);font-weight:300;font-size:26px;">Chelsea</strong>
-              <span id="inspClubStats" style="display:block;font-size:13px;color:var(--color-ash);margin-top:2px;"></span>
+              <strong id="inspClubName" style="color:var(--ink-primary);font-family:var(--font-serif);font-size:21px;">Chelsea</strong>
+              <span id="inspClubStats" style="display:block;font-size:13px;color:var(--ink-muted);margin-top:2px;"></span>
             </div>
-            <div id="inspClubDeals" style="font-size:13px;color:var(--color-ash);"></div>
+            <div id="inspClubDeals" style="font-size:13px;color:var(--ink-body);"></div>
           </div>
           <div class="chart-source">
-            <span>FUENTE: ELABORACIÓN PROPIA EN BASE A TRANSFERMARKT (2005–2026)</span>
-            <span>MUESTRA: 997 OPERACIONES · 20 CLUBES</span>
+            <span>Fuente: Elaboración propia con datos de Transfermarkt (temporadas 2005/06 a 2025/26).</span>
+            <span>Muestra: 997 transferencias · 20 clubes de la Premier League</span>
           </div>
         </div>
 
         <div class="prose reading-column">
-          <p>La visualización de datos desnuda las dimensiones de este fenómeno institución por institución. En la cúspide del gasto desmedido se erige el <strong>Chelsea FC</strong>. Con una política de contrataciones compulsiva que se aceleró exponencialmente en el último lustro, el club londinense acumula en solitario un sobreprecio de <strong>837,2 millones de euros</strong> a lo largo de 93 traspasos. Pagaron más de 3.002 millones de euros por un lote de futbolistas tasado objetivamente en poco más de 2.165 millones: un encarecimiento promedio por operación del 182,2%.</p>
-          <p>Apenas un peldaño más abajo aparece el <strong>Manchester United</strong>, cuyo patrón de gasto confirma cómo el exceso de capital no garantiza acierto deportivo. Aunque ocupan el segundo lugar en sobreprecio acumulado absoluto (€516 millones adicionales), su recargo porcentual promedio es el más alto entre las grandes potencias de la liga: un estratosférico <strong>272,8%</strong>. Desde apuestas juveniles hiperinfladas hasta fichajes de renombre internacional cerrados en el límite del libro de pases, los <em>Red Devils</em> han pagado casi el triple de la tasación objetiva de mercado para cerrar sus planteles.</p>
-          <p>Pero la anomalía no pertenece en exclusiva al autodenominado <em>Big Six</em>. La gráfica expone una verdad aún más reveladora para la mitad de la tabla: clubes como <strong>Newcastle United</strong> (€416,8M de sobreprecio acumulado tras la inyección saudí), <strong>Southampton</strong> (€260,2M) o <strong>Everton</strong> (€256,4M con un sobreprecio promedio de 182,2%) registran desviaciones porcentuales tanto o más severas que las de los contendientes al título. Para estas escuadras, el sobrepago no es una demostración de opulencia, sino un impuesto de supervivencia: el precio extorsivo exigido por las ligas extranjeras a sabiendas de que perder la categoría en Inglaterra implica un abismo económico del que pocos logran retornar.</p>
+          <p>En la cúspide del gasto desmedido se erige el <strong>Chelsea FC</strong>. Con una política de contrataciones compulsiva que se aceleró exponencialmente en el último lustro, el club londinense acumula en solitario un sobreprecio de <strong>837,2 millones de euros</strong> a lo largo de 93 traspasos. Pagaron más de 3.002 millones de euros por un lote de futbolistas tasado objetivamente en poco más de 2.165 millones: un encarecimiento promedio por operación del 182,2%.</p>
+          <p>Apenas un peldaño más abajo aparece el <strong>Manchester United</strong>, cuyo patrón de gasto confirma cómo el exceso de capital no garantiza acierto deportivo. Aunque ocupan el segundo lugar en sobreprecio acumulado absoluto (€516 millones adicionales), su recargo porcentual promedio es el más alto entre las grandes potencias de la liga: un estratosférico <strong>272,8%</strong>. Desde apuestas juveniles hiperinfladas como Anthony Martial (+650%) hasta fichajes cerrados sobre la hora como Antony (+€60M), los <em>Red Devils</em> han pagado casi el triple de la tasación objetiva de mercado.</p>
+          <p>Pero la anomalía no pertenece en exclusiva al autodenominado <em>Big Six</em>. La matriz de cuadrantes expone una verdad aún más reveladora para la mitad de la tabla: clubes como <strong>Newcastle United</strong> (€416,8M de sobreprecio acumulado tras la inyección saudí), <strong>Southampton</strong> (€260,2M) o <strong>Everton</strong> (€256,4M con un recargo promedio de 182,2%) registran desviaciones porcentuales tanto o más severas que las de los candidatos al título. Para estas escuadras, el sobrepago no es una demostración de opulencia, sino un impuesto de supervivencia para evitar el descenso.</p>
         </div>
       </div>
     </section>
@@ -364,124 +336,129 @@
     <!-- 4. SECCIÓN 02: JUAN TAPIA -->
     <section id="inflacion" class="story-section">
       <div class="container">
-        <div class="section-header-center">
-          <span class="mono-label">SECCIÓN 02 · CRÓNICA Y VISUALIZACIÓN POR JUAN TAPIA</span>
-          <h2 class="section-display-title"><em>El doble</em> discurso de la Premier: inflación real vs. burbuja</h2>
-          <p class="section-subhead">
-            Mientras el Índice Armonizado de Precios de Consumo (HICP) de la Eurozona promedió un estable 2,14% durante veinte años, el fútbol inglés naturalizó sobrecostos de hasta 68,1% anual.
+        <div class="section-header-editorial">
+          <span class="kicker-label">CAPÍTULO 02 · POR JUAN TAPIA</span>
+          <h2 class="section-title">El doble discurso de la inflación: qué dice realmente el Banco Central Europeo</h2>
+          <p class="section-standfirst">
+            Los clubes ingleses suelen justificar los fichajes de €80 millones y el alza de las entradas culpando a la inflación global. Pero el Índice Armonizado de Precios de Consumo (HICP) de la Eurozona promedió apenas un 2,14% anual durante veinte años.
           </p>
         </div>
 
         <div class="prose reading-column">
-          <p class="drop-cap">En el discurso de la Premier League, la palabra «inflación» funciona como un comodín. Los clubes la usan en dos frentes distintos para armar un relato que los libre de responsabilidad y normalice que todo cueste cada vez más, sea en los fichajes o en lo que cobran de diferentes formas: ya sea por entradas, camisetas o abonos de temporada.</p>
-          <p>Por un lado, cuando los directivos tienen que justificar el pago de 80 millones de euros por un jugador de mediana edad, hablan de un «mercado inflado». En el fondo saben que no se refieren a la economía real, sino a la dinámica de su propio negocio por la llegada de capitales extranjeros y la lluvia de millones que dejan los derechos de televisión. Pero, por otro lado, cuando esos mismos clubes anuncian que subirán el precio de las entradas, los abonos o las camisetas, el discurso cambia. Ahí sí se escudan en la economía mundial, culpando a las presiones inflacionarias globales y al aumento de los costos para mantener el estadio.</p>
-          <p>Al usar la misma palabra para mezclar dos cosas totalmente distintas, las directivas lograron convencer al público de que el encarecimiento del fútbol es algo inevitable, casi un capricho de la economía global. Pero los datos dicen otra cosa.</p>
+          <p class="drop-cap">En el discurso de la Premier League, la palabra «inflación» funciona como un comodín. Los clubes la usan en dos frentes distintos para armar un relato que los libre de responsabilidad y normalice que todo cueste cada vez más, sea en los fichajes o en lo que cobran a sus hinchas por entradas, camisetas o abonos de temporada.</p>
+          <p>Por un lado, cuando los directivos tienen que justificar el pago de 80 millones de euros por un jugador de mediana edad, hablan de un «mercado inflado». En el fondo saben que no se refieren a la economía real, sino a la dinámica de su propio negocio por la llegada de capitales extranjeros y la lluvia de millones que dejan los derechos de televisión. Pero, por otro lado, cuando esos mismos clubes anuncian que subirán el precio de las entradas o las camisetas, el discurso cambia: ahí sí se escudan en la economía mundial, culpando a las presiones inflacionarias globales y al aumento de los costos para mantener los estadios.</p>
+        </div>
+
+        <div class="editorial-callout">
+          <strong>El grupo de control macroeconómico:</strong> Para verificar si el encarecimiento del fútbol responde al costo de la vida, contrastamos los 997 fichajes de la Premier League con las <strong>258 mediciones mensuales</strong> del Índice Armonizado de Precios de Consumo (HICP) del Banco Central Europeo entre enero de 2005 y junio de 2026.
         </div>
 
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 02 · GRUPO DE CONTROL MACROECONÓMICO (SIN DISTORSIÓN DE DOBLE EJE)</span>
-              <h3 class="chart-title"><em>La falsa</em> excusa: Inflación Europea (HICP) vs. Sobreprecio Premier</h3>
-              <p class="chart-subtitle">Compara en la misma escala 1:1 la brecha entre la inflación europea (Cyan Signal #00b3dd) y el sobrecosto de la Premier League (Iris Gleam #847dff), o inspecciona las 258 observaciones mensuales del BCE.</p>
+              <span class="kicker-label">GRÁFICO 02 · CONTRASTE MACROECONÓMICO EN ESCALA 1:1 (2005–2026)</span>
+              <h3 class="chart-title">La falsa excusa: mientras la inflación europea rondó la meta del 2% del BCE, el sobrecosto Premier escaló hasta el 68%</h3>
+              <p class="chart-subtitle">En la vista principal ambas tasas se grafican en la misma escala vertical (0% a 75%) para mostrar la verdadera dimensión de la brecha. También puedes explorar la serie mensual completa del BCE (258 meses) o el volumen anual en millones de euros.</p>
             </div>
             <div class="chart-controls" role="group" aria-label="Vistas del gráfico 02">
               <button type="button" class="seg-btn active" data-c2-mode="rates">Escala Real 1:1 (Brecha %)</button>
               <button type="button" class="seg-btn" data-c2-mode="monthly">Serie Mensual BCE (258 meses)</button>
-              <button type="button" class="seg-btn" data-c2-mode="euros">Volumen Anual Apilado (€M)</button>
+              <button type="button" class="seg-btn" data-c2-mode="euros">Volumen Anual (€M)</button>
             </div>
           </div>
           <div class="chart-legend-bar" id="chart02Legend"></div>
           <div class="svg-chart-wrap" id="chart02Wrap"></div>
           <div class="chart-source">
-            <span>FUENTE: PORTAL DE ESTADÍSTICAS DEL BANCO CENTRAL EUROPEO (HICP) Y TRANSFERMARKT</span>
-            <span>META DE ESTABILIDAD BCE: 2,0% ANUAL</span>
+            <span>Fuente: Portal de Estadísticas del Banco Central Europeo (Eurostat HICP) y Transfermarkt (2005–2026).</span>
+            <span>Línea punteada: Meta histórica de estabilidad del BCE (2,0% anual)</span>
           </div>
         </div>
 
         <div class="prose reading-column">
-          <p>El Índice Armonizado de Precios de Consumo (HICP) del Banco Central Europeo demuestra que, durante casi veinte años, la inflación real de la Eurozona fue prácticamente plana, con un promedio de apenas <strong>2,14%</strong>. En ese mismo tiempo, el fútbol inglés pagaba de forma sistemática el «Impuesto Premier», un sobreprecio que ronda el <strong>30%</strong> por encima del valor real de los jugadores —disparándose por encima del 55% anual tras el macro-contrato televisivo de 2014–2017 (máximo de 68,1% en 2017) y superando los €574M y €619M anuales de sobreprecio neto en 2023 y 2025—.</p>
-          <p>La economía europea no justifica los números del fútbol inglés. El mercado de fichajes no sube por el costo de la vida, sino por una distorsión generada por los propios clubes, que al tener más dinero que nunca terminan compitiendo de forma desesperada por los mismos jugadores. No es que el mundo haya encarecido el fútbol. Es que la Premier League, encerrada en su propia burbuja, decidió encarecerse a sí misma.</p>
+          <p>Los datos desmienten la coartada dirigencial. El Índice Armonizado de Precios de Consumo (HICP) del Banco Central Europeo demuestra que, durante casi veinte años, la inflación real de la Eurozona fue prácticamente plana, con un promedio de apenas <strong>2,14%</strong>. Incluso en la década de 2010 —cuando Europa rozó la deflación con tasas de entre 0,2% y 1,5% anual—, el sobrecosto ponderado de la Premier League se disparó por encima del 60% tras la entrada en vigor del macro-contrato televisivo de 2016/17, alcanzando un pico del <strong>68,1% en 2017</strong>.</p>
+          <p>La economía europea no justifica los números del fútbol inglés. El mercado de fichajes no sube por el costo de la vida, sino por una distorsión generada por los propios clubes, que al tener más dinero que nunca terminan compitiendo de forma desesperada por los mismos jugadores. No es que el mundo haya encarecido el fútbol: es que la Premier League, encerrada en su propia burbuja, decidió encarecerse a sí misma.</p>
         </div>
       </div>
     </section>
 
     <!-- 5. SECCIÓN 03: VALERIA TRUJILLO -->
-    <section id="clubes" class="story-section abyss">
+    <section id="clubes" class="story-section alt-bg">
       <div class="container">
-        <div class="section-header-center">
-          <span class="mono-label">SECCIÓN 03 · CRÓNICA Y VISUALIZACIÓN POR VALERIA TRUJILLO</span>
-          <h2 class="section-display-title"><em>La otra</em> inflación: clubes que valen y gastan cada vez más</h2>
-          <p class="section-subhead">
-            Veinte años de evolución patrimonial (2005–2026) revelan cómo la expansión de ingresos comerciales e inversionistas extranjeros fracturó la liga en dos velocidades.
+        <div class="section-header-editorial">
+          <span class="kicker-label">CAPÍTULO 03 · POR VALERIA TRUJILLO</span>
+          <h2 class="section-title">La otra inflación de la Premier League: clubes que multiplicaron por diez su valor patrimonial</h2>
+          <p class="section-standfirst">
+            Detrás del sobreprecio de los futbolistas hay una transformación estructural: entre 2005 y 2025, la valoración económica de clubes como Chelsea y Arsenal pasó de €250 millones a superar los €2.600 y €3.200 millones.
           </p>
         </div>
 
         <div class="prose reading-column">
-          <p class="drop-cap">En el fútbol inglés, los millones ya no se cuentan únicamente en goles, títulos o fichajes. Se cuentan en derechos televisivos, contratos publicitarios, inversionistas extranjeros y valoraciones que convierten a los equipos en verdaderos imperios económicos. Mientras los aficionados discuten cuánto cuesta contratar a un delantero, otra cifra crece silenciosamente detrás de las negociaciones: cuánto vale el club que puede comprarlo. Porque en la Premier League, el negocio ya no está solamente dentro de la cancha.</p>
-          <p>Durante las últimas dos décadas, el fútbol inglés ha experimentado una transformación económica que permite plantear una pregunta clave: ¿los futbolistas son cada vez más caros porque todo ha subido de precio o porque los clubes tienen una capacidad financiera cada vez mayor? La desigualdad económica es fundamental para interpretar estos datos: mientras instituciones como Manchester United, Liverpool, Arsenal, Manchester City y Chelsea han construido marcas globales, otros clubes deben competir desde posiciones financieras profundamente distintas.</p>
+          <p class="drop-cap">En el fútbol inglés, los millones ya no se cuentan únicamente en goles, títulos o fichajes. Se cuentan en derechos televisivos, contratos publicitarios, inversionistas extranjeros y valoraciones que convierten a los equipos en verdaderos imperios económicos. Mientras los aficionados discuten cuánto cuesta contratar a un delantero, otra cifra crece silenciosamente detrás de las negociaciones: cuánto vale el club que puede comprarlo.</p>
+          <p>Durante las últimas dos décadas, la evolución económica de los equipos de la Premier League —registrada en las valoraciones históricas de <em>Forbes</em> y en los informes de <em>Deloitte Football Money League</em>— permite entender por qué el mercado británico opera desconectado de la economía real. Los contratos de transmisión internacional y la llegada de fondos soberanos multiplicaron la capacidad financiera de la liga, pero lo hicieron de manera profundamente desigual.</p>
         </div>
 
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 03 · VALORACIÓN PATRIMONIAL (FORBES/DELOITTE) Y TRAYECTORIA DE GASTO</span>
-              <h3 class="chart-title"><em>Veinte años</em> de evolución patrimonial y sobreprecio por club (2005–2026)</h3>
-              <p class="chart-subtitle">Recorre la serie limpia de valoración patrimonial de los clubes (2005–2025), compara el salto neto en dos décadas (Slope Chart 2005 vs. 2025) o contrasta con el sobreprecio y gasto acumulado en fichajes.</p>
+              <span class="kicker-label">GRÁFICO 03 · EVOLUCIÓN PATRIMONIAL Y GASTO ACUMULADO (2005–2026)</span>
+              <h3 class="chart-title">Veinte años de expansión desigual: del despegue televisivo de 2016 a la liga de dos velocidades</h3>
+              <p class="chart-subtitle">Explora la valoración patrimonial anual de los clubes (2005–2025), compara el salto neto entre 2005 y 2025 (Slope Chart) o revisa las curvas de sobreprecio y gasto acumulado en fichajes.</p>
             </div>
             <div class="chart-controls" role="group" aria-label="Métrica del gráfico 03">
               <button type="button" class="seg-btn active" data-c3-metric="clubVal">Valoración Club (€M)</button>
               <button type="button" class="seg-btn" data-c3-metric="slope">Salto 2005 vs. 2025 (Slope)</button>
-              <button type="button" class="seg-btn" data-c3-metric="cumOver">Sobreprecio Fichajes (€M)</button>
-              <button type="button" class="seg-btn" data-c3-metric="cumPaid">Gasto Fichajes (€M)</button>
+              <button type="button" class="seg-btn" data-c3-metric="cumOver">Sobreprecio Acum. (€M)</button>
+              <button type="button" class="seg-btn" data-c3-metric="cumPaid">Gasto Acum. (€M)</button>
             </div>
           </div>
           <div class="chart-controls" style="margin-bottom:14px;" role="group" aria-label="Grupos de clubes">
-            <button type="button" class="seg-btn active" data-c3-preset="top6">Top 6 mayor sobreprecio</button>
+            <button type="button" class="seg-btn active" data-c3-preset="top6">Clubes líderes</button>
             <button type="button" class="seg-btn" data-c3-preset="all">Los 20 clubes</button>
             <button type="button" class="seg-btn" data-c3-preset="mid">Clubes de media tabla</button>
           </div>
           <div class="svg-chart-wrap" id="chart03Wrap"></div>
           <div class="club-selector-pills" id="c3ClubToggles" aria-label="Activar o desactivar clubes individuales"></div>
           <div class="chart-source">
-            <span>FUENTE: TRANSFERMARKT, FORBES &amp; DELOITTE FOOTBALL MONEY LEAGUE (2005–2026)</span>
-            <span>TOCA CUALQUIER CLUB PARA AISLAR SU TRAYECTORIA</span>
+            <span>Fuente: Valoraciones históricas Forbes / Deloitte Football Money League (2005–2025) y Transfermarkt.</span>
+            <span>Haz clic en los botones inferiores para aislar o comparar instituciones</span>
           </div>
         </div>
 
         <div class="prose reading-column">
-          <p>El gráfico longitudinal confirma cómo la distribución del gasto y del sobreprecio mutó de manera radical tras la entrada en vigor de los grandes contratos televisivos a mediados de la década pasada. Hasta 2013, ningún club superaba los €100M de sobreprecio acumulado; diez años más tarde, el grupo de cabeza ya había roto toda contención financiera. <strong>Chelsea</strong> protagoniza la pendiente más abrupta de la serie: pasó de €36,7M acumulados en 2014 a €425,2M en 2022 y €837,2M en 2026.</p>
-          <p>La Premier League no solo se ha convertido en una competencia por los puntos. También es una disputa por ingresos, inversiones y poder económico. Porque quizás la pregunta ya no sea únicamente por qué los jugadores cuestan tanto, sino cuánto ha crecido la industria que está dispuesta a pagar por ellos.</p>
+          <p>La desigualdad económica es una de las claves para interpretar estos datos. Mientras instituciones como <strong>Chelsea</strong> (cuya valoración escaló de €250M en 2005 a €3.200M en 2025, un alza del +1.180%), <strong>Arsenal</strong> (de €240M a €2.600M), <strong>Liverpool</strong> (€836,1M) y <strong>Manchester City</strong> (de €90,1M a €829,3M) construyeron marcas globales con respaldo multimillonario, los clubes de mitad de tabla compiten durante noventa minutos bajo las mismas reglas pero desde posiciones financieras abismalmente distintas.</p>
+          <p>La Premier League no solo se ha convertido en una competencia por los puntos: también es una disputa por ingresos, inversiones y poder económico. Y quizás la pregunta ya no sea únicamente por qué los jugadores cuestan tanto, sino cuánto ha crecido la industria que está dispuesta a sobrepagar por ellos.</p>
         </div>
       </div>
     </section>
 
-    <!-- 6. METODOLOGÍA Y TABLA INTERACTIVA DE LOS 20 CLUBES -->
+    <!-- 6. SIMULADOR Y TABLA METODOLÓGICA DE LOS 20 CLUBES -->
     <section id="metodologia" class="story-section">
       <div class="container">
-        <div class="section-header-center">
-          <span class="mono-label">TRANSPARENCIA METODOLÓGICA Y DATOS ABIERTOS</span>
-          <h2 class="section-display-title"><em>Auditoría</em> completa de los 20 clubes</h2>
-          <p class="section-subhead">
-            Reunimos 997 fichajes entre enero de 2005 y agosto de 2026. Para cada operación se calculó el sobreprecio neto (Pagado − Estimado) y el recargo porcentual respecto a la tasación técnica.
+        <div class="section-header-editorial">
+          <span class="kicker-label">HERRAMIENTA DE DATOS Y NOTA METODOLÓGICA</span>
+          <h2 class="section-title">Simulador del «Impuesto Premier» y base completa de los 20 clubes</h2>
+          <p class="section-standfirst">
+            Para cada una de las 997 operaciones se calculó el sobreprecio neto (Valor pagado − Valor estimado en Transfermarkt), el recargo porcentual individual y el sobrecosto ponderado agregado por institución.
           </p>
         </div>
 
-        <!-- Simulador Interactivo del Impuesto Premier -->
+        <!-- Simulador Interactivo -->
         <div class="simulator-card" aria-label="Simulador interactivo del Impuesto Premier">
-          <span class="mono-label" style="color:var(--color-cyan-signal);">HERRAMIENTA INTERACTIVA · SIMULADOR DE FICHAJES</span>
-          <h3 class="chart-title" style="margin-top:6px;"><em>Calculadora</em> del «Impuesto Premier»</h3>
-          <p class="chart-subtitle">Selecciona un club comprador y define la tasación técnica de mercado de un futbolista para simular cuánto costaría con inflación real europea (BCE: +2,14%) frente a lo que termina desembolsando el club según su sobrecosto histórico.</p>
+          <span class="kicker-label" style="color:#ff8080;">CALCULADORA INTERACTIVA · SIMULACIÓN BASADA EN DATOS HISTÓRICOS (2005–2026)</span>
+          <h3 style="font-family:var(--font-serif);font-size:26px;margin:6px 0 8px;color:#ffffff;">¿Cuánto termina pagando un club inglés por un fichaje?</h3>
+          <p style="font-family:var(--font-sans);font-size:14px;color:#cfd6dc;margin:0;max-width:72ch;">
+            Elige un club comprador y ajusta la tasación real de mercado de un futbolista para comparar su precio ajustado por la inflación real del Banco Central Europeo (+2,14%) frente al desembolso esperado según el sobrecosto histórico del club.
+          </p>
           <div class="simulator-grid">
             <div class="sim-controls">
               <div>
-                <label for="simClubSelect" class="mono-label" style="display:block;color:var(--color-cloud);margin-bottom:6px;">1. CLUB COMPRADOR DE LA PREMIER LEAGUE</label>
+                <label for="simClubSelect" style="display:block;font-family:var(--font-sans);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;margin-bottom:6px;">1. Selecciona el club comprador</label>
                 <select id="simClubSelect" class="sim-select"></select>
               </div>
               <div>
                 <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
-                  <label for="simBaseRange" class="mono-label" style="color:var(--color-cloud);">2. TASACIÓN REAL DE MERCADO (TRANSFERMARKT)</label>
-                  <strong id="simBaseLabel" class="tabular" style="color:var(--color-cyan-signal);font-size:16px;">€40,0M</strong>
+                  <label for="simBaseRange" style="font-family:var(--font-sans);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;">2. Tasación real en Transfermarkt</label>
+                  <strong id="simBaseLabel" class="tabular" style="color:#78d2c9;font-size:17px;">€40,0M</strong>
                 </div>
                 <input type="range" id="simBaseRange" class="sim-range" min="5" max="120" step="5" value="40" />
               </div>
@@ -489,16 +466,16 @@
             <div>
               <div class="sim-readouts">
                 <div class="sim-stat-box">
-                  <span class="mono-label" style="font-size:10px;color:var(--color-ash);">CON INFLACIÓN BCE (+2,14%)</span>
-                  <div class="sim-stat-val tabular" id="simBceVal" style="color:var(--color-cyan-signal);">€40,9M</div>
+                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">Con Inflación BCE (+2,14%)</span>
+                  <div class="sim-stat-val tabular" id="simBceVal" style="color:#78d2c9;">€40,9M</div>
                 </div>
                 <div class="sim-stat-box">
-                  <span class="mono-label" style="font-size:10px;color:var(--color-ash);">PRECIO ESPERADO PREMIER</span>
+                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">Desembolso Premier Esperado</span>
                   <div class="sim-stat-val tabular" id="simPaidVal">€55,5M</div>
                 </div>
                 <div class="sim-stat-box">
-                  <span class="mono-label" style="font-size:10px;color:var(--color-ash);">«IMPUESTO PREMIER» NETO</span>
-                  <div class="sim-stat-val tabular" id="simTaxVal" style="color:var(--color-iris-gleam);">+€15,5M</div>
+                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">«Impuesto Premier» Neto</span>
+                  <div class="sim-stat-val tabular" id="simTaxVal" style="color:#ff8080;">+€15,5M</div>
                 </div>
               </div>
               <div class="sim-note" id="simDealNote" aria-live="polite"></div>
@@ -507,8 +484,8 @@
         </div>
 
         <div class="table-toolbar">
-          <input type="search" id="clubSearch" class="search-input" placeholder="Filtrar club (ej. Chelsea, Arsenal, Wolves)..." aria-label="Filtrar tabla de clubes" />
-          <span class="mono-label" style="color:var(--color-ash);">HAZ CLIC EN CUALQUIER COLUMNA PARA ORDENAR ↓↑</span>
+          <input type="search" id="clubSearch" class="search-input" placeholder="Buscar club en la tabla (ej. Chelsea, Arsenal, Everton)..." aria-label="Filtrar tabla de clubes" />
+          <span style="font-size:12px;font-weight:600;color:var(--ink-muted);">Haz clic en cualquier encabezado para ordenar la tabla ↓↑</span>
         </div>
 
         <div class="table-wrap">
@@ -516,50 +493,48 @@
             <thead>
               <tr>
                 <th>Club</th>
-                <th class="num"><button type="button" class="sort-th-btn" data-sort="count">Operaciones</button></th>
+                <th class="num"><button type="button" class="sort-th-btn" data-sort="count">Fichajes</button></th>
                 <th class="num"><button type="button" class="sort-th-btn" data-sort="paid">Pagado (€M)</button></th>
-                <th class="num"><button type="button" class="sort-th-btn" data-sort="est">Tasación (€M)</button></th>
-                <th class="num"><button type="button" class="sort-th-btn active" data-sort="overpay">Sobreprecio (€M) ↓</button></th>
-                <th class="num"><button type="button" class="sort-th-btn" data-sort="avgDef">Recargo prom. (%)</button></th>
-                <th class="num"><button type="button" class="sort-th-btn" data-sort="weightedPct">Sobrecosto pond. (%)</button></th>
+                <th class="num"><button type="button" class="sort-th-btn" data-sort="est">Tasación Real (€M)</button></th>
+                <th class="num"><button type="button" class="sort-th-btn active" data-sort="overpay">Sobreprecio Neto (€M) ↓</button></th>
+                <th class="num"><button type="button" class="sort-th-btn" data-sort="avgDef">Recargo Prom. (%)</button></th>
+                <th class="num"><button type="button" class="sort-th-btn" data-sort="weightedPct">Sobrecosto Pond. (%)</button></th>
               </tr>
             </thead>
             <tbody id="clubsTableBody"></tbody>
           </table>
         </div>
 
-        <!-- Second Silver Inverted Card (#cacaca) for Conclusion & Share -->
-        <div class="stat-inverted-card" id="cierre" style="margin-top:var(--spacing-80);">
-          <div class="inverted-header" style="margin-bottom:0;">
-            <span class="mono-label" style="color:#000000;">CONCLUSIÓN DEL REPORTAJE</span>
-            <h3 class="inverted-title" style="max-width:20ch;margin-bottom:16px;"><em>El impuesto</em> de la supervivencia</h3>
-            <p style="max-width:62ch;font-size:16px;line-height:1.6;color:rgba(0,0,0,0.8);margin:0 0 8px;">
-              El fútbol inglés no solo compra futbolistas: financia, con su propio superávit televisivo, la inflación del mercado continental. Tanto los gigantes del Big Six como los clubes de mitad de tabla pagan una prima estructural cercana al 30% para competir o evitar el abismo económico del descenso.
-            </p>
-            <div class="share-row" aria-label="Compartir este reportaje">
-              <a id="shareWhatsapp" class="btn-inverted-dark" target="_blank" rel="noopener noreferrer" href="#">Compartir en WhatsApp <span>→</span></a>
-              <a id="shareX" class="btn-inverted-outline" target="_blank" rel="noopener noreferrer" href="#">Compartir en X</a>
-              <button type="button" id="copyLinkBtn" class="btn-inverted-outline"><span id="copyLinkLabel">Copiar enlace →</span></button>
-            </div>
+        <!-- Conclusión Editorial -->
+        <div class="conclusion-box" id="cierre">
+          <span class="kicker-label">CONCLUSIÓN DE LA INVESTIGACIÓN</span>
+          <h3 style="font-family:var(--font-serif);font-size:28px;margin:6px 0 12px;color:var(--ink-primary);">El impuesto de la supervivencia</h3>
+          <p style="font-family:var(--font-serif);font-size:18px;line-height:1.68;color:var(--ink-body);margin:0;">
+            El fútbol inglés no solo compra talento: financia, con su propio superávit televisivo, la inflación de todo el mercado europeo. Tanto las potencias del <em>Big Six</em> como los clubes de mitad de tabla asumen una prima estructural cercana al 30% por encima del valor real de mercado para sostener su competitividad o evitar el abismo económico del descenso.
+          </p>
+          <div class="share-row" aria-label="Compartir este reportaje">
+            <a id="shareWhatsapp" class="share-btn primary" target="_blank" rel="noopener noreferrer" href="#">Compartir en WhatsApp</a>
+            <a id="shareX" class="share-btn" target="_blank" rel="noopener noreferrer" href="#">Compartir en X</a>
+            <button type="button" id="copyLinkBtn" class="share-btn"><span id="copyLinkLabel">Copiar enlace</span></button>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- 7. FOOTER & EQUIPO -->
+  <!-- 7. CRÉDITOS Y REPOSITORIO -->
   <footer id="equipo" class="site-footer">
     <div class="container footer-inner">
       <div>
-        <div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:6px;">EQUIPO DE INVESTIGACIÓN · COM-208 (2025-2 / 2026)</div>
-        <div class="footer-credits"><em>Juan Tapia</em>, Valeria Trujillo &amp; Diego Valenzuela</div>
-        <div style="margin-top:8px;color:var(--color-ash);">
-          Narración Gráfica de No Ficción (COM-208) · Facultad de Comunicaciones · Pontificia Universidad Católica de Chile.
+        <div class="kicker-label" style="color:#ff8080;margin-bottom:4px;">NARRACIÓN GRÁFICA DE NO FICCIÓN (COM-208) · 2025-2 / 2026</div>
+        <div class="footer-credits">Juan Tapia, Valeria Trujillo y Diego Valenzuela</div>
+        <div style="margin-top:6px;">
+          Facultad de Comunicaciones · Pontificia Universidad Católica de Chile · Datos: Transfermarkt, Eurostat (BCE) y Forbes/Deloitte.
         </div>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/diegovalz/Proyecto_webstory" target="_blank" rel="noopener noreferrer" class="btn-ghost-outline">Repositorio del Proyecto →</a>
-        <a href="#inicio" class="nav-glass-btn">↑ Volver arriba</a>
+        <a href="https://github.com/diegovalz/Proyecto_webstory" target="_blank" rel="noopener noreferrer" class="footer-btn">Repositorio en GitHub →</a>
+        <a href="#inicio" class="footer-btn">↑ Volver arriba</a>
       </div>
     </div>
   </footer>
