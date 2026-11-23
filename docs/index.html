@@ -144,7 +144,8 @@
                   <span class="player-season-tag">TEMP. 2022/23</span>
                 </div>
                 <span class="player-overpay-tag">+€66,0M (+120%)</span>
-                <img src="img/player_chelsea.png" alt="Jugador de Chelsea FC sin fondo" class="player-cutout-img" />
+                <img src="img/player_chelsea.png" alt="Fotografía real de Enzo Fernández" class="player-cutout-img" />
+                <span class="player-photo-credit">Foto: Wikimedia Commons (CC BY-SA 4.0)</span>
               </div>
               <div class="player-card-body">
                 <div>
@@ -174,7 +175,8 @@
                   <span class="player-season-tag">TEMP. 2022/23</span>
                 </div>
                 <span class="player-overpay-tag">+€60,0M (+171%)</span>
-                <img src="img/player_manutd.png" alt="Jugador de Manchester United sin fondo" class="player-cutout-img" />
+                <img src="img/player_manutd.png" alt="Fotografía real de Antony" class="player-cutout-img" />
+                <span class="player-photo-credit">Foto: Wikimedia Commons (CC BY-SA 4.0)</span>
               </div>
               <div class="player-card-body">
                 <div>
@@ -204,7 +206,8 @@
                   <span class="player-season-tag">TEMP. 2021/22</span>
                 </div>
                 <span class="player-overpay-tag">+€52,5M (+81%)</span>
-                <img src="img/player_mancity.png" alt="Jugador de Manchester City sin fondo" class="player-cutout-img" />
+                <img src="img/player_mancity.png" alt="Fotografía real de Jack Grealish" class="player-cutout-img" />
+                <span class="player-photo-credit">Foto: Wikimedia Commons (CC BY 4.0)</span>
               </div>
               <div class="player-card-body">
                 <div>
@@ -234,7 +237,8 @@
                   <span class="player-season-tag">TEMP. 2022/23</span>
                 </div>
                 <span class="player-overpay-tag">+€47,5M (+158%)</span>
-                <img src="img/player_newcastle.png" alt="Jugador de Newcastle United sin fondo" class="player-cutout-img" />
+                <img src="img/player_newcastle.png" alt="Fotografía real de Alexander Isak" class="player-cutout-img" />
+                <span class="player-photo-credit">Foto: Wikimedia Commons (CC BY-SA 3.0)</span>
               </div>
               <div class="player-card-body">
                 <div>
@@ -442,40 +446,62 @@
           </p>
         </div>
 
-        <!-- Simulador Interactivo -->
-        <div class="simulator-card" aria-label="Simulador interactivo del Impuesto Premier">
-          <span class="kicker-label" style="color:#ff8080;">CALCULADORA INTERACTIVA · SIMULACIÓN BASADA EN DATOS HISTÓRICOS (2005–2026)</span>
-          <h3 style="font-family:var(--font-serif);font-size:26px;margin:6px 0 8px;color:#ffffff;">¿Cuánto termina pagando un club inglés por un fichaje?</h3>
-          <p style="font-family:var(--font-sans);font-size:14px;color:#cfd6dc;margin:0;max-width:72ch;">
-            Elige un club comprador y ajusta la tasación real de mercado de un futbolista para comparar su precio ajustado por la inflación real del Banco Central Europeo (+2,14%) frente al desembolso esperado según el sobrecosto histórico del club.
+        <!-- Simulador Interactivo: ¿Cuánto costarías en la Premier League? -->
+        <div class="simulator-card" aria-label="Simulador interactivo: ¿Cuánto costarías en la Premier League?">
+          <span class="kicker-label" style="color:#ff8080;">SIMULADOR INTERACTIVO · ¿CUÁNTO COSTARÍAS EN LA PREMIER LEAGUE?</span>
+          <h3 style="font-family:var(--font-serif);font-size:28px;margin:6px 0 8px;color:#ffffff;">¿Cuánto pagarían por ti en el mercado inglés?</h3>
+          <p style="font-family:var(--font-sans);font-size:14px;color:#cfd6dc;margin:0;max-width:74ch;">
+            Elige el club por el que quieres fichar, tu posición en la cancha, cuántos goles y asistencias hiciste en la temporada y cuánto vales en Transfermarkt. Calcularemos tu tasación con el «Impuesto Premier» de ese club y te diremos a qué fichaje real te pareces.
           </p>
           <div class="simulator-grid">
             <div class="sim-controls">
-              <div>
-                <label for="simClubSelect" style="display:block;font-family:var(--font-sans);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;margin-bottom:6px;">1. Selecciona el club comprador</label>
-                <select id="simClubSelect" class="sim-select"></select>
+              <div class="sim-row-2col">
+                <div>
+                  <label for="simClubSelect" style="display:block;font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;margin-bottom:6px;">1. Equipo que te ficha</label>
+                  <select id="simClubSelect" class="sim-select"></select>
+                </div>
+                <div>
+                  <label for="simPosSelect" style="display:block;font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;margin-bottom:6px;">2. Tu posición</label>
+                  <select id="simPosSelect" class="sim-select">
+                    <option value="delantero">Delantero Centro (9)</option>
+                    <option value="extremo" selected>Extremo / Mediapunta</option>
+                    <option value="volante">Mediocampista / Pivote</option>
+                    <option value="defensa">Defensa Central / Lateral</option>
+                    <option value="arquero">Arquero</option>
+                  </select>
+                </div>
+              </div>
+              <div class="sim-row-2col">
+                <div>
+                  <label for="simGoalsInput" style="display:block;font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;margin-bottom:6px;">3. Goles en la temporada</label>
+                  <input type="number" id="simGoalsInput" class="sim-number-input tabular" min="0" max="99999" value="8" placeholder="Ej: 8 (o prueba 200)" />
+                </div>
+                <div>
+                  <label for="simAssistsInput" style="display:block;font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;margin-bottom:6px;">4. Asistencias</label>
+                  <input type="number" id="simAssistsInput" class="sim-number-input tabular" min="0" max="99999" value="4" placeholder="Ej: 4" />
+                </div>
               </div>
               <div>
                 <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
-                  <label for="simBaseRange" style="font-family:var(--font-sans);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;">2. Tasación real en Transfermarkt</label>
-                  <strong id="simBaseLabel" class="tabular" style="color:#78d2c9;font-size:17px;">€40,0M</strong>
+                  <label for="simBaseRange" style="font-family:var(--font-sans);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#cfd6dc;">5. Tu valor actual en Transfermarkt</label>
+                  <strong id="simBaseLabel" class="tabular" style="color:#78d2c9;font-size:17px;">€35,0M</strong>
                 </div>
-                <input type="range" id="simBaseRange" class="sim-range" min="5" max="120" step="5" value="40" />
+                <input type="range" id="simBaseRange" class="sim-range" min="1" max="150" step="1" value="35" />
               </div>
             </div>
             <div>
               <div class="sim-readouts">
                 <div class="sim-stat-box">
-                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">Con Inflación BCE (+2,14%)</span>
-                  <div class="sim-stat-val tabular" id="simBceVal" style="color:#78d2c9;">€40,9M</div>
+                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">Valor con Inflación BCE (+2,14%)</span>
+                  <div class="sim-stat-val tabular" id="simBceVal" style="color:#78d2c9;">€35,7M</div>
                 </div>
                 <div class="sim-stat-box">
-                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">Desembolso Premier Esperado</span>
-                  <div class="sim-stat-val tabular" id="simPaidVal">€55,5M</div>
+                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">Lo que pagarían por ti en Premier</span>
+                  <div class="sim-stat-val tabular" id="simPaidVal">€51,3M</div>
                 </div>
                 <div class="sim-stat-box">
-                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">«Impuesto Premier» Neto</span>
-                  <div class="sim-stat-val tabular" id="simTaxVal" style="color:#ff8080;">+€15,5M</div>
+                  <span style="font-family:var(--font-sans);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#a8b2ba;">Tu «Impuesto Premier» Neto</span>
+                  <div class="sim-stat-val tabular" id="simTaxVal" style="color:#ff8080;">+€16,3M</div>
                 </div>
               </div>
               <div class="sim-note" id="simDealNote" aria-live="polite"></div>

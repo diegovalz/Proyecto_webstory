@@ -803,36 +803,96 @@
   renderChart03();
 
   /* ==========================================================================
-     5. SIMULADOR INTERACTIVO: CALCULADORA DEL «IMPUESTO PREMIER»
+     5. SIMULADOR INTERACTIVO: «¿CUÁNTO COSTARÍAS EN LA PREMIER LEAGUE?»
      ========================================================================== */
   const simClubSel = $("simClubSelect");
+  const simPosSel = $("simPosSelect");
+  const simGoalsInput = $("simGoalsInput");
+  const simAssistsInput = $("simAssistsInput");
   const simBaseRange = $("simBaseRange");
   if (simClubSel && simBaseRange) {
     CLUB_DATA.forEach(function (c) {
       const opt = document.createElement("option");
       opt.value = c.club;
-      opt.textContent = c.club + " (Sobrecosto pond. +" + fmtP(c.weightedPct) + " / Recargo prom. +" + fmtP(c.avgDef) + ")";
+      opt.textContent = c.club + " (Recargo club: +" + fmtP(c.weightedPct) + " pond. / +" + fmtP(c.avgDef) + " prom.)";
       simClubSel.appendChild(opt);
     });
 
+    const POS_PREMIUM = {
+      delantero: { bonusPct: 12.0, label: "Delantero centro (9)" },
+      extremo:   { bonusPct: 8.5,  label: "Extremo / Mediapunta" },
+      volante:   { bonusPct: 4.5,  label: "Volante / Mediocampista" },
+      defensa:   { bonusPct: 0.0,  label: "Defensa central / Lateral" },
+      arquero:   { bonusPct: -3.5, label: "Arquero" }
+    };
+
+    function getPlayerComparison(pos, goals, assists, totalGA, club) {
+      if (goals < 0 || assists < 0) {
+        return '¿Goles o asistencias negativas? Ni siquiera el peor autogol descuenta en la Premier: hasta con números en contra, <strong>' + club.club + '</strong> igual pagaría sobreprecio por tu pase.';
+      }
+      if (goals >= 45 || assists >= 45 || totalGA >= 55) {
+        const antonyCount = Math.max(2, Math.round(totalGA / 5));
+        return '🚨 <strong>¡Récord fuera de toda escala humana (' + goals + ' goles y ' + assists + ' asistencias en una sola temporada)!</strong> Esos números escapan por completo de la media del fútbol profesional: <strong>¡es como si jugaras como ' + antonyCount + ' Antony juntos al mismo tiempo en la cancha!</strong> (Considerando que el Manchester United pagó <strong>€95,0M</strong> —con <strong>+€60,0M</strong> de sobreprecio— por un solo Antony tras una temporada de 8 goles y 4 asistencias, por ti los dueños de <strong>' + club.club + '</strong> tendrían que hipotecar el estadio entero).';
+      }
+      if (pos === "arquero") {
+        if (totalGA >= 3) {
+          return 'Con <strong>' + goals + ' goles y ' + assists + ' asistencias</strong> siendo arquero (' + totalGA + ' G+A), eres prácticamente un <strong>Ederson o Alisson Becker</strong> lanzando contragolpes (o un Chilavert moderno), pero tasado con la inflación del fichaje récord de <strong>Kepa Arrizabalaga al Chelsea (€80,0M pagados vs. €20,0M en Transfermarkt, +300% de sobreprecio)</strong>.';
+        }
+        return 'Como arquero titular, tu perfil de mercado equivale al de <strong>Kepa Arrizabalaga</strong> (fichado por el Chelsea en <strong>€80,0M</strong> cuando valía €20,0M) o <strong>André Onana</strong> (Manchester United, <strong>€50,2M</strong> vs. €35,0M): en Inglaterra los porteros con juego de pies pagan peaje de estrella.';
+      }
+      if (pos === "defensa" && totalGA <= 5) {
+        return 'Con <strong>' + goals + ' goles y ' + assists + ' asistencias</strong> desde la última línea (' + totalGA + ' G+A), tu perfil estadístico equivale al de zagueros récord como <strong>Harry Maguire</strong> (Manchester United pagó <strong>€87,0M</strong> vs. €50,0M de valor) o <strong>Wesley Fofana</strong> (Chelsea pagó <strong>€80,4M</strong> vs. €40,0M).';
+      }
+      if (totalGA === 0) {
+        return 'Con <strong>0 goles y 0 asistencias</strong> en la temporada, tu fichaje sería puro «pago por potencial futuro», exactamente como <strong>Roméo Lavia al Chelsea (€62,1M pagados vs. €32,0M en Transfermarkt)</strong> o <strong>Amadou Onana al Aston Villa (€59,4M vs. €50,0M)</strong>.';
+      }
+      if (totalGA <= 6) {
+        return 'Sumando <strong>' + goals + ' goles y ' + assists + ' asistencias (' + totalGA + ' G+A)</strong> en la temporada, tu producción ofensiva es equivalente a la de <strong>Antony</strong> en el Manchester United (por quien pagaron <strong>€95,0M</strong> cuando Transfermarkt lo tasaba en <strong>€35,0M</strong>; +171% de sobrecosto) o <strong>Moisés Caicedo</strong> al llegar al Chelsea (<strong>€116,0M</strong> vs. €75,0M).';
+      }
+      if (totalGA <= 14) {
+        return 'Con <strong>' + goals + ' goles y ' + assists + ' asistencias (' + totalGA + ' G+A)</strong> en la campaña, tienes números idénticos a los que registraban <strong>Enzo Fernández</strong> (Chelsea pagó <strong>€121,0M</strong> vs. €55,0M en Transfermarkt) o <strong>Jack Grealish</strong> al salir del Aston Villa rumbo al Manchester City (<strong>€117,5M</strong> pagados vs. €65,0M).';
+      }
+      if (totalGA <= 24) {
+        return 'Con <strong>' + goals + ' goles y ' + assists + ' asistencias (' + totalGA + ' G+A)</strong>, tu temporada goleadora se compara directamente con la de <strong>Alexander Isak</strong> (tasado en €70,0M por el Newcastle y proyectado en <strong>€145,0M</strong> hacia Liverpool) o <strong>Matheus Cunha</strong> rumbo al Manchester United (<strong>€74,2M</strong> vs. €60,0M).';
+      }
+      return 'Con <strong>' + goals + ' goles y ' + assists + ' asistencias (' + totalGA + ' G+A)</strong>, estás en la élite absoluta de <strong>Erling Haaland, Mohamed Salah o el traspaso récord de Alexander Isak (€145,0M)</strong>: cualquier club del Big Six entraría en guerra de ofertas para duplicar tu valor de Transfermarkt.';
+    }
+
     function updateSimulator() {
       const clubName = simClubSel.value;
+      const posKey = simPosSel ? simPosSel.value : "delantero";
+      const goals = Math.max(0, Number(simGoalsInput ? simGoalsInput.value : 12) || 0);
+      const assists = Math.max(0, Number(simAssistsInput ? simAssistsInput.value : 6) || 0);
+      const totalGA = goals + assists;
       const baseVal = Number(simBaseRange.value) || 40;
+
       const club = CLUB_DATA.find(function (c) { return c.club === clubName; }) || CLUB_DATA[0];
+      const posInfo = POS_PREMIUM[posKey] || POS_PREMIUM.delantero;
       $("simBaseLabel").textContent = fmtM(baseVal);
 
+      // Ajuste por posición + rendimiento razonable en la temporada (acotado para no distorsionar la tasa estructural del club)
+      const perfBonusPct = Math.min(18, totalGA * 0.45);
+      const effectivePct = Math.max(5, club.weightedPct + posInfo.bonusPct + perfBonusPct);
+
       const bceAdjusted = baseVal * 1.0214;
-      const premierWeightedPaid = baseVal * (1 + club.weightedPct / 100);
-      const premierTax = premierWeightedPaid - baseVal;
+      const premierPaid = baseVal * (1 + effectivePct / 100);
+      const premierTax = premierPaid - baseVal;
       const topDeal = club.topDeals[0];
 
       $("simBceVal").textContent = fmtM(bceAdjusted);
-      $("simPaidVal").textContent = fmtM(premierWeightedPaid);
-      $("simTaxVal").textContent = "+" + fmtM(premierTax) + " (+" + fmtP(club.weightedPct) + ")";
+      $("simPaidVal").textContent = fmtM(premierPaid);
+      $("simTaxVal").textContent = "+" + fmtM(premierTax) + " (+" + fmtP(effectivePct) + ")";
+
+      const comparisonHtml = getPlayerComparison(posKey, goals, assists, totalGA, club);
       $("simDealNote").innerHTML =
-        'Caso real en <strong>' + club.club + '</strong>: en el fichaje de <strong>' + topDeal.jugador + '</strong> (' + topDeal.orig + ', temp. ' + topDeal.temp + '), el club desembolsó <strong>' + fmtM(topDeal.paid) + '</strong> frente a una tasación de <strong>' + fmtM(topDeal.est) + '</strong> (<strong class="tabular" style="color:#ff8080;">+' + fmtM(topDeal.overpay) + ' / +' + topDeal.def + '%</strong> de sobreprecio).';
+        comparisonHtml +
+        '<br><span style="display:inline-block;margin-top:6px;color:var(--ink-secondary);font-size:12px;">Referencia histórica en <strong>' + club.club + '</strong>: en el fichaje de <strong>' + topDeal.jugador + '</strong> (' + topDeal.orig + ', temp. ' + topDeal.temp + '), el club pagó <strong>' + fmtM(topDeal.paid) + '</strong> frente a una tasación de <strong>' + fmtM(topDeal.est) + '</strong> (<strong class="tabular" style="color:var(--data-overpay);">+' + fmtM(topDeal.overpay) + ' / +' + topDeal.def + '%</strong>).</span>';
     }
+
     simClubSel.addEventListener("change", updateSimulator);
+    if (simPosSel) simPosSel.addEventListener("change", updateSimulator);
+    if (simGoalsInput) simGoalsInput.addEventListener("input", updateSimulator);
+    if (simAssistsInput) simAssistsInput.addEventListener("input", updateSimulator);
     simBaseRange.addEventListener("input", updateSimulator);
     updateSimulator();
   }

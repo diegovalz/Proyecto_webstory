@@ -619,15 +619,12 @@ button {
 
 .player-stage {
   position: relative;
-  height: 205px;
-  background:
-    linear-gradient(180deg, rgba(246, 244, 239, 0.2) 0%, rgba(237, 234, 226, 0.95) 100%),
-    repeating-linear-gradient(0deg, transparent, transparent 23px, rgba(17, 20, 23, 0.04) 24px),
-    repeating-linear-gradient(90deg, transparent, transparent 23px, rgba(17, 20, 23, 0.04) 24px);
+  height: 225px;
+  background: var(--bg-pitch-dark);
   border-bottom: 2px solid var(--ink-primary);
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 
@@ -637,13 +634,14 @@ button {
   left: 0;
   right: 0;
   height: 4px;
+  z-index: 3;
 }
 
 .player-badge-top {
   position: absolute;
   top: 12px;
   left: 12px;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -651,7 +649,7 @@ button {
 
 .player-club-pill {
   display: inline-block;
-  padding: 2px 7px;
+  padding: 3px 8px;
   font-family: var(--font-sans);
   font-size: 10px;
   font-weight: 800;
@@ -660,40 +658,57 @@ button {
   color: #ffffff;
   background: var(--ink-primary);
   border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 .player-season-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background: rgba(17, 20, 23, 0.78);
+  color: #f6f4ef;
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 600;
-  color: var(--ink-muted);
+  border-radius: 2px;
 }
 
 .player-overpay-tag {
   position: absolute;
   top: 12px;
   right: 12px;
-  z-index: 2;
+  z-index: 3;
   background: var(--data-overpay);
   color: #ffffff;
   font-family: var(--font-mono);
   font-size: 11.5px;
   font-weight: 700;
-  padding: 3px 7px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.player-photo-credit {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  z-index: 3;
+  background: rgba(17, 20, 23, 0.72);
+  color: #d8dee3;
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  padding: 2px 6px;
   border-radius: 2px;
 }
 
-/* Transparent Player Cutout Image (No background) */
+/* Real Wikimedia Commons Player Photograph */
 .player-cutout-img {
   position: relative;
   z-index: 1;
-  height: 188px;
-  width: auto;
-  max-width: 92%;
-  object-fit: contain;
-  object-position: bottom center;
-  filter: drop-shadow(0 6px 10px rgba(17, 20, 23, 0.18));
-  transition: transform 0.2s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.25s ease;
 }
 
 .player-dossier-card:hover .player-cutout-img {
@@ -1062,7 +1077,8 @@ button {
   padding: 20px;
 }
 
-.sim-select {
+.sim-select,
+.sim-number-input {
   width: 100%;
   min-height: 42px;
   padding: 8px 12px;
@@ -1071,6 +1087,12 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 2px;
   font-size: 14px;
+}
+
+.sim-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .sim-range {
