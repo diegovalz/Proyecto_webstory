@@ -9,39 +9,48 @@
 
 La webstory articula **tres visualizaciones principales de datos** más **dos módulos exploratorios complementarios** (la balanza interactiva de los arcos de fútbol y la tabla auditable de los 20 clubes), diseñados para responder secuencialmente las preguntas de investigación del semestre:
 
-### A. Visualización 01 — Ranking Interactivo: *Sobreprecio acumulado pagado por club (2005–2026)*
+### A. Visualización 01 — Sistema Multi-Vista: *Brecha Dumbbell, Matriz de 4 Cuadrantes y Ranking de Sobreprecio por Club (2005–2026)*
 * **Autor responsable:** Diego Valenzuela.
 * **Archivos asociados:**
   * Código original en Python/Altair: [`codigo/codigo_vis_03_sobreprecio_valenzuela.ipynb`](codigo/codigo_vis_03_sobreprecio_valenzuela.ipynb)
   * Implementación interactiva web: Función `renderChart01()` en [`../../docs/script.js`](../../docs/script.js)
   * Imagen de referencia estática: [`imagenes/vis_03_sobreprecio_clubes.png`](imagenes/vis_03_sobreprecio_clubes.png)
   * Base de datos: [`base_datos/Transfers_cleaned2.csv`](base_datos/Transfers_cleaned2.csv)
-* **Dimensiones y mensaje que comunica:**
-  Responde a la primera pregunta de investigación: *¿Qué clubes de la Premier League acumulan el mayor sobreprecio neto y porcentual en las últimas dos décadas?* Mediante un gráfico de barras horizontales ordenable por tres dimensiones (**Sobreprecio neto en €M**, **Recargo promedio en %** y **Gasto total en €M**), comunica de forma inmediata que el **Chelsea FC** lidera el sobrepago absoluto con **€837,2 millones** en 93 operaciones, mientras que al cambiar la vista a **Recargo promedio (%)**, el lector descubre que el **Manchester United** (272,8%) y clubes como **Bolton** (216,8%), **Everton** (182,2%) o **Newcastle** (154,3%) sufren distorsiones porcentuales extremas.
+* **Por qué elegimos estas tres formas de representación:**
+  Un gráfico de barras horizontales simple solo muestra una magnitud aislada, ocultando la relación entre el presupuesto total y la brecha de sobreprecio. Por ello diseñamos un módulo con **tres representaciones complementarias**:
+  1. **Gráfico de Mancuernas / Brecha (*Cleveland Dumbbell Plot* — Vista principal):** Conecta para cada uno de los 20 clubes el punto de su **Tasación Técnica Real (`#00b3dd`)** con el punto de su **Monto Efectivo Pagado (`#847dff`)**. El segmento entre ambos puntos materializa visualmente el «Impuesto Premier» (`+€837,2M` en Chelsea, `+€516,0M` en Man Utd).
+  2. **Matriz de Dispersión de 4 Cuadrantes (*Scatter Plot* Gasto Total vs. % de Recargo Promedio):** Cruza el volumen de gasto (eje X) con la ineficiencia porcentual por operación (eje Y) y la cantidad de fichajes (tamaño de burbuja), revelando visualmente los dos perfiles del fenómeno: el **Cuadrante I de Opulencia Hiperinflada** (Man Utd `272,8%`, Chelsea `182,2%`) y el **Cuadrante II de Impuesto de Supervivencia en Media Tabla** (Everton `182,2%`, Newcastle `154,3%`, Aston Villa `151,1%`, Southampton `121,5%`).
+  3. **Ranking Horizontal con Línea de Promedio de la Liga:** Permite ordenar por sobreprecio neto (€M) o recargo promedio (%) contrastando cada club frente a la media de la competición (`€227,8M` / `117,4%`).
 
 ---
 
-### B. Visualización 02 — Contraste Macroeconómico: *La falsa excusa: Inflación Europea (HICP) vs. Sobreprecio Premier (2005–2026)*
+### B. Visualización 02 — Contraste Macroeconómico sin Distorsión de Doble Eje: *Inflación Europea (HICP) vs. Sobreprecio Premier (2005–2026)*
 * **Autor responsable:** Juan Tapia.
 * **Archivos asociados:**
   * Código original en Python/Altair: [`codigo/codigo_vis_01_inflacion_tapia.ipynb`](codigo/codigo_vis_01_inflacion_tapia.ipynb)
   * Implementación interactiva web: Función `renderChart02()` en [`../../docs/script.js`](../../docs/script.js)
   * Imagen de referencia estática: [`imagenes/vis_01_inflacion_hicp.png`](imagenes/vis_01_inflacion_hicp.png)
   * Base de datos: [`base_datos/INFLACION_LIMPIA.csv`](base_datos/INFLACION_LIMPIA.csv)
-* **Dimensiones y mensaje que comunica:**
-  Funciona como el **«grupo de control»** científico del reportaje para desmentir el argumento de que *"los fichajes son más caros porque todo en la economía está más caro"*. Traza la serie temporal del Índice Armonizado de Precios de Consumo (HICP) de la Eurozona en color `--color-cyan-signal` (`#00b3dd`) junto a una línea horizontal punteada en el **2,0%** (meta histórica de estabilidad del Banco Central Europeo), contrastándola con la curva de sobrecosto de la Premier League en `--color-iris-gleam` (`#847dff`). El lector comprueba visualmente que durante la década de 2010 —cuando la inflación europea era casi nula (0,2% a 1,8%)— el sobrecosto del fútbol inglés se disparó hasta un **68,1%** tras el macro-contrato televisivo de 2016/17.
+* **Por qué mejoramos la representación eliminando el doble eje Y:**
+  En diseño de información, los gráficos de doble eje Y con escalas dispares suelen inducir a error porque hacen parecer que una inflación del `8%` equivale en altura a un recargo del `200%`. Para representar los datos con rigor periodístico implementamos tres vistas honestas:
+  1. **Gráfico de Brecha en Escala Real 1:1 (*Same-Scale Gap Chart* — Vista principal):** Coloca la inflación europea HICP (`#00b3dd`, promedio `2,14%`, meta BCE `2,0%`) y el sobrecosto ponderado anual de la Premier League (`#847dff`, que alcanza `60,4%` en 2014 y `68,1%` en 2017) en el **mismo eje Y porcentual (`0% a 75%`)**, sombreando el área entre ambas curvas como la **«Brecha Especulativa Neta»**.
+  2. **Serie Mensual Completa del BCE (258 meses, Enero 2005 – Junio 2026):** Despliega las **258 observaciones mensuales reales** de `INFLACION_LIMPIA.csv` con anotaciones de hitos macroeconómicos (*Crisis Subprime jul. 2008: 4,1%*, *Deflación ene. 2015: -0,6%*, *Pico energético oct. 2022: 10,6%*).
+  3. **Volumen Monetario Anual Apilado (€M):** Desglosa cada año cuánto correspondió a tasación real de mercado (`#00b3dd`) y cuánto a sobreprecio neto (`#847dff`).
 
 ---
 
-### C. Visualización 03 — Serie Longitudinal: *Veinte años de evolución económica por club (2005–2026)*
+### C. Visualización 03 — Serie Longitudinal y Gráfico de Pendiente: *Veinte años de evolución patrimonial y gasto por club (2005–2026)*
 * **Autora responsable:** Valeria Trujillo.
 * **Archivos asociados:**
   * Código original en Python/Altair: [`codigo/codigo_vis_02_valor_trujillo.ipynb`](codigo/codigo_vis_02_valor_trujillo.ipynb)
   * Implementación interactiva web: Función `renderChart03()` en [`../../docs/script.js`](../../docs/script.js)
   * Imagen de referencia estática: [`imagenes/vis_02_valor_premier.jpg`](imagenes/vis_02_valor_premier.jpg)
   * Base de datos: [`base_datos/Valor_Neto_Premier_League.csv`](base_datos/Valor_Neto_Premier_League.csv) y [`base_datos/Transfers_cleaned2.csv`](base_datos/Transfers_cleaned2.csv)
-* **Dimensiones y mensaje que comunica:**
-  Responde a cómo evolucionó el poder financiero y la desigualdad entre el *Big Six* y la media tabla a lo largo de 20 temporadas. Permite alternar entre **Sobreprecio acumulado (€M)**, **Gasto acumulado (€M)** y **Sobreprecio anual (€M)**, además de filtrar grupos predefinidos (*Top 6*, *Los 20 clubes*, *Clubes de media tabla*) o activar/desactivar clubes individuales. Muestra el punto de inflexión estructural a partir de 2014–2016 y la pendiente casi vertical del Chelsea y del Newcastle tras sus cambios de propiedad en 2022.
+* **Depuración de datos y elección de representaciones:**
+  Durante la auditoría de `Valor_Neto_Premier_League.csv` detectamos y corregimos una inconsistencia de formato entre separadores de miles con punto (`1.530`, `3.200`) y decimales con coma (`836,1`) que en la Entrega 03 generaba saltos artificiales. Con la serie limpia incorporamos cuatro vistas:
+  1. **Valoración Patrimonial del Club (€M, 2005–2025):** Muestra la evolución real de la valoración económica de las instituciones (Chelsea de `€250M` a `€3.200M`, Arsenal de `€240M` a `€2.600M`, Liverpool de `€181,2M` a `€836,1M`, Man City de `€90,1M` a `€829,3M`), incluyendo la línea vertical del hito del macro-contrato televisivo de 2016 (`£5.140M`).
+  2. **Gráfico de Pendiente (*Slope Chart 2005 vs. 2025*):** Sintetiza el salto patrimonial entre el inicio y el cierre de la serie sin el ruido visual de 20 líneas entrecruzadas, destacando el crecimiento porcentual neto de cada institución (`+1.180%` Chelsea, `+983%` Arsenal, `+820%` Man City, `+603%` Aston Villa).
+  3. **Sobreprecio Acumulado en Fichajes (€M, 2005–2026)** y **Gasto Total Acumulado (€M, 2005–2026)**.
 
 ---
 

@@ -58,6 +58,12 @@
     ["Bolton", [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0.5,2.5,0.5],[0,2.5,0.5],[0,2.5,0.5],[2.7,5.9,3.2],[0,5.9,3.2],[0,5.9,3.2],[0,5.9,3.2],[0,5.9,3.2],[0,5.9,3.2],[-0.1,6.1,3.1],[0,6.1,3.1],[0,6.1,3.1],[0,6.1,3.1],[0,6.2,3.1],[0,6.2,3.1],[0,6.2,3.1],[0,6.2,3.1],[0,6.2,3.1]]]
   ];
 
+  /* Real 258 Monthly HICP observations from Juan Tapia's INFLACION_LIMPIA.csv */
+  const HICP_MONTHLY = [["2005-01", 1.9], ["2005-02", 2.1], ["2005-03", 2.2], ["2005-04", 2.1], ["2005-05", 2.0], ["2005-06", 2.0], ["2005-07", 2.1], ["2005-08", 2.2], ["2005-09", 2.6], ["2005-10", 2.4], ["2005-11", 2.3], ["2005-12", 2.2], ["2006-01", 2.4], ["2006-02", 2.4], ["2006-03", 2.2], ["2006-04", 2.4], ["2006-05", 2.5], ["2006-06", 2.5], ["2006-07", 2.4], ["2006-08", 2.3], ["2006-09", 1.8], ["2006-10", 1.6], ["2006-11", 1.9], ["2006-12", 1.9], ["2007-01", 1.8], ["2007-02", 1.9], ["2007-03", 1.9], ["2007-04", 1.9], ["2007-05", 1.9], ["2007-06", 1.9], ["2007-07", 1.8], ["2007-08", 1.7], ["2007-09", 2.1], ["2007-10", 2.5], ["2007-11", 3.0], ["2007-12", 3.1], ["2008-01", 3.2], ["2008-02", 3.3], ["2008-03", 3.6], ["2008-04", 3.3], ["2008-05", 3.7], ["2008-06", 4.0], ["2008-07", 4.1], ["2008-08", 3.8], ["2008-09", 3.7], ["2008-10", 3.2], ["2008-11", 2.1], ["2008-12", 1.6], ["2009-01", 1.1], ["2009-02", 1.2], ["2009-03", 0.6], ["2009-04", 0.6], ["2009-05", 0.0], ["2009-06", -0.1], ["2009-07", -0.7], ["2009-08", -0.2], ["2009-09", -0.3], ["2009-10", -0.1], ["2009-11", 0.5], ["2009-12", 0.9], ["2010-01", 1.0], ["2010-02", 0.8], ["2010-03", 1.6], ["2010-04", 1.6], ["2010-05", 1.7], ["2010-06", 1.5], ["2010-07", 1.7], ["2010-08", 1.6], ["2010-09", 1.9], ["2010-10", 1.9], ["2010-11", 1.9], ["2010-12", 2.2], ["2011-01", 2.3], ["2011-02", 2.4], ["2011-03", 2.7], ["2011-04", 2.8], ["2011-05", 2.7], ["2011-06", 2.7], ["2011-07", 2.5], ["2011-08", 2.5], ["2011-09", 3.0], ["2011-10", 3.0], ["2011-11", 3.0], ["2011-12", 2.8], ["2012-01", 2.7], ["2012-02", 2.7], ["2012-03", 2.7], ["2012-04", 2.6], ["2012-05", 2.4], ["2012-06", 2.4], ["2012-07", 2.4], ["2012-08", 2.6], ["2012-09", 2.6], ["2012-10", 2.5], ["2012-11", 2.2], ["2012-12", 2.2], ["2013-01", 2.0], ["2013-02", 1.9], ["2013-03", 1.7], ["2013-04", 1.2], ["2013-05", 1.4], ["2013-06", 1.6], ["2013-07", 1.6], ["2013-08", 1.3], ["2013-09", 1.1], ["2013-10", 0.7], ["2013-11", 0.9], ["2013-12", 0.8], ["2014-01", 0.8], ["2014-02", 0.7], ["2014-03", 0.5], ["2014-04", 0.7], ["2014-05", 0.5], ["2014-06", 0.5], ["2014-07", 0.4], ["2014-08", 0.4], ["2014-09", 0.3], ["2014-10", 0.4], ["2014-11", 0.3], ["2014-12", -0.2], ["2015-01", -0.6], ["2015-02", -0.3], ["2015-03", -0.1], ["2015-04", 0.2], ["2015-05", 0.6], ["2015-06", 0.5], ["2015-07", 0.6], ["2015-08", 0.4], ["2015-09", 0.2], ["2015-10", 0.4], ["2015-11", 0.1], ["2015-12", 0.2], ["2016-01", 0.3], ["2016-02", -0.1], ["2016-03", 0.0], ["2016-04", -0.3], ["2016-05", -0.1], ["2016-06", 0.1], ["2016-07", 0.2], ["2016-08", 0.2], ["2016-09", 0.4], ["2016-10", 0.5], ["2016-11", 0.6], ["2016-12", 1.1], ["2017-01", 1.7], ["2017-02", 2.0], ["2017-03", 1.5], ["2017-04", 1.9], ["2017-05", 1.4], ["2017-06", 1.3], ["2017-07", 1.3], ["2017-08", 1.5], ["2017-09", 1.6], ["2017-10", 1.4], ["2017-11", 1.5], ["2017-12", 1.3], ["2018-01", 1.3], ["2018-02", 1.1], ["2018-03", 1.4], ["2018-04", 1.2], ["2018-05", 2.0], ["2018-06", 2.0], ["2018-07", 2.2], ["2018-08", 2.1], ["2018-09", 2.1], ["2018-10", 2.3], ["2018-11", 1.9], ["2018-12", 1.5], ["2019-01", 1.4], ["2019-02", 1.5], ["2019-03", 1.4], ["2019-04", 1.7], ["2019-05", 1.2], ["2019-06", 1.3], ["2019-07", 1.0], ["2019-08", 1.0], ["2019-09", 0.8], ["2019-10", 0.7], ["2019-11", 1.0], ["2019-12", 1.3], ["2020-01", 1.4], ["2020-02", 1.2], ["2020-03", 0.7], ["2020-04", 0.3], ["2020-05", 0.1], ["2020-06", 0.3], ["2020-07", 0.4], ["2020-08", -0.2], ["2020-09", -0.3], ["2020-10", -0.3], ["2020-11", -0.3], ["2020-12", -0.3], ["2021-01", 0.9], ["2021-02", 0.9], ["2021-03", 1.3], ["2021-04", 1.6], ["2021-05", 2.0], ["2021-06", 1.9], ["2021-07", 2.2], ["2021-08", 3.0], ["2021-09", 3.4], ["2021-10", 4.1], ["2021-11", 4.9], ["2021-12", 5.0], ["2022-01", 5.1], ["2022-02", 5.9], ["2022-03", 7.4], ["2022-04", 7.5], ["2022-05", 8.1], ["2022-06", 8.6], ["2022-07", 8.9], ["2022-08", 9.1], ["2022-09", 9.9], ["2022-10", 10.6], ["2022-11", 10.1], ["2022-12", 9.2], ["2023-01", 8.6], ["2023-02", 8.5], ["2023-03", 6.9], ["2023-04", 6.9], ["2023-05", 6.1], ["2023-06", 5.5], ["2023-07", 5.3], ["2023-08", 5.2], ["2023-09", 4.3], ["2023-10", 2.9], ["2023-11", 2.4], ["2023-12", 2.9], ["2024-01", 2.8], ["2024-02", 2.6], ["2024-03", 2.4], ["2024-04", 2.4], ["2024-05", 2.6], ["2024-06", 2.5], ["2024-07", 2.6], ["2024-08", 2.2], ["2024-09", 1.7], ["2024-10", 2.0], ["2024-11", 2.2], ["2024-12", 2.4], ["2025-01", 2.5], ["2025-02", 2.3], ["2025-03", 2.2], ["2025-04", 2.2], ["2025-05", 1.9], ["2025-06", 2.0], ["2025-07", 2.0], ["2025-08", 2.0], ["2025-09", 2.2], ["2025-10", 2.1], ["2025-11", 2.1], ["2025-12", 2.0], ["2026-01", 1.7], ["2026-02", 1.9], ["2026-03", 2.6], ["2026-04", 3.0], ["2026-05", 3.2], ["2026-06", 2.8]];
+
+  /* Real Cleaned Club Valuations (2005-2025) from Valeria Trujillo's Valor_Neto_Premier_League.csv */
+  const VAL_SERIES = {"Arsenal": [[2005, 240.0], [2006, 464.0], [2007, 600.0], [2008, 598.0], [2009, 605.0], [2010, 605.0], [2011, 731.0], [2012, 800.0], [2013, 848.0], [2014, 790.0], [2015, 845.0], [2016, 1530.0], [2017, 1500.0], [2018, 1830.0], [2019, 1800.0], [2020, 1400.0], [2021, 1990.0], [2022, 1300.0], [2023, 1250.0], [2024, 2100.0], [2025, 2600.0]], "Chelsea": [[2005, 250.0], [2006, 381.0], [2007, 578.0], [2008, 381.0], [2009, 366.6], [2010, 422.2], [2011, 400.0], [2012, 474.0], [2013, 588.0], [2014, 515.0], [2015, 901.0], [2016, 1230.0], [2017, 1430.0], [2018, 1545.0], [2019, 2195.0], [2020, 1880.0], [2021, 2260.0], [2022, 2500.0], [2023, 2480.0], [2024, 2460.0], [2025, 3200.0]], "Everton": [[2005, 75.9], [2006, 75.0], [2007, 98.0], [2008, 98.0], [2009, 143.0], [2010, 100.0], [2011, 120.0], [2012, 110.0], [2013, 112.0], [2014, 133.0], [2015, 127.0], [2016, 285.0], [2017, 440.0], [2018, 363.0], [2019, 257.0], [2020, 475.0], [2021, 475.0], [2022, 300.0], [2023, 550.0], [2024, 400.0], [2025, 240.0]], "Liverpool": [[2005, 181.2], [2006, 176.0], [2007, 198.9], [2008, 210.9], [2009, 237.0], [2010, 225.3], [2011, 203.3], [2012, 233.2], [2013, 240.6], [2014, 305.9], [2015, 391.8], [2016, 403.8], [2017, 427.2], [2018, 513.7], [2019, 604.7], [2020, 558.6], [2021, 550.4], [2022, 701.7], [2023, 682.9], [2024, 714.7], [2025, 836.1]], "Man Utd": [[2005, 246.4], [2006, 242.6], [2007, 315.2], [2008, 324.8], [2009, 327.0], [2010, 349.8], [2011, 367.0], [2012, 395.9], [2013, 423.8], [2014, 518.0], [2015, 519.5], [2016, 689.0], [2017, 676.3], [2018, 666.0], [2019, 711.5], [2020, 580.4], [2021, 558.0], [2022, 688.6], [2023, 745.8], [2024, 770.6], [2025, 793.1]], "Tottenham": [[2005, 104.5], [2006, 107.2], [2007, 153.1], [2008, 145.0], [2009, 132.7], [2010, 146.3], [2011, 181.0], [2012, 178.2], [2013, 172.0], [2014, 215.8], [2015, 257.5], [2016, 279.7], [2017, 355.6], [2018, 428.3], [2019, 521.1], [2020, 445.7], [2021, 406.2], [2022, 523.0], [2023, 631.5], [2024, 615.0], [2025, 672.6]], "Man City": [[2005, 90.1], [2006, 89.4], [2007, 84.6], [2008, 104.0], [2009, 101.2], [2010, 152.8], [2011, 169.6], [2012, 285.6], [2013, 316.2], [2014, 414.4], [2015, 463.5], [2016, 524.9], [2017, 527.7], [2018, 568.4], [2019, 610.6], [2020, 549.2], [2021, 644.9], [2022, 731.0], [2023, 825.9], [2024, 837.8], [2025, 829.3]], "Newcastle": [[2005, 128.9], [2006, 124.3], [2007, 129.4], [2008, 126.6], [2009, 101.0], [2010, null], [2011, 98.0], [2012, 115.3], [2013, 111.9], [2014, 155.1], [2015, 169.3], [2016, 168.2], [2017, null], [2018, 201.5], [2019, null], [2020, null], [2021, 170.1], [2022, 212.3], [2023, 287.8], [2024, 371.8], [2025, 398.4]], "Aston Villa": [[2005, 64.0], [2006, 62.0], [2007, 62.0], [2008, 78.3], [2009, 95.5], [2010, 95.0], [2011, 109.4], [2012, 99.3], [2013, 98.6], [2014, 200.0], [2015, 133.0], [2016, 148.8], [2017, null], [2018, null], [2019, null], [2020, null], [2021, 207.3], [2022, 210.9], [2023, 250.5], [2024, 310.2], [2025, 450.2]], "West Ham": [[2005, null], [2006, 86.9], [2007, 85.1], [2008, 103.0], [2009, null], [2010, 87.6], [2011, 89.1], [2012, 58.0], [2013, 104.8], [2014, 137.4], [2015, 160.9], [2016, 192.3], [2017, 213.3], [2018, 197.9], [2019, 216.4], [2020, 158.0], [2021, 221.5], [2022, 301.2], [2023, 275.1], [2024, 322.2], [2025, 276.0]], "Fulham": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, 94.2], [2011, 88.8], [2012, 98.0], [2013, 86.0], [2014, null], [2015, null], [2016, null], [2017, null], [2018, null], [2019, null], [2020, null], [2021, null], [2022, null], [2023, 209.8], [2024, 212.2], [2025, 227.6]], "Southampton": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, null], [2012, 28.4], [2013, 84.8], [2014, 126.9], [2015, 149.5], [2016, 163.3], [2017, 212.1], [2018, 172.0], [2019, null], [2020, null], [2021, 177.5], [2022, 177.7], [2023, null], [2024, null], [2025, 150.0]], "Leicester": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, null], [2012, null], [2013, null], [2014, 38.5], [2015, 137.2], [2016, 172.1], [2017, 271.1], [2018, 179.4], [2019, 200.0], [2020, 171.0], [2021, 255.5], [2022, 252.2], [2023, null], [2024, null], [2025, 218.3]], "Crystal Palace": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, null], [2012, null], [2013, null], [2014, 111.7], [2015, 130.8], [2016, 124.8], [2017, 164.0], [2018, 169.0], [2019, 174.5], [2020, 161.3], [2021, null], [2022, 188.9], [2023, 206.5], [2024, 218.9], [2025, 232.5]], "Sunderland": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, 87.9], [2012, 96.4], [2013, 89.5], [2014, 124.8], [2015, 132.9], [2016, 144.4], [2017, 143.8], [2018, null], [2019, null], [2020, null], [2021, null], [2022, null], [2023, null], [2024, null], [2025, null]], "West Brom": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, 68.0], [2012, 82.7], [2013, 82.4], [2014, 108.0], [2015, 126.6], [2016, 119.9], [2017, 160.5], [2018, null], [2019, null], [2020, null], [2021, null], [2022, null], [2023, null], [2024, null], [2025, null]], "Wolves": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, 73.8], [2012, null], [2013, null], [2014, null], [2015, null], [2016, null], [2017, null], [2018, null], [2019, 195.5], [2020, 151.2], [2021, 219.2], [2022, 195.4], [2023, null], [2024, 206.9], [2025, 206.3]], "Blackburn": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, 66.9], [2012, 66.6], [2013, 31.4], [2014, null], [2015, null], [2016, null], [2017, null], [2018, null], [2019, null], [2020, null], [2021, null], [2022, null], [2023, null], [2024, null], [2025, 28.0]], "Bolton": [[2005, 78.6], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, 78.4], [2012, 80.2], [2013, 33.6], [2014, null], [2015, null], [2016, null], [2017, null], [2018, null], [2019, null], [2020, null], [2021, null], [2022, null], [2023, null], [2024, null], [2025, null]], "Middlesbrough": [[2005, 77.0], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, null], [2012, null], [2013, 16.7], [2014, null], [2015, null], [2016, null], [2017, 138.1], [2018, null], [2019, null], [2020, null], [2021, null], [2022, null], [2023, null], [2024, null], [2025, null]], "Stoke City": [[2005, null], [2006, null], [2007, null], [2008, null], [2009, null], [2010, null], [2011, 77.2], [2012, 87.6], [2013, 78.9], [2014, 117.6], [2015, 130.9], [2016, 127.2], [2017, 158.3], [2018, null], [2019, null], [2020, null], [2021, null], [2022, null], [2023, null], [2024, null], [2025, null]]};
+
   const CLUB_DATA = C_RAW.map(function (c) {
     return {
       club: c[0],
@@ -81,7 +87,16 @@
     return {
       club: s[0],
       series: s[1].map(function (a, i) {
-        return { y: 2005 + i, yrOver: a[0], cumPaid: a[1], cumOver: a[2] };
+        const yr = 2005 + i;
+        const valArr = VAL_SERIES[s[0]] || [];
+        const foundVal = valArr.find(function (v) { return v[0] === yr; });
+        return {
+          y: yr,
+          yrOver: a[0],
+          cumPaid: a[1],
+          cumOver: a[2],
+          clubVal: foundVal ? foundVal[1] : null
+        };
       })
     };
   });
@@ -93,10 +108,9 @@
     2023: 5.4, 2024: 2.4, 2025: 2.1, 2026: 2.0
   };
 
-  /* Origin Financial Data Signals Palette */
   const COLS = [
     "#00b3dd", "#847dff", "#dd90d8", "#90b8f0", "#d1c9ff",
-    "#4b49aa", "#f5f5f7", "#00b3dd", "#847dff", "#dd90d8",
+    "#f5f5f7", "#4b49aa", "#00b3dd", "#847dff", "#dd90d8",
     "#90b8f0", "#d1c9ff", "#4b49aa", "#9f9fa0", "#00b3dd",
     "#847dff", "#dd90d8", "#90b8f0", "#d1c9ff", "#6a6b6b"
   ];
@@ -115,8 +129,8 @@
     if (!tip || !e) return;
     const cx = e.touches ? e.touches[0].clientX : e.clientX;
     const cy = e.touches ? e.touches[0].clientY : e.clientY;
-    const w = tip.offsetWidth || 250;
-    const h = tip.offsetHeight || 115;
+    const w = tip.offsetWidth || 260;
+    const h = tip.offsetHeight || 120;
     tip.style.left = Math.max(10, cx + 14 + w > window.innerWidth - 10 ? cx - w - 14 : cx + 14) + "px";
     tip.style.top = Math.max(10, cy - h - 14 < 10 ? cy + 14 : cy - h - 14) + "px";
   }
@@ -176,21 +190,25 @@
     });
     if (foundClub) {
       const top = foundClub.topDeals[0];
+      const valArr = (VAL_SERIES[foundClub.club] || []).filter(function (x) { return x[1] !== null; });
+      const valTxt = valArr.length >= 2
+        ? ' Además, su valoración patrimonial pasó de <strong class="tabular">' + fmtM(valArr[0][1]) + '</strong> (' + valArr[0][0] + ') a <strong class="tabular">' + fmtM(valArr[valArr.length - 1][1]) + '</strong> (' + valArr[valArr.length - 1][0] + ').'
+        : '';
       aiPanel.innerHTML =
-        '<div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:4px;">CONSULTA DE CLUB · ' + foundClub.club.toUpperCase() + ' (2005–2026)</div>' +
-        '<strong>' + foundClub.club + '</strong> desembolsó <strong class="tabular">' + fmtM(foundClub.paid) + '</strong> en <strong>' + foundClub.count + ' operaciones</strong> (tasadas en ' + fmtM(foundClub.est) + '), acumulando un sobreprecio neto de <strong class="tabular" style="color:var(--color-iris-gleam);">+' + fmtM(foundClub.overpay) + '</strong> y un recargo promedio por fichaje de <strong class="tabular">' + fmtP(foundClub.avgDef) + '</strong>. Su mayor desvío fue <strong>' + top.jugador + '</strong> (+' + fmtM(top.overpay) + ', ' + top.def + '%).';
+        '<div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:4px;">AUDITORÍA DE CLUB · ' + foundClub.club.toUpperCase() + ' (2005–2026)</div>' +
+        '<strong>' + foundClub.club + '</strong> desembolsó <strong class="tabular">' + fmtM(foundClub.paid) + '</strong> en <strong>' + foundClub.count + ' operaciones</strong> (tasadas en ' + fmtM(foundClub.est) + '), acumulando un sobreprecio neto de <strong class="tabular" style="color:var(--color-iris-gleam);">+' + fmtM(foundClub.overpay) + '</strong> y un recargo promedio por fichaje de <strong class="tabular">' + fmtP(foundClub.avgDef) + '</strong>. Su mayor desvío fue <strong>' + top.jugador + '</strong> (+' + fmtM(top.overpay) + ', ' + top.def + '%).' + valTxt;
       return;
     }
     if (q.indexOf("inflac") !== -1 || q.indexOf("bce") !== -1 || q.indexOf("hicp") !== -1 || q.indexOf("euro") !== -1) {
       aiPanel.innerHTML =
-        '<div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:4px;">CONTRASTE MACROECONÓMICO · EUROSTAT HICP VS. PREMIER LEAGUE</div>' +
-        'Entre 2005 y 2026, la inflación real europea (HICP del BCE) promedió apenas <strong class="tabular">2,14% anual</strong>, manteniéndose prácticamente plana cerca de la meta del <strong>2,0%</strong>. En cambio, la Premier League pagó un sobrecosto estructural del <strong class="tabular" style="color:var(--color-iris-gleam);">+29,8%</strong> (+€4.555,1M), con picos de <strong>68,1%</strong> en 2017.';
+        '<div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:4px;">CONTRASTE MACROECONÓMICO · 258 MESES HICP BCE VS. PREMIER LEAGUE</div>' +
+        'En los 258 meses entre enero de 2005 y junio de 2026, la inflación real europea (HICP del BCE) promedió apenas <strong class="tabular">2,14% anual</strong> (con mínimo de -0,6% en 2009/2015 y máximo puntual de 10,6% en oct. 2022). En cambio, la Premier League pagó un sobrecosto estructural del <strong class="tabular" style="color:var(--color-iris-gleam);">+29,8%</strong> (+€4.555,1M), alcanzando un <strong>68,1%</strong> de recargo en 2017.';
       return;
     }
     if (q.indexOf("recargo") !== -1 || q.indexOf("porcent") !== -1 || q.indexOf("mayor") !== -1) {
       aiPanel.innerHTML =
-        '<div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:4px;">HALLAZGO PRINCIPAL · LÍDERES DEL IMPUESTO PREMIER</div>' +
-        'En volumen absoluto, <strong>Chelsea FC</strong> lidera con <strong class="tabular">€837,2M</strong> de sobreprecio neto en 93 fichajes. En recargo porcentual promedio entre los grandes clubes, <strong>Manchester United</strong> encabeza la liga con un <strong class="tabular" style="color:var(--color-iris-gleam);">272,8%</strong> por encima de la tasación de mercado.';
+        '<div class="mono-label" style="color:var(--color-cyan-signal);margin-bottom:4px;">HALLAZGO PRINCIPAL · OPULENCIA VS. SUPERVIVENCIA</div>' +
+        'En volumen absoluto, <strong>Chelsea FC</strong> lidera con <strong class="tabular">€837,2M</strong> de sobreprecio neto (y una valoración récord de €3.200M en 2025). En recargo porcentual promedio, <strong>Manchester United</strong> encabeza el Big Six con <strong class="tabular" style="color:var(--color-iris-gleam);">272,8%</strong>, mientras clubes de media tabla como <strong>Everton (182,2%)</strong>, <strong>Newcastle (154,3%)</strong> y <strong>Southampton (121,5%)</strong> pagan un impuesto de supervivencia.';
       return;
     }
     aiPanel.innerHTML =
@@ -359,18 +377,21 @@
   renderPodium("Chelsea");
 
   /* ==========================================================================
-     4. CHART 01: SOBREPRECIO ACUMULADO POR CLUB (DIEGO VALENZUELA)
+     4. CHART 01 (DIEGO VALENZUELA):
+        - "dumbbell": Cleveland Dumbbell Gap Plot (Tasación Real vs. Pagado + Brecha)
+        - "scatter": 4-Quadrant Scatter Matrix (Gasto Total vs. Recargo Promedio %)
+        - "overpay" / "avgDef": Horizontal Bar Ranking with League Average Reference Line
      ========================================================================== */
-  let c1Mode = "overpay";
+  let c1Mode = "dumbbell";
   function updateInsp(c) {
     if (!c) return;
     $("inspClubName").textContent = c.club;
     $("inspClubStats").innerHTML =
-      'Sobreprecio: <strong class="tabular" style="color:var(--color-iris-gleam);">' + fmtM(c.overpay) + '</strong> · ' +
-      'Recargo promedio: <strong class="tabular" style="color:var(--color-cyan-signal);">' + fmtP(c.avgDef) + '</strong> · ' +
-      'Pagado: <span class="tabular">' + fmtM(c.paid) + '</span> (' + c.count + ' fichajes)';
+      'Tasación real: <strong class="tabular" style="color:var(--color-cyan-signal);">' + fmtM(c.est) + '</strong> → ' +
+      'Pagado: <strong class="tabular" style="color:var(--color-pure);">' + fmtM(c.paid) + '</strong> · ' +
+      'Sobreprecio neto: <strong class="tabular" style="color:var(--color-iris-gleam);">+' + fmtM(c.overpay) + '</strong> (' + fmtP(c.avgDef) + ' recargo prom. en ' + c.count + ' fichajes)';
     $("inspClubDeals").innerHTML =
-      'Mayor desvío: <strong style="color:var(--color-pure);">' + c.topDeals[0].jugador + '</strong> (<span class="tabular">+' + fmtM(c.topDeals[0].overpay) + '</span>)';
+      'Caso crítico: <strong style="color:var(--color-pure);">' + c.topDeals[0].jugador + '</strong> (<span class="tabular">+' + fmtM(c.topDeals[0].overpay) + ' / +' + c.topDeals[0].def + '%</span>)';
   }
   updateInsp(CLUB_DATA[0]);
 
@@ -389,11 +410,131 @@
   }
 
   function renderChart01() {
+    const leg = $("chart01Legend");
+    if (c1Mode === "dumbbell") {
+      if (leg) {
+        leg.innerHTML =
+          '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;border-radius:50%;"></span> TASACIÓN REAL DE MERCADO (€M)</span>' +
+          '<span class="legend-item"><span class="legend-swatch" style="background:#847dff;border-radius:50%;"></span> MONTO EFECTIVO PAGADO (€M)</span>' +
+          '<span class="legend-item"><span class="legend-swatch" style="background:rgba(132,125,255,0.55);height:4px;"></span> BRECHA «IMPUESTO PREMIER» (+€M)</span>';
+      }
+      const sorted = CLUB_DATA.slice().sort(function (a, b) { return b.overpay - a.overpay; });
+      const nMax = 3500;
+      const W = 900, H = 590, pL = 132, pR = 105, pT = 22, pB = 38, pW = W - pL - pR;
+      const step = (H - pT - pB) / sorted.length;
+      const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Gráfico de mancuernas: Tasación Real vs Monto Pagado por club">'];
+      for (let t = 0; t <= 7; t++) {
+        const v = 500 * t;
+        const x = pL + (v / nMax) * pW;
+        out.push(
+          '<line x1="' + x.toFixed(1) + '" y1="' + pT + '" x2="' + x.toFixed(1) + '" y2="' + (H - pB) + '" stroke="rgba(255,255,255,0.07)"/>' +
+          '<text x="' + x.toFixed(1) + '" y="' + (H - 12) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">€' + v + 'M</text>'
+        );
+      }
+      sorted.forEach(function (c, i) {
+        const y = pT + i * step + step / 2;
+        const xEst = pL + (c.est / nMax) * pW;
+        const xPaid = pL + (c.paid / nMax) * pW;
+        out.push(
+          '<g data-tip="' + i + '" style="cursor:pointer;">' +
+          '<rect x="' + pL + '" y="' + (pT + i * step) + '" width="' + (pW + pR) + '" height="' + step.toFixed(1) + '" fill="transparent"/>' +
+          '<line x1="' + pL + '" y1="' + y.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,0.03)"/>' +
+          '<text x="' + (pL - 12) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#f5f5f7" font-size="12.5" font-family="Inter, sans-serif">' + c.club + '</text>' +
+          '<line x1="' + xEst.toFixed(1) + '" y1="' + y.toFixed(1) + '" x2="' + xPaid.toFixed(1) + '" y2="' + y.toFixed(1) + '" stroke="#847dff" stroke-width="5" stroke-opacity="0.65" stroke-linecap="round"/>' +
+          '<circle cx="' + xEst.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="5" fill="#00b3dd" stroke="#0f1011" stroke-width="1.5"/>' +
+          '<circle cx="' + xPaid.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="5.8" fill="#847dff" stroke="#ffffff" stroke-width="1.2"/>' +
+          '<text x="' + (xPaid + 10).toFixed(1) + '" y="' + (y + 4).toFixed(1) + '" fill="#d1c9ff" font-size="11" font-family="Roboto Mono, monospace">+' + fmtM(c.overpay) + '</text>' +
+          '</g>'
+        );
+      });
+      out.push('</svg>');
+      $("chart01Wrap").innerHTML = out.join("");
+      bindTips($("chart01Wrap"), sorted, function (c) {
+        updateInsp(c);
+        return [
+          c.club + " · Brecha de Fichajes",
+          [
+            'Tasación técnica previa: <strong class="tabular" style="color:#00b3dd;">' + fmtM(c.est) + '</strong>',
+            'Desembolso real pagado: <strong class="tabular" style="color:#ffffff;">' + fmtM(c.paid) + '</strong>',
+            'Sobreprecio neto («Impuesto Premier»): <strong class="tabular" style="color:#847dff;">+' + fmtM(c.overpay) + '</strong>',
+            'Recargo promedio por operación: <strong class="tabular" style="color:#00b3dd;">' + fmtP(c.avgDef) + '</strong> (' + c.count + ' fichajes)'
+          ]
+        ];
+      });
+      return;
+    }
+
+    if (c1Mode === "scatter") {
+      if (leg) {
+        leg.innerHTML =
+          '<span class="legend-item"><span class="legend-swatch" style="background:#847dff;border-radius:50%;"></span> BIG SIX (ALTO PRESUPUESTO)</span>' +
+          '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;border-radius:50%;"></span> MEDIA TABLA («IMPUESTO DE SUPERVIVENCIA»)</span>' +
+          '<span class="legend-item">TAMAÑO DEL CÍRCULO = N° DE FICHAJES (5 A 93)</span>';
+      }
+      const W = 900, H = 470, pL = 72, pR = 38, pT = 28, pB = 48, pW = W - pL - pR, pH = H - pT - pB;
+      const maxX = 3200, maxY = 300;
+      const xS = function (v) { return pL + (v / maxX) * pW; };
+      const yS = function (v) { return pT + pH - (v / maxY) * pH; };
+      const avgPaid = 992.1, avgRec = 117.4;
+      const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Matriz de dispersión: Gasto Total vs Recargo Porcentual Promedio">'];
+      for (let gx = 0; gx <= 4; gx++) {
+        const vx = gx * 800, x = xS(vx);
+        out.push('<line x1="' + x.toFixed(1) + '" y1="' + pT + '" x2="' + x.toFixed(1) + '" y2="' + (H - pB) + '" stroke="rgba(255,255,255,0.06)"/><text x="' + x.toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">€' + vx + 'M</text>');
+      }
+      for (let gy = 0; gy <= 5; gy++) {
+        const vy = gy * 60, y = yS(vy);
+        out.push('<line x1="' + pL + '" y1="' + y.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,0.06)"/><text x="' + (pL - 10) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + vy + '%</text>');
+      }
+      /* Quadrant dividing lines */
+      const qX = xS(avgPaid), qY = yS(avgRec);
+      out.push(
+        '<line x1="' + qX.toFixed(1) + '" y1="' + pT + '" x2="' + qX.toFixed(1) + '" y2="' + (H - pB) + '" stroke="rgba(255,255,255,0.28)" stroke-dasharray="5 5"/>' +
+        '<line x1="' + pL + '" y1="' + qY.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + qY.toFixed(1) + '" stroke="rgba(255,255,255,0.28)" stroke-dasharray="5 5"/>' +
+        '<text x="' + (W - pR - 8) + '" y="' + (pT + 16) + '" text-anchor="end" fill="#d1c9ff" font-size="10" font-family="Roboto Mono, monospace">CUADRANTE I · OPULENCIA HIPERINFLADA (MAN UTD / CHELSEA)</text>' +
+        '<text x="' + (pL + 10) + '" y="' + (pT + 16) + '" text-anchor="start" fill="#00b3dd" font-size="10" font-family="Roboto Mono, monospace">CUADRANTE II · IMPUESTO DE SUPERVIVENCIA (MEDIA TABLA)</text>' +
+        '<text x="' + (W - pR - 8) + '" y="' + (H - pB - 10) + '" text-anchor="end" fill="#9f9fa0" font-size="10" font-family="Roboto Mono, monospace">CUADRANTE III · MEGAGASTO DE MENOR RECARGO % (MAN CITY / LIVERPOOL / ARSENAL)</text>'
+      );
+      const bigSix = new Set(["Chelsea", "Man Utd", "Man City", "Liverpool", "Arsenal"]);
+      CLUB_DATA.forEach(function (c, i) {
+        const cx = xS(c.paid), cy = yS(c.avgDef);
+        const r = Math.max(5.5, Math.sqrt(c.count) * 1.55);
+        const col = bigSix.has(c.club) ? "#847dff" : "#00b3dd";
+        const showLbl = c.paid > 700 || c.avgDef > 140;
+        out.push(
+          '<g data-tip="' + i + '" style="cursor:pointer;">' +
+          '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + r.toFixed(1) + '" fill="' + col + '" fill-opacity="0.78" stroke="#ffffff" stroke-width="1.2"/>' +
+          (showLbl ? '<text x="' + (cx + r + 5).toFixed(1) + '" y="' + (cy + 4).toFixed(1) + '" fill="#f5f5f7" font-size="11" font-family="Inter, sans-serif">' + c.club + '</text>' : '') +
+          '</g>'
+        );
+      });
+      out.push('</svg>');
+      $("chart01Wrap").innerHTML = out.join("");
+      bindTips($("chart01Wrap"), CLUB_DATA, function (c) {
+        updateInsp(c);
+        return [
+          c.club + " · Matriz Gasto vs. Recargo",
+          [
+            'Gasto total desembolsado: <strong class="tabular">' + fmtM(c.paid) + '</strong> (' + c.count + ' operaciones)',
+            'Recargo promedio por operación: <strong class="tabular" style="color:#00b3dd;">' + fmtP(c.avgDef) + '</strong>',
+            'Sobreprecio neto acumulado: <strong class="tabular" style="color:#847dff;">+' + fmtM(c.overpay) + '</strong>'
+          ]
+        ];
+      });
+      return;
+    }
+
+    /* Horizontal Bar Ranking with League Average Benchmark */
+    const avgVal = c1Mode === "avgDef" ? 117.4 : 227.8;
+    if (leg) {
+      leg.innerHTML =
+        '<span class="legend-item"><span class="legend-swatch" style="background:#847dff;"></span> POR ENCIMA DEL PROMEDIO DE LA LIGA</span>' +
+        '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;"></span> POR DEBAJO DEL PROMEDIO (' + (c1Mode === "avgDef" ? "117,4%" : "€227,8M") + ')</span>';
+    }
     const sorted = CLUB_DATA.slice().sort(function (a, b) { return b[c1Mode] - a[c1Mode]; });
     const max = sorted[0][c1Mode] || 1;
-    const u = c1Mode === "paid" ? 500 : c1Mode === "avgDef" ? 50 : 100;
+    const u = c1Mode === "avgDef" ? 50 : 100;
     const nMax = Math.ceil(max / u) * u;
-    const W = 900, H = 580, pL = 132, pR = 82, pT = 18, pB = 36, pW = W - pL - pR;
+    const W = 900, H = 580, pL = 132, pR = 86, pT = 22, pB = 36, pW = W - pL - pR;
     const step = (H - pT - pB) / sorted.length, bH = step * 0.68;
     const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Sobreprecio acumulado por club">'];
     for (let t = 0; t <= 5; t++) {
@@ -407,10 +548,9 @@
     }
     sorted.forEach(function (c, i) {
       const val = c[c1Mode];
-      const r = val / max;
       const bw = Math.max(3, (val / nMax) * pW);
       const y = pT + i * step + (step - bH) / 2;
-      const col = r > 0.75 ? "#847dff" : r > 0.48 ? "#00b3dd" : r > 0.28 ? "#90b8f0" : r > 0.14 ? "#d1c9ff" : "#4b49aa";
+      const col = val >= avgVal ? "#847dff" : "#00b3dd";
       out.push(
         '<g data-tip="' + i + '" style="cursor:pointer;">' +
         '<rect x="' + pL + '" y="' + (pT + i * step) + '" width="' + (pW + pR) + '" height="' + step.toFixed(1) + '" fill="transparent"/>' +
@@ -420,6 +560,11 @@
         (c1Mode === "avgDef" ? fmtP(val) : fmtM(val)) + '</text></g>'
       );
     });
+    const xAvg = pL + (avgVal / nMax) * pW;
+    out.push(
+      '<line x1="' + xAvg.toFixed(1) + '" y1="' + pT + '" x2="' + xAvg.toFixed(1) + '" y2="' + (H - pB) + '" stroke="#ffffff" stroke-dasharray="5 4" stroke-width="1.4"/>' +
+      '<text x="' + (xAvg + 6).toFixed(1) + '" y="' + (pT + 12) + '" fill="#ffffff" font-size="10" font-family="Roboto Mono, monospace">PROMEDIO LIGA: ' + (c1Mode === "avgDef" ? "117,4%" : "€227,8M") + '</text>'
+    );
     out.push('</svg>');
     $("chart01Wrap").innerHTML = out.join("");
     bindTips($("chart01Wrap"), sorted, function (c) {
@@ -435,6 +580,7 @@
       ];
     });
   }
+
   document.querySelectorAll("[data-c1-mode]").forEach(function (b) {
     b.addEventListener("click", function () {
       document.querySelectorAll("[data-c1-mode]").forEach(function (x) { x.classList.remove("active"); });
@@ -446,16 +592,83 @@
   renderChart01();
 
   /* ==========================================================================
-     5. CHART 02: INFLACIÓN HICP DEL BCE VS. SOBREPRECIO PREMIER (JUAN TAPIA)
+     5. CHART 02 (JUAN TAPIA):
+        - "rates": True 1:1 Same-Scale Gap Chart (HICP % vs. Sobrecosto Ponderado Premier % 2007-2026, eliminating dual-axis distortion!)
+        - "monthly": Complete 258-Month BCE HICP Time Series (2005-01 to 2026-06) with historical annotations
+        - "euros": Annual Stacked Volume (Tasación Real vs. Sobreprecio Neto €M)
      ========================================================================== */
   let c2Mode = "rates";
   function renderChart02() {
-    const yrs = c2Mode === "bce" ? YEAR_DATA.filter(function (y) { return y.year >= 2006 && y.year <= 2017; }) : YEAR_DATA;
-    const W = 900, H = 390, pL = 68, pR = 68, pT = 22, pB = 42, pW = W - pL - pR, pH = H - pT - pB;
+    const W = 900, H = 400, pL = 68, pR = 42, pT = 26, pB = 42, pW = W - pL - pR, pH = H - pT - pB;
+
+    if (c2Mode === "monthly") {
+      $("chart02Legend").innerHTML =
+        '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;"></span> SERIE MENSUAL HICP EUROZONA (258 MESES, 2005–2026)</span>' +
+        '<span class="legend-item"><span class="legend-swatch" style="background:#ffffff;"></span> META DE ESTABILIDAD BCE (2,0%)</span>' +
+        '<span class="legend-item"><span class="legend-swatch" style="background:#847dff;"></span> PROMEDIO HISTÓRICO 20 AÑOS (2,14%)</span>';
+      const minV = -1, maxV = 11.5, span = maxV - minV;
+      const xM = function (i) { return pL + (i / (HICP_MONTHLY.length - 1)) * pW; };
+      const yM = function (v) { return pT + pH - ((v - minV) / span) * pH; };
+      const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Serie mensual completa de 258 meses de inflación HICP en la Eurozona">'];
+      [-1, 0, 2, 4, 6, 8, 10].forEach(function (gv) {
+        const y = yM(gv);
+        out.push(
+          '<line x1="' + pL + '" y1="' + y.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,' + (gv === 0 ? '0.18' : '0.07') + ')"/>' +
+          '<text x="' + (pL - 8) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + gv + '%</text>'
+        );
+      });
+      const yZero = yM(0), yBce = yM(2.0);
+      const pts = HICP_MONTHLY.map(function (m, i) { return xM(i).toFixed(1) + "," + yM(m[1]).toFixed(1); }).join(" ");
+      out.push(
+        '<polygon points="' + pL + ',' + yZero.toFixed(1) + ' ' + pts + ' ' + (pL + pW) + ',' + yZero.toFixed(1) + '" fill="rgba(0,179,221,0.16)"/>' +
+        '<polyline points="' + pts + '" fill="none" stroke="#00b3dd" stroke-width="2.2" stroke-linejoin="round"/>' +
+        '<line x1="' + pL + '" y1="' + yBce.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + yBce.toFixed(1) + '" stroke="#ffffff" stroke-dasharray="6 4" stroke-width="1.5"/>' +
+        '<text x="' + (pL + 10) + '" y="' + (yBce - 7).toFixed(1) + '" fill="#ffffff" font-size="10.5" font-family="Roboto Mono, monospace">META HISTÓRICA BCE: 2,0% (PROMEDIO 2005–2026: 2,14%)</text>'
+      );
+      /* Historical Annotations */
+      const annotations = [
+        [42, "2008-07: 4,1% (Crisis Subprime)"],
+        [120, "2015-01: -0,6% (Deflación Eurozona)"],
+        [213, "2022-10: 10,6% (Pico energético post-pandemia)"]
+      ];
+      annotations.forEach(function (an) {
+        const idx = an[0], m = HICP_MONTHLY[idx];
+        if (m) {
+          const ax = xM(idx), ay = yM(m[1]);
+          out.push(
+            '<circle cx="' + ax.toFixed(1) + '" cy="' + ay.toFixed(1) + '" r="4.5" fill="#847dff" stroke="#ffffff" stroke-width="1.5"/>' +
+            '<text x="' + ax.toFixed(1) + '" y="' + (ay - 10).toFixed(1) + '" text-anchor="middle" fill="#d1c9ff" font-size="10" font-family="Roboto Mono, monospace">' + an[1] + '</text>'
+          );
+        }
+      });
+      const stepW = pW / HICP_MONTHLY.length;
+      HICP_MONTHLY.forEach(function (m, i) {
+        const cx = xM(i);
+        if (m[0].endsWith("-01") && (parseInt(m[0].slice(0, 4), 10) % 2 === 1)) {
+          out.push('<text x="' + cx.toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + m[0].slice(0, 4) + '</text>');
+        }
+        out.push('<rect data-tip="' + i + '" x="' + (cx - stepW / 2).toFixed(1) + '" y="' + pT + '" width="' + Math.max(2, stepW).toFixed(1) + '" height="' + pH + '" fill="transparent" style="cursor:pointer;"/>');
+      });
+      out.push('</svg>');
+      $("chart02Wrap").innerHTML = out.join("");
+      bindTips($("chart02Wrap"), HICP_MONTHLY, function (m) {
+        const diff = (m[1] - 2.0).toFixed(1);
+        return [
+          "Periodo " + m[0],
+          [
+            'Tasa de Inflación HICP (BCE): <strong class="tabular" style="color:#00b3dd;">' + fmtP(m[1]) + '</strong>',
+            'Desviación frente a meta 2,0% BCE: <span class="tabular">' + (diff >= 0 ? "+" : "") + diff + ' pts</span>',
+            'Fuente: Base INFLACION_LIMPIA.csv (258 observaciones mensuales)'
+          ]
+        ];
+      });
+      return;
+    }
 
     if (c2Mode === "euros") {
+      const yrs = YEAR_DATA;
       $("chart02Legend").innerHTML =
-        '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;"></span> VALOR ESTIMADO DE MERCADO (€M)</span>' +
+        '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;"></span> TASACIÓN REAL DE MERCADO (€M)</span>' +
         '<span class="legend-item"><span class="legend-swatch" style="background:#847dff;"></span> SOBREPRECIO NETO PAGADO (€M)</span>';
       const mP = 3200;
       const bw = (pW / yrs.length) * 0.66;
@@ -478,78 +691,87 @@
           '<rect x="' + (x - 4).toFixed(1) + '" y="' + pT + '" width="' + (bw + 8).toFixed(1) + '" height="' + pH + '" fill="transparent"/>' +
           '<rect x="' + x.toFixed(1) + '" y="' + yE.toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + eH.toFixed(1) + '" fill="#00b3dd" fill-opacity="0.75"/>' +
           '<rect x="' + x.toFixed(1) + '" y="' + (yE - oH).toFixed(1) + '" width="' + bw.toFixed(1) + '" height="' + oH.toFixed(1) + '" rx="2" fill="#847dff"/>' +
-          (i % 2 === 0 || yrs.length <= 12 ? '<text x="' + (x + bw / 2).toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + yr.year + '</text>' : '') +
+          (i % 2 === 0 ? '<text x="' + (x + bw / 2).toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + yr.year + '</text>' : '') +
           '</g>'
         );
       });
       out.push('</svg>');
       $("chart02Wrap").innerHTML = out.join("");
-    } else {
-      $("chart02Legend").innerHTML =
-        '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;"></span> INFLACIÓN EUROPEA HICP (%)</span>' +
-        '<span class="legend-item"><span class="legend-swatch" style="background:#ffffff;"></span> META HISTÓRICA BCE (2,0%)</span>' +
-        (c2Mode === "rates" ? '<span class="legend-item"><span class="legend-swatch" style="background:#847dff;"></span> SOBRECOSTO PREMIER (%)</span>' : '');
-      const mH = c2Mode === "bce" ? 5 : 10;
-      const mPr = 280;
-      const xA = function (i) { return pL + (i / (yrs.length - 1)) * pW; };
-      const yH = function (v) { return pT + pH - (v / mH) * pH; };
-      const yP = function (v) { return pT + pH - (v / mPr) * pH; };
-      const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Inflación HICP vs sobreprecio Premier">'];
-      for (let g = 0; g <= 5; g++) {
-        const hv = (mH / 5) * g;
-        const y = yH(hv);
-        out.push(
-          '<line x1="' + pL + '" y1="' + y.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,0.07)"/>' +
-          '<text x="' + (pL - 8) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#00b3dd" font-size="11" font-family="Roboto Mono, monospace">' + hv.toFixed(0) + '%</text>'
-        );
-        if (c2Mode === "rates") {
-          out.push(
-            '<text x="' + (W - pR + 8) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="start" fill="#847dff" font-size="11" font-family="Roboto Mono, monospace">' + Math.round((mPr / 5) * g) + '%</text>'
-          );
-        }
-      }
-      const yB = yH(2);
-      out.push(
-        '<line x1="' + pL + '" y1="' + yB.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + yB.toFixed(1) + '" stroke="rgba(255,255,255,0.65)" stroke-dasharray="6 5" stroke-width="1.5"/>' +
-        '<text x="' + (pL + 10) + '" y="' + (yB - 7).toFixed(1) + '" fill="#ffffff" font-size="10.5" font-family="Roboto Mono, monospace">META BCE 2,0%</text>'
-      );
-      const hPts = yrs.map(function (yr, i) { return xA(i).toFixed(1) + "," + yH(HICP[yr.year] ?? 2).toFixed(1); }).join(" ");
-      out.push(
-        '<polygon points="' + pL + ',' + (pT + pH) + ' ' + hPts + ' ' + (pL + pW) + ',' + (pT + pH) + '" fill="rgba(0,179,221,0.14)"/>' +
-        '<polyline points="' + hPts + '" fill="none" stroke="#00b3dd" stroke-width="2.6" stroke-linejoin="round"/>'
-      );
-      if (c2Mode === "rates") {
-        out.push(
-          '<polyline points="' + yrs.map(function (yr, i) { return xA(i).toFixed(1) + "," + yP(yr.weightedPct).toFixed(1); }).join(" ") + '" fill="none" stroke="#847dff" stroke-width="2.6" stroke-linejoin="round"/>'
-        );
-      }
-      const cW = pW / yrs.length;
-      yrs.forEach(function (yr, i) {
-        const cx = xA(i);
-        out.push(
-          '<g data-tip="' + i + '" style="cursor:pointer;">' +
-          '<rect x="' + (cx - cW / 2).toFixed(1) + '" y="' + pT + '" width="' + cW.toFixed(1) + '" height="' + pH + '" fill="transparent"/>' +
-          '<circle cx="' + cx.toFixed(1) + '" cy="' + yH(HICP[yr.year] ?? 2).toFixed(1) + '" r="4" fill="#00b3dd" stroke="#0f1011" stroke-width="1.5"/>' +
-          (c2Mode === "rates" ? '<circle cx="' + cx.toFixed(1) + '" cy="' + yP(yr.weightedPct).toFixed(1) + '" r="4" fill="#847dff" stroke="#0f1011" stroke-width="1.5"/>' : '') +
-          (i % 2 === 0 || yrs.length <= 12 ? '<text x="' + cx.toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + yr.year + '</text>' : '') +
-          '</g>'
-        );
+      bindTips($("chart02Wrap"), yrs, function (yr) {
+        return [
+          "Año " + yr.year,
+          [
+            'Tasación técnica estimada: <strong class="tabular" style="color:#00b3dd;">' + fmtM(yr.est) + '</strong>',
+            'Sobreprecio neto pagado: <strong class="tabular" style="color:#847dff;">+' + fmtM(yr.overpay) + '</strong>',
+            'Total desembolsado: <span class="tabular">' + fmtM(yr.paid) + '</span> (' + yr.count + ' operaciones)'
+          ]
+        ];
       });
-      out.push('</svg>');
-      $("chart02Wrap").innerHTML = out.join("");
+      return;
     }
+
+    /* Default "rates": True 1:1 Same-Scale Gap Chart (2007-2026) */
+    const yrs = YEAR_DATA.filter(function (y) { return y.year >= 2007; });
+    $("chart02Legend").innerHTML =
+      '<span class="legend-item"><span class="legend-swatch" style="background:#847dff;"></span> SOBRECOSTO PONDERADO PREMIER LEAGUE (%)</span>' +
+      '<span class="legend-item"><span class="legend-swatch" style="background:#00b3dd;"></span> INFLACIÓN REAL EUROPEA HICP (%)</span>' +
+      '<span class="legend-item"><span class="legend-swatch" style="background:rgba(132,125,255,0.22);"></span> BRECHA ESPECULATIVA NETA (MISMA ESCALA 1:1)</span>';
+    const maxR = 75;
+    const xA = function (i) { return pL + (i / (yrs.length - 1)) * pW; };
+    const yA = function (v) { return pT + pH - (v / maxR) * pH; };
+    const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Comparación en escala 1:1 entre Inflación HICP y Sobrecosto Premier">'];
+    [0, 15, 30, 45, 60, 75].forEach(function (gv) {
+      const y = yA(gv);
+      out.push(
+        '<line x1="' + pL + '" y1="' + y.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,0.07)"/>' +
+        '<text x="' + (pL - 8) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + gv + '%</text>'
+      );
+    });
+    const hPts = yrs.map(function (yr, i) { return xA(i).toFixed(1) + "," + yA(HICP[yr.year] ?? 2).toFixed(1); });
+    const pPts = yrs.map(function (yr, i) { return xA(i).toFixed(1) + "," + yA(yr.weightedPct).toFixed(1); });
+    const areaPoly = pPts.concat(hPts.slice().reverse()).join(" ");
+    const yBce = yA(2.0);
+    out.push(
+      '<polygon points="' + areaPoly + '" fill="rgba(132,125,255,0.18)"/>' +
+      '<line x1="' + pL + '" y1="' + yBce.toFixed(1) + '" x2="' + (W - pR) + '" y2="' + yBce.toFixed(1) + '" stroke="rgba(255,255,255,0.5)" stroke-dasharray="5 4" stroke-width="1.2"/>' +
+      '<polyline points="' + hPts.join(" ") + '" fill="none" stroke="#00b3dd" stroke-width="2.8" stroke-linejoin="round"/>' +
+      '<polyline points="' + pPts.join(" ") + '" fill="none" stroke="#847dff" stroke-width="3" stroke-linejoin="round"/>'
+    );
+    /* Direct Canvas Annotations */
+    const idx2017 = yrs.findIndex(function (y) { return y.year === 2017; });
+    if (idx2017 !== -1) {
+      const ax = xA(idx2017), ay = yA(yrs[idx2017].weightedPct);
+      out.push('<text x="' + ax.toFixed(1) + '" y="' + (ay - 10).toFixed(1) + '" text-anchor="middle" fill="#d1c9ff" font-size="10" font-family="Roboto Mono, monospace">2017 · MACRO-CONTRATO TV: +68,1% RECARGO (HICP: 1,5%)</text>');
+    }
+    const cW = pW / yrs.length;
+    yrs.forEach(function (yr, i) {
+      const cx = xA(i);
+      out.push(
+        '<g data-tip="' + i + '" style="cursor:pointer;">' +
+        '<rect x="' + (cx - cW / 2).toFixed(1) + '" y="' + pT + '" width="' + cW.toFixed(1) + '" height="' + pH + '" fill="transparent"/>' +
+        '<circle cx="' + cx.toFixed(1) + '" cy="' + yA(HICP[yr.year] ?? 2).toFixed(1) + '" r="3.8" fill="#00b3dd" stroke="#0f1011" stroke-width="1.4"/>' +
+        '<circle cx="' + cx.toFixed(1) + '" cy="' + yA(yr.weightedPct).toFixed(1) + '" r="4.2" fill="#847dff" stroke="#ffffff" stroke-width="1.2"/>' +
+        (i % 2 === 0 || i === yrs.length - 1 ? '<text x="' + cx.toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + yr.year + '</text>' : '') +
+        '</g>'
+      );
+    });
+    out.push('</svg>');
+    $("chart02Wrap").innerHTML = out.join("");
     bindTips($("chart02Wrap"), yrs, function (yr) {
+      const hVal = HICP[yr.year] ?? 2.0;
+      const ratio = (yr.weightedPct / Math.max(0.2, hVal)).toFixed(1);
       return [
-        "Año " + yr.year,
+        "Año " + yr.year + " · Escala Real 1:1",
         [
-          'Inflación HICP Eurozona: <strong class="tabular" style="color:#00b3dd;">' + fmtP(HICP[yr.year] ?? 2) + '</strong> (Meta BCE: 2,0%)',
-          'Sobrecosto Premier: <strong class="tabular" style="color:#847dff;">' + fmtP(yr.weightedPct) + '</strong>',
-          'Pagado: <span class="tabular">' + fmtM(yr.paid) + '</span> · Tasación: <span class="tabular">' + fmtM(yr.est) + '</span>',
-          'Sobreprecio neto: <span class="tabular">' + fmtM(yr.overpay) + '</span> (' + yr.count + ' fichajes)'
+          'Sobrecosto ponderado Premier: <strong class="tabular" style="color:#847dff;">+' + fmtP(yr.weightedPct) + '</strong>',
+          'Inflación real Eurozona (HICP): <strong class="tabular" style="color:#00b3dd;">' + fmtP(hVal) + '</strong> (Meta BCE: 2,0%)',
+          'Multiplicador especulativo: <strong class="tabular">' + ratio + 'x</strong> veces la inflación europea',
+          'Sobreprecio neto anual: <span class="tabular">+' + fmtM(yr.overpay) + '</span> (' + yr.count + ' operaciones)'
         ]
       ];
     });
   }
+
   document.querySelectorAll("[data-c2-mode]").forEach(function (b) {
     b.addEventListener("click", function () {
       document.querySelectorAll("[data-c2-mode]").forEach(function (x) { x.classList.remove("active"); });
@@ -561,10 +783,14 @@
   renderChart02();
 
   /* ==========================================================================
-     6. CHART 03: 20 AÑOS DE EVOLUCIÓN ECONÓMICA POR CLUB (VALERIA TRUJILLO)
+     6. CHART 03 (VALERIA TRUJILLO):
+        - "clubVal": Valoración Patrimonial del Club (€M, 2005–2025, from Valor_Neto_Premier_League.csv)
+        - "slope": Slope Chart 2005 vs 2025 (Salto Patrimonial en 20 Años)
+        - "cumOver": Sobreprecio Acumulado en Fichajes (€M, 2005–2026)
+        - "cumPaid": Gasto Total Acumulado en Fichajes (€M, 2005–2026)
      ========================================================================== */
-  let c3Metric = "cumOver";
-  let activeClubs = new Set(["Chelsea", "Man Utd", "Man City", "Newcastle", "Liverpool", "Arsenal"]);
+  let c3Metric = "clubVal";
+  let activeClubs = new Set(["Chelsea", "Arsenal", "Liverpool", "Man City", "Man Utd", "Aston Villa", "Newcastle"]);
 
   function renderClubToggles() {
     $("c3ClubToggles").innerHTML = CLUB_DATA.map(function (c, i) {
@@ -591,23 +817,74 @@
       return { cs: cs, col: COLS[idx % COLS.length], idx: idx };
     }).filter(function (x) { return activeClubs.has(x.cs.club); });
 
+    if (c3Metric === "slope") {
+      const W = 900, H = 430, pL = 190, pR = 230, pT = 34, pB = 34, pH = H - pT - pB;
+      const items = [];
+      vis.forEach(function (it) {
+        const pts = it.cs.series.filter(function (p) { return p.clubVal !== null; });
+        if (pts.length >= 2) {
+          const first = pts[0], last = pts[pts.length - 1];
+          const pct = ((last.clubVal - first.clubVal) / Math.max(1, first.clubVal)) * 100;
+          items.push({ club: it.cs.club, col: it.col, y0: first.y, v0: first.clubVal, y1: last.y, v1: last.clubVal, pct: pct });
+        }
+      });
+      items.sort(function (a, b) { return b.v1 - a.v1; });
+      const maxV = 3400;
+      const yS = function (v) { return pT + pH - (v / maxV) * pH; };
+      const x0 = pL, x1 = W - pR;
+      const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Gráfico de pendiente 2005 vs 2025: Salto patrimonial por club">'];
+      out.push(
+        '<line x1="' + x0 + '" y1="' + pT + '" x2="' + x0 + '" y2="' + (H - pB) + '" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>' +
+        '<line x1="' + x1 + '" y1="' + pT + '" x2="' + x1 + '" y2="' + (H - pB) + '" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>' +
+        '<text x="' + x0 + '" y="' + (pT - 12) + '" text-anchor="middle" fill="#00b3dd" font-size="11" font-family="Roboto Mono, monospace">INICIO SERIE (2005)</text>' +
+        '<text x="' + x1 + '" y="' + (pT - 12) + '" text-anchor="middle" fill="#847dff" font-size="11" font-family="Roboto Mono, monospace">CIERRE SERIE (2025)</text>'
+      );
+      items.forEach(function (it, i) {
+        const py0 = yS(it.v0), py1 = yS(it.v1);
+        out.push(
+          '<g data-tip="' + i + '" style="cursor:pointer;">' +
+          '<line x1="' + x0 + '" y1="' + py0.toFixed(1) + '" x2="' + x1 + '" y2="' + py1.toFixed(1) + '" stroke="' + it.col + '" stroke-width="2.5"/>' +
+          '<circle cx="' + x0 + '" cy="' + py0.toFixed(1) + '" r="4.5" fill="' + it.col + '"/>' +
+          '<circle cx="' + x1 + '" cy="' + py1.toFixed(1) + '" r="5" fill="' + it.col + '" stroke="#ffffff" stroke-width="1.2"/>' +
+          '<text x="' + (x1 + 12) + '" y="' + (py1 + 4).toFixed(1) + '" fill="#f5f5f7" font-size="11.5" font-family="Roboto Mono, monospace">' + it.club + ': ' + fmtM(it.v1) + ' (+' + Math.round(it.pct) + '%)</text>' +
+          '</g>'
+        );
+      });
+      out.push('</svg>');
+      $("chart03Wrap").innerHTML = out.join("");
+      bindTips($("chart03Wrap"), items, function (it) {
+        return [
+          it.club + " · Salto Patrimonial",
+          [
+            'Valoración inicial (' + it.y0 + '): <strong class="tabular" style="color:#00b3dd;">' + fmtM(it.v0) + '</strong>',
+            'Valoración reciente (' + it.y1 + '): <strong class="tabular" style="color:#847dff;">' + fmtM(it.v1) + '</strong>',
+            'Crecimiento patrimonial neto: <strong class="tabular">+' + fmtP(it.pct) + '</strong>'
+          ]
+        ];
+      });
+      return;
+    }
+
+    const maxYearIdx = c3Metric === "clubVal" ? 21 : 22;
     let max = 50, min = 0;
     vis.forEach(function (it) {
-      it.cs.series.forEach(function (p) {
-        if (p[c3Metric] > max) max = p[c3Metric];
-        if (p[c3Metric] < min) min = p[c3Metric];
+      it.cs.series.slice(0, maxYearIdx).forEach(function (p) {
+        const val = p[c3Metric];
+        if (val !== null && val !== undefined) {
+          if (val > max) max = val;
+          if (val < min) min = val;
+        }
       });
     });
     const su = max > 1200 ? 500 : max > 400 ? 200 : 100;
     const nMax = Math.ceil(max / su) * su;
     const nMin = min < 0 ? Math.floor(min / 50) * 50 : 0;
     const span = Math.max(1, nMax - nMin);
-    const W = 900, H = 405, pL = 74, pR = 28, pT = 20, pB = 42, pW = W - pL - pR, pH = H - pT - pB;
-    const yLen = CLUB_SERIES[0].series.length;
-    const xA = function (i) { return pL + (i / (yLen - 1)) * pW; };
+    const W = 900, H = 410, pL = 74, pR = 32, pT = 24, pB = 42, pW = W - pL - pR, pH = H - pT - pB;
+    const xA = function (i) { return pL + (i / (maxYearIdx - 1)) * pW; };
     const yA = function (v) { return pT + pH - ((v - nMin) / span) * pH; };
 
-    const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Evolución económica por club 2005-2026">'];
+    const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Evolución económica por club">'];
     for (let g = 0; g <= 5; g++) {
       const v = nMin + (span / 5) * g;
       const y = yA(v);
@@ -616,26 +893,40 @@
         '<text x="' + (pL - 8) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">€' + Math.round(v) + 'M</text>'
       );
     }
-    if (nMin < 0) {
-      out.push('<line x1="' + pL + '" y1="' + yA(0).toFixed(1) + '" x2="' + (W - pR) + '" y2="' + yA(0).toFixed(1) + '" stroke="rgba(255,255,255,0.3)" stroke-dasharray="4 4"/>');
-    }
+    /* Structural milestone line: 2016/17 TV Deal */
+    const x2016 = xA(11);
+    out.push(
+      '<line x1="' + x2016.toFixed(1) + '" y1="' + pT + '" x2="' + x2016.toFixed(1) + '" y2="' + (H - pB) + '" stroke="rgba(255,255,255,0.28)" stroke-dasharray="5 4"/>' +
+      '<text x="' + (x2016 + 6).toFixed(1) + '" y="' + (pT + 12) + '" fill="#d1c9ff" font-size="10" font-family="Roboto Mono, monospace">2016 · MACRO-CONTRATO TV (£5.140M)</text>'
+    );
+
     vis.forEach(function (it) {
-      out.push(
-        '<polyline points="' + it.cs.series.map(function (p, i) { return xA(i).toFixed(1) + "," + yA(p[c3Metric]).toFixed(1); }).join(" ") +
-        '" fill="none" stroke="' + it.col + '" stroke-width="' + (it.idx < 3 ? 2.6 : 1.8) + '" stroke-linejoin="round"/>'
-      );
+      const validPts = [];
+      it.cs.series.slice(0, maxYearIdx).forEach(function (p, i) {
+        if (p[c3Metric] !== null && p[c3Metric] !== undefined) {
+          validPts.push(xA(i).toFixed(1) + "," + yA(p[c3Metric]).toFixed(1));
+        }
+      });
+      if (validPts.length > 1) {
+        out.push(
+          '<polyline points="' + validPts.join(" ") + '" fill="none" stroke="' + it.col + '" stroke-width="' + (it.idx < 4 ? 2.6 : 1.8) + '" stroke-linejoin="round"/>'
+        );
+      }
     });
-    const cW = pW / yLen;
+
+    const cW = pW / maxYearIdx;
     const yrsIdx = [];
-    for (let yi = 0; yi < yLen; yi++) {
+    for (let yi = 0; yi < maxYearIdx; yi++) {
       yrsIdx.push(yi);
       const cx = xA(yi);
       out.push(
         '<g data-tip="' + yi + '" style="cursor:pointer;">' +
         '<rect x="' + (cx - cW / 2).toFixed(1) + '" y="' + pT + '" width="' + cW.toFixed(1) + '" height="' + pH + '" fill="transparent"/>' +
-        (yi % 2 === 0 || yi === yLen - 1 ? '<text x="' + cx.toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + (2005 + yi) + '</text>' : '') +
+        (yi % 2 === 0 || yi === maxYearIdx - 1 ? '<text x="' + cx.toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#9f9fa0" font-size="11" font-family="Roboto Mono, monospace">' + (2005 + yi) + '</text>' : '') +
         vis.map(function (it) {
-          return '<circle cx="' + cx.toFixed(1) + '" cy="' + yA(it.cs.series[yi][c3Metric]).toFixed(1) + '" r="3" fill="' + it.col + '"/>';
+          const v = it.cs.series[yi][c3Metric];
+          if (v === null || v === undefined) return '';
+          return '<circle cx="' + cx.toFixed(1) + '" cy="' + yA(v).toFixed(1) + '" r="3" fill="' + it.col + '"/>';
         }).join("") +
         '</g>'
       );
@@ -643,15 +934,18 @@
     out.push('</svg>');
     $("chart03Wrap").innerHTML = out.join("");
 
-    const mL = c3Metric === "cumPaid" ? "Gasto acumulado" : c3Metric === "yrOver" ? "Sobreprecio anual" : "Sobreprecio acumulado";
+    const mL = c3Metric === "clubVal"
+      ? "Valoración Patrimonial (Forbes/Deloitte)"
+      : c3Metric === "cumPaid"
+        ? "Gasto acumulado en fichajes"
+        : "Sobreprecio acumulado en fichajes";
     bindTips($("chart03Wrap"), yrsIdx, function (yi) {
-      const top = vis.slice().sort(function (a, b) { return b.cs.series[yi][c3Metric] - a.cs.series[yi][c3Metric]; }).slice(0, 7);
+      const avail = vis.filter(function (it) { return it.cs.series[yi][c3Metric] !== null && it.cs.series[yi][c3Metric] !== undefined; });
+      const top = avail.sort(function (a, b) { return b.cs.series[yi][c3Metric] - a.cs.series[yi][c3Metric]; }).slice(0, 8);
       return [
         mL + " · " + (2005 + yi),
         top.map(function (it) {
-          const info = CLUB_DATA.find(function (c) { return c.club === it.cs.club; });
-          return '<span style="color:' + it.col + ';font-weight:700;">■</span> ' + it.cs.club + ': <strong class="tabular">' + fmtM(it.cs.series[yi][c3Metric]) + '</strong>' +
-            (info ? ' (<span class="tabular">' + fmtP(info.avgDef) + '</span>)' : '');
+          return '<span style="color:' + it.col + ';font-weight:700;">■</span> ' + it.cs.club + ': <strong class="tabular">' + fmtM(it.cs.series[yi][c3Metric]) + '</strong>';
         })
       ];
     });
@@ -674,7 +968,7 @@
         ? new Set(CLUB_DATA.map(function (c) { return c.club; }))
         : pr === "mid"
           ? new Set(["Southampton", "West Ham", "Everton", "Aston Villa", "Wolves", "Leicester", "Crystal Palace"])
-          : new Set(["Chelsea", "Man Utd", "Man City", "Newcastle", "Liverpool", "Arsenal"]);
+          : new Set(["Chelsea", "Arsenal", "Liverpool", "Man City", "Man Utd", "Aston Villa", "Newcastle"]);
       renderClubToggles();
       renderChart03();
     });
@@ -683,7 +977,42 @@
   renderChart03();
 
   /* ==========================================================================
-     7. METHODOLOGY TABLE & SHARE BUTTONS
+     7. SIMULADOR INTERACTIVO: CALCULADORA DEL «IMPUESTO PREMIER»
+     ========================================================================== */
+  const simClubSel = $("simClubSelect");
+  const simBaseRange = $("simBaseRange");
+  if (simClubSel && simBaseRange) {
+    CLUB_DATA.forEach(function (c) {
+      const opt = document.createElement("option");
+      opt.value = c.club;
+      opt.textContent = c.club + " (Sobrecosto pond. +" + fmtP(c.weightedPct) + " / Recargo prom. +" + fmtP(c.avgDef) + ")";
+      simClubSel.appendChild(opt);
+    });
+
+    function updateSimulator() {
+      const clubName = simClubSel.value;
+      const baseVal = Number(simBaseRange.value) || 40;
+      const club = CLUB_DATA.find(function (c) { return c.club === clubName; }) || CLUB_DATA[0];
+      $("simBaseLabel").textContent = fmtM(baseVal);
+
+      const bceAdjusted = baseVal * 1.0214;
+      const premierWeightedPaid = baseVal * (1 + club.weightedPct / 100);
+      const premierTax = premierWeightedPaid - baseVal;
+      const topDeal = club.topDeals[0];
+
+      $("simBceVal").textContent = fmtM(bceAdjusted);
+      $("simPaidVal").textContent = fmtM(premierWeightedPaid);
+      $("simTaxVal").textContent = "+" + fmtM(premierTax) + " (+" + fmtP(club.weightedPct) + ")";
+      $("simDealNote").innerHTML =
+        'Referencia real en <strong>' + club.club + '</strong>: en el fichaje de <strong>' + topDeal.jugador + '</strong> (' + topDeal.orig + ', temp. ' + topDeal.temp + '), el club pagó un sobreprecio neto de <strong class="tabular" style="color:var(--color-iris-gleam);">+' + fmtM(topDeal.overpay) + ' (+' + topDeal.def + '%)</strong> sobre su tasación de Transfermarkt.';
+    }
+    simClubSel.addEventListener("change", updateSimulator);
+    simBaseRange.addEventListener("input", updateSimulator);
+    updateSimulator();
+  }
+
+  /* ==========================================================================
+     8. METHODOLOGY TABLE & SHARE BUTTONS
      ========================================================================== */
   let sKey = "overpay", sAsc = false, sTerm = "";
   function renderTable() {

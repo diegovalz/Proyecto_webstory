@@ -327,16 +327,18 @@
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 01 · RANKING INTERACTIVO</span>
-              <h3 class="chart-title"><em>Sobreprecio</em> acumulado pagado por club (2005–2026)</h3>
-              <p class="chart-subtitle">Diferencia neta en millones de euros (€M) entre el monto desembolsado y la tasación previa de mercado. Pasa el cursor o toca cualquier barra para auditar cada institución.</p>
+              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 01 · BRECHA, MATRIZ DE CUADRANTES Y RANKING</span>
+              <h3 class="chart-title"><em>Sobreprecio</em> acumulado y distorsión por club (2005–2026)</h3>
+              <p class="chart-subtitle">Explora en tres representaciones complementarias: la brecha directa entre tasación real y precio pagado (Dumbbell Chart), la matriz de 4 cuadrantes (Opulencia vs. Supervivencia) y el ranking con promedio de liga.</p>
             </div>
-            <div class="chart-controls" role="group" aria-label="Ordenar gráfico 01">
-              <button type="button" class="seg-btn active" data-c1-mode="overpay">Sobreprecio (€M)</button>
-              <button type="button" class="seg-btn" data-c1-mode="avgDef">Recargo prom. (%)</button>
-              <button type="button" class="seg-btn" data-c1-mode="paid">Gasto total (€M)</button>
+            <div class="chart-controls" role="group" aria-label="Representación del gráfico 01">
+              <button type="button" class="seg-btn active" data-c1-mode="dumbbell">Brecha Dumbbell (€M)</button>
+              <button type="button" class="seg-btn" data-c1-mode="scatter">Matriz 4 Cuadrantes</button>
+              <button type="button" class="seg-btn" data-c1-mode="overpay">Ranking Sobreprecio (€M)</button>
+              <button type="button" class="seg-btn" data-c1-mode="avgDef">Ranking Recargo (%)</button>
             </div>
           </div>
+          <div class="chart-legend-bar" id="chart01Legend"></div>
           <div class="svg-chart-wrap" id="chart01Wrap"></div>
           <div class="club-inspector">
             <div>
@@ -379,14 +381,14 @@
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 02 · GRUPO DE CONTROL MACROECONÓMICO</span>
+              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 02 · GRUPO DE CONTROL MACROECONÓMICO (SIN DISTORSIÓN DE DOBLE EJE)</span>
               <h3 class="chart-title"><em>La falsa</em> excusa: Inflación Europea (HICP) vs. Sobreprecio Premier</h3>
-              <p class="chart-subtitle">Contraste entre la inflación real de la Eurozona (en Cyan Signal #00b3dd), la meta histórica del 2,0% del Banco Central Europeo y el sobrecosto anual en la Premier League.</p>
+              <p class="chart-subtitle">Compara en la misma escala 1:1 la brecha entre la inflación europea (Cyan Signal #00b3dd) y el sobrecosto de la Premier League (Iris Gleam #847dff), o inspecciona las 258 observaciones mensuales del BCE.</p>
             </div>
             <div class="chart-controls" role="group" aria-label="Vistas del gráfico 02">
-              <button type="button" class="seg-btn active" data-c2-mode="rates">HICP (%) vs. Recargo (%)</button>
-              <button type="button" class="seg-btn" data-c2-mode="euros">Pagado vs. Tasación (€M)</button>
-              <button type="button" class="seg-btn" data-c2-mode="bce">Zoom BCE (2006–2017)</button>
+              <button type="button" class="seg-btn active" data-c2-mode="rates">Escala Real 1:1 (Brecha %)</button>
+              <button type="button" class="seg-btn" data-c2-mode="monthly">Serie Mensual BCE (258 meses)</button>
+              <button type="button" class="seg-btn" data-c2-mode="euros">Volumen Anual Apilado (€M)</button>
             </div>
           </div>
           <div class="chart-legend-bar" id="chart02Legend"></div>
@@ -423,14 +425,15 @@
         <div class="chart-card">
           <div class="chart-header">
             <div>
-              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 03 · TRAYECTORIA LONGITUDINAL</span>
-              <h3 class="chart-title"><em>Veinte años</em> de evolución económica por club (2005–2026)</h3>
-              <p class="chart-subtitle">Evolución acumulada y anual por institución en millones de euros (€M). Alterna métricas o activa clubes individuales para contrastar sus curvas de crecimiento.</p>
+              <span class="mono-label" style="color:var(--color-cyan-signal);">VISUALIZACIÓN ATÓMICA 03 · VALORACIÓN PATRIMONIAL (FORBES/DELOITTE) Y TRAYECTORIA DE GASTO</span>
+              <h3 class="chart-title"><em>Veinte años</em> de evolución patrimonial y sobreprecio por club (2005–2026)</h3>
+              <p class="chart-subtitle">Recorre la serie limpia de valoración patrimonial de los clubes (2005–2025), compara el salto neto en dos décadas (Slope Chart 2005 vs. 2025) o contrasta con el sobreprecio y gasto acumulado en fichajes.</p>
             </div>
             <div class="chart-controls" role="group" aria-label="Métrica del gráfico 03">
-              <button type="button" class="seg-btn active" data-c3-metric="cumOver">Sobreprecio acum. (€M)</button>
-              <button type="button" class="seg-btn" data-c3-metric="cumPaid">Gasto acum. (€M)</button>
-              <button type="button" class="seg-btn" data-c3-metric="yrOver">Sobreprecio anual (€M)</button>
+              <button type="button" class="seg-btn active" data-c3-metric="clubVal">Valoración Club (€M)</button>
+              <button type="button" class="seg-btn" data-c3-metric="slope">Salto 2005 vs. 2025 (Slope)</button>
+              <button type="button" class="seg-btn" data-c3-metric="cumOver">Sobreprecio Fichajes (€M)</button>
+              <button type="button" class="seg-btn" data-c3-metric="cumPaid">Gasto Fichajes (€M)</button>
             </div>
           </div>
           <div class="chart-controls" style="margin-bottom:14px;" role="group" aria-label="Grupos de clubes">
@@ -462,6 +465,45 @@
           <p class="section-subhead">
             Reunimos 997 fichajes entre enero de 2005 y agosto de 2026. Para cada operación se calculó el sobreprecio neto (Pagado − Estimado) y el recargo porcentual respecto a la tasación técnica.
           </p>
+        </div>
+
+        <!-- Simulador Interactivo del Impuesto Premier -->
+        <div class="simulator-card" aria-label="Simulador interactivo del Impuesto Premier">
+          <span class="mono-label" style="color:var(--color-cyan-signal);">HERRAMIENTA INTERACTIVA · SIMULADOR DE FICHAJES</span>
+          <h3 class="chart-title" style="margin-top:6px;"><em>Calculadora</em> del «Impuesto Premier»</h3>
+          <p class="chart-subtitle">Selecciona un club comprador y define la tasación técnica de mercado de un futbolista para simular cuánto costaría con inflación real europea (BCE: +2,14%) frente a lo que termina desembolsando el club según su sobrecosto histórico.</p>
+          <div class="simulator-grid">
+            <div class="sim-controls">
+              <div>
+                <label for="simClubSelect" class="mono-label" style="display:block;color:var(--color-cloud);margin-bottom:6px;">1. CLUB COMPRADOR DE LA PREMIER LEAGUE</label>
+                <select id="simClubSelect" class="sim-select"></select>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+                  <label for="simBaseRange" class="mono-label" style="color:var(--color-cloud);">2. TASACIÓN REAL DE MERCADO (TRANSFERMARKT)</label>
+                  <strong id="simBaseLabel" class="tabular" style="color:var(--color-cyan-signal);font-size:16px;">€40,0M</strong>
+                </div>
+                <input type="range" id="simBaseRange" class="sim-range" min="5" max="120" step="5" value="40" />
+              </div>
+            </div>
+            <div>
+              <div class="sim-readouts">
+                <div class="sim-stat-box">
+                  <span class="mono-label" style="font-size:10px;color:var(--color-ash);">CON INFLACIÓN BCE (+2,14%)</span>
+                  <div class="sim-stat-val tabular" id="simBceVal" style="color:var(--color-cyan-signal);">€40,9M</div>
+                </div>
+                <div class="sim-stat-box">
+                  <span class="mono-label" style="font-size:10px;color:var(--color-ash);">PRECIO ESPERADO PREMIER</span>
+                  <div class="sim-stat-val tabular" id="simPaidVal">€55,5M</div>
+                </div>
+                <div class="sim-stat-box">
+                  <span class="mono-label" style="font-size:10px;color:var(--color-ash);">«IMPUESTO PREMIER» NETO</span>
+                  <div class="sim-stat-val tabular" id="simTaxVal" style="color:var(--color-iris-gleam);">+€15,5M</div>
+                </div>
+              </div>
+              <div class="sim-note" id="simDealNote" aria-live="polite"></div>
+            </div>
+          </div>
         </div>
 
         <div class="table-toolbar">
