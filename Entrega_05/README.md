@@ -7,7 +7,8 @@
 ---
 
 ## 🌐 Enlace a la Webstory Publicada (GitHub Pages)
-* **Webstory (Versión Beta en `/docs`):** [https://diegovalz.github.io/Proyecto_webstory/](https://diegovalz.github.io/Proyecto_webstory/)
+* **Webstory (Versión Beta en `/docs`):**
+* https://diegovalz.github.io/Proyecto_webstory/docs/ 
 * **Código fuente de la Webstory (`docs/`):** [`docs/index.html`](../docs/index.html) · [`docs/style.css`](../docs/style.css) · [`docs/script.js`](../docs/script.js)
 
 ---
