@@ -45,7 +45,7 @@ La webstory y su documentación fueron desarrolladas colaborativamente por los t
 | **Recolección y limpieza de datos de Fichajes y Sobreprecio (Transfermarkt)** | — | — | ✅ Autor principal |
 | **Crónica Sección 01 (*El Impuesto Premier: Sobreprecio por club*)** | Edición | — | ✅ Autor principal |
 | **Crónica Sección 02 (*El doble discurso de la Premier: Inflación HICP*)** | ✅ Autor principal | — | Edición |
-| **Crónica Sección 03 (*La otra inflación: Evolución económica de clubes*)** | — | ✅ Autora principal | Edición |
+| **Crónica Sección 03 (*Veinte años de crecimiento desigual en la Premier League: La evolución del poder adquisitivo en el fútbol inglés*)** | — | ✅ Autora principal | Edición |
 | **Visualización 01 (Ranking interactivo de sobreprecio por club + Podio)** | Integración web | — | ✅ Autor principal |
 | **Visualización 02 (Serie HICP del BCE vs. Sobrecosto Premier)** | ✅ Autor principal | — | Apoyo datos |
 | **Visualización 03 (Trayectoria longitudinal 2005–2026 + Balanza de Arcos)** | Integración web | ✅ Autora principal | Apoyo datos |
