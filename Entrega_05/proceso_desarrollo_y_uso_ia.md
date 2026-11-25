@@ -1,6 +1,6 @@
 # Proceso de Desarrollo e Implementación con Apoyo de IA y Vibecoding
 
-**Proyecto:** *La prima del oro británico: Cuando el mercado cobra el «Impuesto Premier» (2005–2026)*  
+**Proyecto:** *El «Impuesto Premier League»: por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes*  
 **Integrantes:** Juan Tapia, Valeria Trujillo y Diego Valenzuela  
 
 ---
