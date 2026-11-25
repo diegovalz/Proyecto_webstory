@@ -8,7 +8,7 @@
 ## 1. Diseño de la Información y Diseño de la Interacción
 
 ### A. Estructura Narrativa Definida (*Reportaje Especial Estilo Reuters Graphics / The Athletic*)
-La arquitectura de información de la webstory se organizó en **siete bloques secuenciales** inspirados en los reportajes especiales de investigación de **Reuters Graphics** (`@reuters-graphics/style`) y **The Athletic**, priorizando la claridad periodística, el contraste empírico y una experiencia táctil y visual propia de una cobertura de fútbol de élite:
+La información de la webstory se organizó en **siete bloques secuenciales** inspirados en los reportajes especiales de investigación de **Reuters Graphics** (`@reuters-graphics/style`) y **The Athletic**, priorizando la claridad periodística, el contraste empírico y una experiencia táctil y visual propia de una cobertura de fútbol de élite:
 
 1. **Portada Periodística y Cuadro Contable de Hallazgos (`#inicio` — Hero Section):**
    * Abre con un titular directo, informativo y sin ambigüedades: ***«El "Impuesto Premier League": por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes»***.
