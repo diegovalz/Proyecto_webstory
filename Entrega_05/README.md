@@ -2,11 +2,11 @@
 
 **Titular del Reportaje:** *El «Impuesto Premier League»: por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes (2005–2026)*  
 **Integrantes:** Juan Tapia, Valeria Trujillo y Diego Valenzuela  
-**Curso:** Narración Gráfica de No Ficción (COM-208) — Pontificia Universidad Católica de Chile  
+**Curso:** Narración Gráfica — Pontificia Universidad Católica de Chile  
 
 ---
 
-## 🌐 Enlace a la Webstory Publicada (GitHub Pages)
+## Enlace a la Webstory Publicada 
 * **Webstory (Versión Beta en `/docs`):**
 * https://diegovalz.github.io/Proyecto_webstory/docs/ 
 * **Código fuente de la Webstory (`docs/`):** [`docs/index.html`](../docs/index.html) · [`docs/style.css`](../docs/style.css) · [`docs/script.js`](../docs/script.js)
@@ -14,7 +14,7 @@
 ---
 
 ## 1. Resumen del Reportaje: ¿De qué se trata la historia?
-En las últimas dos décadas, la inyección masiva de capital extranjero, el ingreso de fondos soberanos y los multimillonarios contratos de derechos televisivos otorgaron a la **Premier League** inglesa una liquidez financiera sin precedentes en el deporte mundial. Sin embargo, este superávit produjo una distorsión estructural en el mercado europeo: cada vez que un club británico negocia por un futbolista, el precio exigido se multiplica sistemáticamente por encima de su tasación técnica real.
+En las últimas dos décadas, la inyección masiva de capital extranjero, el ingreso de fondos soberanos y los multimillonarios contratos de derechos televisivos otorgaron a la **Premier League** inglesa una liquidez financiera sin precedentes en el deporte mundial. Sin embargo, este superávit produjo una distorsión estructural en el mercado europeo: cada vez que un club británico negocia por un futbolista, el precio exigido se multiplica sistemáticamente por encima de su tasación real dada por el mercado tomando como referencia el mayor exponente de precios de futbolistas del mundo: La web Transfermarkt.
 
 Nuestro reportaje de datos audita **997 operaciones de traspaso** realizadas por los **20 clubes más estables del fútbol inglés entre 2005 y 2026**, cruzando tres fuentes empíricas:
 1. **Registros históricos de fichajes y tasaciones de mercado (Transfermarkt):** Demuestran que los clubes ingleses desembolsaron **€19.841,9 millones** por jugadores cuyo valor estimado de mercado previo al traspaso era de **€15.286,8 millones**, acumulando **€4.555,1 millones en sobreprecio neto (+29,8% de recargo estructural)**.
