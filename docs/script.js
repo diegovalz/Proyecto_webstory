@@ -306,16 +306,38 @@
     if (c1Mode === "scatter") {
       if (leg) {
         leg.innerHTML =
-          '<span class="legend-item"><span class="legend-swatch" style="background:#c82829;border-radius:50%;"></span> Big Six (Alto presupuesto)</span>' +
-          '<span class="legend-item"><span class="legend-swatch" style="background:#1b6b63;border-radius:50%;"></span> Resto de la liga («Impuesto de supervivencia»)</span>' +
-          '<span class="legend-item" style="color:var(--ink-muted);">Tamaño del círculo = N° de fichajes (5 a 93)</span>';
+          '<span class="legend-item"><span class="legend-swatch" style="background:#c82829;border-radius:50%;"></span> Escudo borde rojo: Big Six (Alto presupuesto)</span>' +
+          '<span class="legend-item"><span class="legend-swatch" style="background:#1b6b63;border-radius:50%;"></span> Escudo borde verde: Resto de la liga («Impuesto de supervivencia»)</span>' +
+          '<span class="legend-item" style="color:var(--ink-muted);">Pasa el cursor sobre el escudo de cada club para ver su nombre y métricas</span>';
       }
-      const W = 900, H = 470, pL = 72, pR = 38, pT = 28, pB = 48, pW = W - pL - pR, pH = H - pT - pB;
+      const CLUB_BADGES = {
+        "Chelsea":       { code: "t8",   abbr: "CHE", bg: "#034694" },
+        "Man Utd":       { code: "t1",   abbr: "MUN", bg: "#DA291C" },
+        "Man City":      { code: "t43",  abbr: "MCI", bg: "#6CABDD" },
+        "Newcastle":     { code: "t4",   abbr: "NEW", bg: "#241F20" },
+        "Liverpool":     { code: "t14",  abbr: "LIV", bg: "#C8102E" },
+        "Southampton":   { code: "t20",  abbr: "SOU", bg: "#D71920" },
+        "West Ham":      { code: "t21",  abbr: "WHU", bg: "#7A263A" },
+        "Everton":       { code: "t11",  abbr: "EVE", bg: "#003399" },
+        "Arsenal":       { code: "t3",   abbr: "ARS", bg: "#EF0107" },
+        "Aston Villa":   { code: "t7",   abbr: "AVL", bg: "#670E36" },
+        "Wolves":        { code: "t39",  abbr: "WOL", bg: "#FDB913" },
+        "Leicester":     { code: "t13",  abbr: "LEI", bg: "#003090" },
+        "Crystal Palace":{ code: "t31",  abbr: "CRY", bg: "#1B458F" },
+        "Sunderland":    { code: "t56",  abbr: "SUN", bg: "#EB172B" },
+        "Fulham":        { code: "t54",  abbr: "FUL", bg: "#111417" },
+        "Middlesbrough": { code: "t25",  abbr: "MID", bg: "#E11B22" },
+        "West Brom":     { code: "t35",  abbr: "WBA", bg: "#122F67" },
+        "Stoke City":    { code: "t110", abbr: "STK", bg: "#E03A3E" },
+        "Blackburn":     { code: "t5",   abbr: "BLB", bg: "#009EE0" },
+        "Bolton":        { code: "t30",  abbr: "BOL", bg: "#263C7E" }
+      };
+      const W = 900, H = 490, pL = 72, pR = 38, pT = 32, pB = 48, pW = W - pL - pR, pH = H - pT - pB;
       const maxX = 3200, maxY = 300;
       const xS = function (v) { return pL + (v / maxX) * pW; };
       const yS = function (v) { return pT + pH - (v / maxY) * pH; };
       const avgPaid = 992.1, avgRec = 117.4;
-      const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Matriz de dispersión: Gasto Total vs Recargo Porcentual Promedio">'];
+      const out = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Matriz de dispersión con escudos de clubes: Gasto Total vs Recargo Porcentual Promedio">'];
       for (let gx = 0; gx <= 4; gx++) {
         const vx = gx * 800, x = xS(vx);
         out.push('<line x1="' + x.toFixed(1) + '" y1="' + pT + '" x2="' + x.toFixed(1) + '" y2="' + (H - pB) + '" stroke="#e4dfd4"/><text x="' + x.toFixed(1) + '" y="' + (H - 14) + '" text-anchor="middle" fill="#5c646c" font-size="11" font-family="JetBrains Mono, monospace">€' + vx + 'M</text>');
@@ -333,20 +355,72 @@
         '<text x="' + (W - pR - 8) + '" y="' + (H - pB - 10) + '" text-anchor="end" fill="#5c646c" font-size="10.5" font-weight="600" font-family="Inter, sans-serif">CUADRANTE III · ALTO VOLUMEN CON MENOR RECARGO % (MAN CITY / LIVERPOOL / ARSENAL)</text>'
       );
       const bigSix = new Set(["Chelsea", "Man Utd", "Man City", "Liverpool", "Arsenal"]);
-      CLUB_DATA.forEach(function (c, i) {
-        const cx = xS(c.paid), cy = yS(c.avgDef);
-        const r = Math.max(5.5, Math.sqrt(c.count) * 1.55);
+      const nodes = CLUB_DATA.map(function (c, i) {
+        const ox = xS(c.paid), oy = yS(c.avgDef);
+        return { c: c, i: i, ox: ox, oy: oy, x: ox, y: oy, r: 14 };
+      });
+      // Separación suave de escudos muy cercanos para que ningún logo tape a otro
+      for (let iter = 0; iter < 40; iter++) {
+        for (let a = 0; a < nodes.length; a++) {
+          for (let b = a + 1; b < nodes.length; b++) {
+            const na = nodes[a], nb = nodes[b];
+            let dx = nb.x - na.x, dy = nb.y - na.y;
+            let dist = Math.sqrt(dx * dx + dy * dy);
+            const minD = na.r + nb.r + 3;
+            if (dist < minD) {
+              if (dist < 0.1) { dx = (b - a) * 0.5; dy = 0.5; dist = 0.7; }
+              const push = (minD - dist) * 0.5;
+              const ux = dx / dist, uy = dy / dist;
+              na.x = Math.max(pL + na.r, Math.min(W - pR - na.r, na.x - ux * push));
+              na.y = Math.max(pT + na.r, Math.min(H - pB - na.r, na.y - uy * push));
+              nb.x = Math.max(pL + nb.r, Math.min(W - pR - nb.r, nb.x + ux * push));
+              nb.y = Math.max(pT + nb.r, Math.min(H - pB - nb.r, nb.y + uy * push));
+            }
+          }
+        }
+      }
+      nodes.forEach(function (n) {
+        const dShift = Math.sqrt((n.x - n.ox) * (n.x - n.ox) + (n.y - n.oy) * (n.y - n.oy));
+        if (dShift > 4) {
+          out.push(
+            '<line x1="' + n.ox.toFixed(1) + '" y1="' + n.oy.toFixed(1) + '" x2="' + n.x.toFixed(1) + '" y2="' + n.y.toFixed(1) + '" stroke="#878f97" stroke-width="1" stroke-dasharray="2 2"/>' +
+            '<circle cx="' + n.ox.toFixed(1) + '" cy="' + n.oy.toFixed(1) + '" r="2.2" fill="#5c646c"/>'
+          );
+        }
+      });
+      nodes.forEach(function (n) {
+        const c = n.c, i = n.i, cx = n.x, cy = n.y, r = n.r;
         const col = bigSix.has(c.club) ? "#c82829" : "#1b6b63";
-        const showLbl = c.paid > 700 || c.avgDef > 140;
+        const badge = CLUB_BADGES[c.club] || { code: "t8", abbr: c.club.slice(0, 3).toUpperCase(), bg: col };
+        const imgSize = (r * 1.5).toFixed(1);
+        const imgX = (cx - r * 0.75).toFixed(1);
+        const imgY = (cy - r * 0.75).toFixed(1);
+        const badgeUrl = "https://resources.premierleague.com/premierleague/badges/70/" + badge.code + ".png";
+        const lblW = Math.max(66, c.club.length * 7.4 + 16);
+        const lblY = cy - r - 24 < pT ? cy + r + 6 : cy - r - 24;
         out.push(
-          '<g data-tip="' + i + '" style="cursor:pointer;">' +
-          '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + r.toFixed(1) + '" fill="' + col + '" fill-opacity="0.82" stroke="#111417" stroke-width="1"/>' +
-          (showLbl ? '<text x="' + (cx + r + 5).toFixed(1) + '" y="' + (cy + 4).toFixed(1) + '" fill="#111417" font-size="11.5" font-weight="600" font-family="Inter, sans-serif">' + c.club + '</text>' : '') +
+          '<g class="scatter-club-node" data-tip="' + i + '" style="cursor:pointer;">' +
+          '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + (r + 1.5).toFixed(1) + '" fill="#ffffff" stroke="' + col + '" stroke-width="2.2"/>' +
+          '<image href="' + badgeUrl + '" x="' + imgX + '" y="' + imgY + '" width="' + imgSize + '" height="' + imgSize + '" preserveAspectRatio="xMidYMid meet"/>' +
+          '<g class="scatter-hover-pill" opacity="0" style="pointer-events:none;transition:opacity 140ms ease;">' +
+            '<rect x="' + (cx - lblW / 2).toFixed(1) + '" y="' + lblY.toFixed(1) + '" width="' + lblW.toFixed(1) + '" height="19" rx="4" fill="#111417" stroke="' + col + '" stroke-width="1.2"/>' +
+            '<text x="' + cx.toFixed(1) + '" y="' + (lblY + 13).toFixed(1) + '" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700" font-family="Inter, sans-serif">' + c.club + '</text>' +
+          '</g>' +
           '</g>'
         );
       });
       out.push('</svg>');
       $("chart01Wrap").innerHTML = out.join("");
+      $("chart01Wrap").querySelectorAll(".scatter-club-node").forEach(function (node) {
+        const pill = node.querySelector(".scatter-hover-pill");
+        node.addEventListener("mouseenter", function () {
+          if (node.parentNode) node.parentNode.appendChild(node);
+          if (pill) pill.setAttribute("opacity", "1");
+        });
+        node.addEventListener("mouseleave", function () {
+          if (pill) pill.setAttribute("opacity", "0");
+        });
+      });
       bindTips($("chart01Wrap"), CLUB_DATA, function (c) {
         updateInsp(c);
         return [
