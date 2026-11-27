@@ -33,7 +33,7 @@ La webstory tiene como propósito demostrar empíricamente que el encarecimiento
 
 ## 3. Registro de Encargos Realizados a Herramientas de IA y Vibecoding
 
-Siguiendo los lineamientos del curso, las herramientas de IA (Google AI Studio Build y asistente de programación) se emplearon exclusivamente como soporte técnico de implementación front-end a partir de los textos, datos y bocetos producidos por el equipo:
+Siguiendo los lineamientos del curso, las herramientas de IA (Google AI Studio Build y asistente de programación) se emplearon exclusivamente como soporte técnico de implementación front-end a partir de los textos, datos y bocetos producidos por el equipo. Como una herramienta de forma y no de fondo, pues los datos y las ideas y el funcionamiento fueron diseñados por el equipo de trabajo.
 
 1. **Encargo 01 — Del boceto a mano al prototipo interactivo (Tarea 03 / Build de Google AI Studio):**
    * *Insumo entregado por el equipo:* Fotografía del boceto dibujado a mano (ver `diseno-historia/recursos/wireframe.pdf`), resumen de las 997 operaciones de Transfermarkt, serie anual del HICP del BCE y estructura de 8 bloques del wireframe de Miro.
