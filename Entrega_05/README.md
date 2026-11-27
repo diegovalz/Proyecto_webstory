@@ -1,4 +1,4 @@
-# Entrega 05: Webstory — Versión Preliminar (Beta)
+# Entrega 05: Webstory — Versión Preliminar
 
 **Titular del Reportaje:** *El «Impuesto Premier League»: por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes (2005–2026)*  
 **Integrantes:** Juan Tapia, Valeria Trujillo y Diego Valenzuela  
