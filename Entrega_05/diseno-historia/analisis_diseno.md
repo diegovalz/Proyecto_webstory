@@ -8,12 +8,12 @@
 ## 1. Diseño de la Información y Diseño de la Interacción
 
 ### A. Estructura Narrativa Definida (*Reportaje Especial Estilo Reuters Graphics / The Athletic*)
-La información de la webstory se organizó en **siete bloques secuenciales** inspirados en los reportajes especiales de investigación de **Reuters Graphics** (`@reuters-graphics/style`) y **The Athletic**, priorizando la claridad periodística, el contraste empírico y una experiencia táctil y visual propia de una cobertura de fútbol de élite:
+La información de la webstory se organizó en **siete bloques secuenciales** inspirados en los reportajes especiales de investigación de **Reuters Graphics** (`@reuters-graphics/style`) y **The Athletic**, priorizando la claridad periodística, el contraste empírico y una experiencia táctil y visual propia de una cobertura de fútbol de élite. Está diseñado para aprender sobre un fenómeno notable que dota de sentido a las interrogantes típicas de todos los fnas del futbol que se quedan confundidos todos los mercados de fichajes vuando en Inglaterra se pagan cantidades por sobre el mercado.
 
 1. **Portada Periodística y Cuadro Contable de Hallazgos (`#inicio` — Hero Section):**
    * Abre con un titular directo, informativo y sin ambigüedades: ***«El "Impuesto Premier League": por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes»***.
    * La bajada y la firma (*byline*) establecen de inmediato la muestra (**997 operaciones entre 2005 y 2026**) y las tres fuentes de verificación (**Transfermarkt**, **Banco Central Europeo / Eurostat HICP** y **Forbes & Deloitte**).
-   * Debajo de la fotografía principal se despliega una **tira contable de 4 columnas** con borde superior de `3px` tipo prensa británica que sintetiza los cuatro pilares numéricos: `€19.841,9M` desembolsados, `€15.286,8M` de tasación real, `+€4.555,1M` de sobreprecio neto (`+29,8%`) y `2,14%` de inflación real europea promedio.
+   * Debajo de la fotografía principal se despliega una **tira contable de 4 columnas** con borde superior de `3px`  que sintetiza los cuatro pilares numéricos: `€19.841,9M` desembolsados, `€15.286,8M` de tasación real, `+€4.555,1M` de sobreprecio neto (`+29,8%`) y `2,14%` de inflación real europea promedio.
 2. **Expediente Interactivo de Fichajes Récord con Fotografías de Jugadores Sin Fondo (`#fichajes`):**
    * Para conectar de inmediato con la cultura visual del fútbol sin caer en metáforas infantiles, diseñamos el módulo **«Radiografía a las transferencias más infladas del fútbol inglés»**.
    * Presenta **4 fichas tácticas con fotografías recortadas sin fondo (PNG transparentes)** de casos emblemáticos de los clubes que lideran el sobreprecio (**Enzo Fernández** en Chelsea `+€66,0M / +120%`, **Antony** en Manchester United `+€60,0M / +171%`, **Jack Grealish** en Manchester City `+€52,5M / +81%` y **Alexander Isak** en Newcastle `+€47,5M / +158%`).
