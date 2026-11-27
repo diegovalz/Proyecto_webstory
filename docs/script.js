@@ -388,6 +388,7 @@
           );
         }
       });
+      const pillsOut = [];
       nodes.forEach(function (n) {
         const c = n.c, i = n.i, cx = n.x, cy = n.y, r = n.r;
         const col = bigSix.has(c.club) ? "#c82829" : "#1b6b63";
@@ -399,28 +400,41 @@
         const lblW = Math.max(66, c.club.length * 7.4 + 16);
         const lblY = cy - r - 24 < pT ? cy + r + 6 : cy - r - 24;
         out.push(
-          '<g class="scatter-club-node" data-tip="' + i + '" style="cursor:pointer;">' +
+          '<g class="scatter-club-node" data-tip="' + i + '" data-pill-id="scatterPill' + i + '" style="cursor:pointer;">' +
           '<circle cx="' + cx.toFixed(1) + '" cy="' + cy.toFixed(1) + '" r="' + (r + 1.5).toFixed(1) + '" fill="#ffffff" stroke="' + col + '" stroke-width="2.2"/>' +
           '<image href="' + badgeUrl + '" x="' + imgX + '" y="' + imgY + '" width="' + imgSize + '" height="' + imgSize + '" preserveAspectRatio="xMidYMid meet"/>' +
-          '<g class="scatter-hover-pill" opacity="0" style="pointer-events:none;transition:opacity 140ms ease;">' +
+          '</g>'
+        );
+        pillsOut.push(
+          '<g id="scatterPill' + i + '" class="scatter-hover-pill" style="display:none;pointer-events:none;">' +
             '<rect x="' + (cx - lblW / 2).toFixed(1) + '" y="' + lblY.toFixed(1) + '" width="' + lblW.toFixed(1) + '" height="19" rx="4" fill="#111417" stroke="' + col + '" stroke-width="1.2"/>' +
             '<text x="' + cx.toFixed(1) + '" y="' + (lblY + 13).toFixed(1) + '" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700" font-family="Inter, sans-serif">' + c.club + '</text>' +
-          '</g>' +
           '</g>'
         );
       });
+      out.push(pillsOut.join(""));
       out.push('</svg>');
       $("chart01Wrap").innerHTML = out.join("");
+      function hideAllScatterPills() {
+        $("chart01Wrap").querySelectorAll(".scatter-hover-pill").forEach(function (p) {
+          p.style.display = "none";
+        });
+      }
       $("chart01Wrap").querySelectorAll(".scatter-club-node").forEach(function (node) {
-        const pill = node.querySelector(".scatter-hover-pill");
+        const pillId = node.getAttribute("data-pill-id");
         node.addEventListener("mouseenter", function () {
-          if (node.parentNode) node.parentNode.appendChild(node);
-          if (pill) pill.setAttribute("opacity", "1");
+          hideAllScatterPills();
+          const pill = $(pillId);
+          if (pill) pill.style.display = "block";
         });
         node.addEventListener("mouseleave", function () {
-          if (pill) pill.setAttribute("opacity", "0");
+          hideAllScatterPills();
         });
       });
+      const svgEl = $("chart01Wrap").querySelector("svg");
+      if (svgEl) {
+        svgEl.addEventListener("mouseleave", hideAllScatterPills);
+      }
       bindTips($("chart01Wrap"), CLUB_DATA, function (c) {
         updateInsp(c);
         return [
