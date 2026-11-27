@@ -1,24 +1,25 @@
-# Entrega 05: Webstory — Versión Preliminar (Beta)
+# Entrega 05: Webstory — Versión Preliminar
 
 **Titular del Reportaje:** *El «Impuesto Premier League»: por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes (2005–2026)*  
 **Integrantes:** Juan Tapia, Valeria Trujillo y Diego Valenzuela  
-**Curso:** Narración Gráfica de No Ficción (COM-208) — Pontificia Universidad Católica de Chile  
+**Curso:** Narración Gráfica — Pontificia Universidad Católica de Chile  
 
 ---
 
-## 🌐 Enlace a la Webstory Publicada (GitHub Pages)
-* **Webstory (Versión Beta en `/docs`):** [https://diegovalz.github.io/Proyecto_webstory/](https://diegovalz.github.io/Proyecto_webstory/)
+## Enlace a la Webstory Publicada 
+* **Webstory (Versión Beta en `/docs`):**
+* https://diegovalz.github.io/Proyecto_webstory/docs/ 
 * **Código fuente de la Webstory (`docs/`):** [`docs/index.html`](../docs/index.html) · [`docs/style.css`](../docs/style.css) · [`docs/script.js`](../docs/script.js)
 
 ---
 
 ## 1. Resumen del Reportaje: ¿De qué se trata la historia?
-En las últimas dos décadas, la inyección masiva de capital extranjero, el ingreso de fondos soberanos y los multimillonarios contratos de derechos televisivos otorgaron a la **Premier League** inglesa una liquidez financiera sin precedentes en el deporte mundial. Sin embargo, este superávit produjo una distorsión estructural en el mercado europeo: cada vez que un club británico negocia por un futbolista, el precio exigido se multiplica sistemáticamente por encima de su tasación técnica real.
+En las últimas dos décadas, la inyección masiva de capital extranjero, el ingreso de fondos soberanos y los multimillonarios contratos de derechos televisivos otorgaron a la **Premier League** inglesa una liquidez financiera sin precedentes en el deporte mundial. Sin embargo, este superávit produjo una distorsión estructural en el mercado europeo: cada vez que un club británico negocia por un futbolista, el precio exigido se multiplica sistemáticamente por encima de su tasación real dada por el mercado tomando como referencia el mayor exponente de precios de futbolistas del mundo: La web Transfermarkt.
 
 Nuestro reportaje de datos audita **997 operaciones de traspaso** realizadas por los **20 clubes más estables del fútbol inglés entre 2005 y 2026**, cruzando tres fuentes empíricas:
 1. **Registros históricos de fichajes y tasaciones de mercado (Transfermarkt):** Demuestran que los clubes ingleses desembolsaron **€19.841,9 millones** por jugadores cuyo valor estimado de mercado previo al traspaso era de **€15.286,8 millones**, acumulando **€4.555,1 millones en sobreprecio neto (+29,8% de recargo estructural)**.
 2. **Índice Armonizado de Precios de Consumo (HICP) de la Eurozona (Banco Central Europeo / Eurostat):** Utilizado como grupo de control macroeconómico para desmontar el «doble discurso» de los directivos que culpan a la inflación general. Mientras la inflación real europea promedió un estable **2,14% anual** (alineada con la meta histórica del 2,0% del BCE), la inflación interna del mercado inglés superó el **55% anual** entre 2014 y 2017 (llegando a **68,1%** en 2017).
-3. **Evolución patrimonial y valoración de clubes (Forbes & Deloitte Football Money League):** Explica cómo la expansión desigual del valor de las instituciones fracturó la liga entre potencias globales (*Big Six*, lideradas por Chelsea con €837,2M de sobreprecio neto y Manchester United con 272,8% de recargo promedio) y clubes de media tabla (Southampton, Everton, Newcastle) que pagan un «impuesto de supervivencia» para evitar el abismo económico del descenso.
+3. **Evolución patrimonial y valoración de clubes (Forbes & Deloitte Football Money League):** Explica cómo el aumento del patrimonio de los clubes incidió en el crecimiento exponencial del mercado de fichajes y como ello generó una brecha desigual entre los clubes de mayor rango y otros que se mantuvierones estancados con los años.
 
 ---
 
@@ -44,7 +45,7 @@ La webstory y su documentación fueron desarrolladas colaborativamente por los t
 | **Recolección y limpieza de datos de Fichajes y Sobreprecio (Transfermarkt)** | — | — | ✅ Autor principal |
 | **Crónica Sección 01 (*El Impuesto Premier: Sobreprecio por club*)** | Edición | — | ✅ Autor principal |
 | **Crónica Sección 02 (*El doble discurso de la Premier: Inflación HICP*)** | ✅ Autor principal | — | Edición |
-| **Crónica Sección 03 (*La otra inflación: Evolución económica de clubes*)** | — | ✅ Autora principal | Edición |
+| **Crónica Sección 03 (*Veinte años de crecimiento desigual en la Premier League: La evolución del poder adquisitivo en el fútbol inglés*)** | — | ✅ Autora principal | Edición |
 | **Visualización 01 (Ranking interactivo de sobreprecio por club + Podio)** | Integración web | — | ✅ Autor principal |
 | **Visualización 02 (Serie HICP del BCE vs. Sobrecosto Premier)** | ✅ Autor principal | — | Apoyo datos |
 | **Visualización 03 (Trayectoria longitudinal 2005–2026 + Balanza de Arcos)** | Integración web | ✅ Autora principal | Apoyo datos |

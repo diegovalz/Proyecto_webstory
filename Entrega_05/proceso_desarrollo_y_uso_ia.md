@@ -1,6 +1,6 @@
 # Proceso de Desarrollo e Implementación con Apoyo de IA y Vibecoding
 
-**Proyecto:** *La prima del oro británico: Cuando el mercado cobra el «Impuesto Premier» (2005–2026)*  
+**Proyecto:** *El «Impuesto Premier League»: por qué los clubes ingleses pagan un 30% de sobreprecio en el mercado de fichajes*  
 **Integrantes:** Juan Tapia, Valeria Trujillo y Diego Valenzuela  
 
 ---
@@ -33,7 +33,7 @@ La webstory tiene como propósito demostrar empíricamente que el encarecimiento
 
 ## 3. Registro de Encargos Realizados a Herramientas de IA y Vibecoding
 
-Siguiendo los lineamientos del curso, las herramientas de IA (Google AI Studio Build y asistente de programación) se emplearon exclusivamente como soporte técnico de implementación front-end a partir de los textos, datos y bocetos producidos por el equipo:
+Siguiendo los lineamientos del curso, las herramientas de IA (Google AI Studio Build y asistente de programación) se emplearon exclusivamente como soporte técnico de implementación front-end a partir de los textos, datos y bocetos producidos por el equipo. Como una herramienta de forma y no de fondo, pues los datos y las ideas y el funcionamiento fueron diseñados por el equipo de trabajo.
 
 1. **Encargo 01 — Del boceto a mano al prototipo interactivo (Tarea 03 / Build de Google AI Studio):**
    * *Insumo entregado por el equipo:* Fotografía del boceto dibujado a mano (ver `diseno-historia/recursos/wireframe.pdf`), resumen de las 997 operaciones de Transfermarkt, serie anual del HICP del BCE y estructura de 8 bloques del wireframe de Miro.
@@ -48,7 +48,7 @@ Siguiendo los lineamientos del curso, las herramientas de IA (Google AI Studio B
 ## 4. Cambios Realizados por el Equipo sobre el Código Generado
 
 El equipo auditó, corrigió y enriqueció el código sugerido en cinco aspectos fundamentales:
-1. **Restitución íntegra de las tres crónicas periodísticas:** En el primer prototipo de vibecoding los textos de cada sección habían quedado reducidos a resúmenes de 1 o 2 párrafos. El equipo reincorporó los textos completos redactados por **Diego Valenzuela** (Sección 01), **Juan Tapia** (Sección 02: *"El doble discurso de la Premier"*) y **Valeria Trujillo** (Sección 03: *"La otra inflación de la Premier League"*).
+1. **Restitución íntegra de las tres crónicas periodísticas:** En el primer prototipo de vibecoding los textos de cada sección habían quedado reducidos a resúmenes de 1 o 2 párrafos. El equipo reincorporó los textos completos redactados por **Diego Valenzuela** (Sección 01), **Juan Tapia** (Sección 02: *"El doble discurso de la Premier"*) y **Valeria Trujillo** (Sección 03: *"Veinte años de crecimiento desigual en la Premier League: La evolución del poder adquisitivo en el fútbol inglés"*).
 2. **Corrección de la navegación y enlaces institucionales:** Se añadió el enlace directo a la sección de inflación (`#inflacion`) en la barra de navegación superior y en el menú móvil, y se corrigió el enlace del pie de página para que apunte al repositorio oficial del equipo (`https://github.com/diegovalz/Proyecto_webstory`).
 3. **Verificación matemática de cifras y unidades:** Se validó que los totales del bloque de KPIs (`€19.841,9M` pagados, `€15.286,8M` tasados, `€4.555,1M` de sobreprecio neto, `272,8%` recargo promedio del Manchester United y `2,14%` inflación promedio del BCE) coincidieran exactamente con los scripts de Python de las Entregas 02 y 03.
 4. **Eliminación de scripts residuales:** Se eliminó la etiqueta `<script src="/_aistudio-iframe.js">` que generaba un error 404 en consola al desplegarse en GitHub Pages.
